@@ -1,6 +1,7 @@
 import { checkRegistryHealth } from "../status-checks/check-registry-health"
 import { checkAutoroutingApiHealth } from "../status-checks/check-autorouting-api-health"
 import { checkFreeroutingClusterHealth } from "../status-checks/check-freerouting-cluster-health"
+import { checkJLCSearchHealth } from "../status-checks/check-jlcsearch-health"
 import fs from "node:fs"
 
 interface StatusCheck {
@@ -17,17 +18,23 @@ async function runChecksAndWriteLog() {
     { name: "registry-api", fn: checkRegistryHealth },
     { name: "autorouting-api", fn: checkAutoroutingApiHealth },
     { name: "freerouting-cluster", fn: checkFreeroutingClusterHealth },
+    { name: "jlcsearch-api", fn: checkJLCSearchHealth },
   ]
 
   const results = await Promise.all(
     checks.map(async (check) => {
       const result = await check.fn()
+      if (!result.ok) {
+        console.error(
+          `${check.name} health check failed: ${result.error.message}`,
+        )
+      }
       return {
         service: check.name,
         status: result.ok ? "ok" : "error",
         ...(result.ok ? {} : { error: result.error.message }),
       }
-    })
+    }),
   )
 
   const statusCheck: StatusCheck = {
@@ -36,11 +43,7 @@ async function runChecksAndWriteLog() {
   }
 
   // Append to statuses.jsonl
-  await Bun.write(
-    "./statuses.jsonl",
-    JSON.stringify(statusCheck) + "\n",
-    { mode: "a" }
-  )
+  fs.appendFileSync("./statuses.jsonl", `${JSON.stringify(statusCheck)}\n`)
 
   // Limit to 2 weeks of logs
   const twoWeeksAgo = new Date()
@@ -51,10 +54,10 @@ async function runChecksAndWriteLog() {
   const recentLogs = lines
     .map((line) => JSON.parse(line))
     .filter((log: StatusCheck) => new Date(log.timestamp) >= twoWeeksAgo)
-  
+
   await Bun.write(
     "./statuses.jsonl",
-    recentLogs.map((log) => JSON.stringify(log)).join("\n") + "\n"
+    recentLogs.map((log) => JSON.stringify(log)).join("\n") + "\n",
   )
 }
 
