@@ -5,20 +5,32 @@ import exampleUnroutedCircuit from "../assets/example-unrouted-circuit.json"
 export const checkFreeroutingClusterHealth: HealthCheckFunction = async () => {
   try {
     const solveRes = await ky
-      .post("https://registry-api.tscircuit.com/autorouting/solve", {
+      .post<{
+        autorouting_result: {
+          output_pcb_traces: any[]
+        }
+      }>("https://registry-api.tscircuit.com/autorouting/solve", {
         json: {
           input_circuit_json: exampleUnroutedCircuit,
         },
       })
       .json()
-    console.log(solveRes)
+
+    if (solveRes?.autorouting_result?.output_pcb_traces?.length === 0) {
+      return {
+        ok: false,
+        error: {
+          message: "Autorouting API returned no traces",
+        },
+      }
+    }
 
     return { ok: true }
-  } catch (err) {
+  } catch (err: any) {
     return {
       ok: false,
       error: {
-        message: "Freerouting Cluster API Health Ping Failed",
+        message: err.toString(),
       },
     }
   }

@@ -1,12 +1,15 @@
 # tscircuit status
 
-| Service | Current Status |
-| ------- | -------------- |
-| `registry-api` | |
-| `freerouting-cluster` | |
-| `jlcpcb-api` | |
-| `autorouting-api` | |
+<!-- START_STATUS_TABLE -->
 
+| Service               | Current Status |
+| --------------------- | -------------- |
+| `registry-api`        |                |
+| `jlcpcb-api`          |                |
+| `autorouting-api`     |                |
+| `freerouting-cluster` |                |
+
+<!-- END_STATUS_TABLE -->
 
 Status checks for tscircuit internal services.
 
@@ -17,4 +20,4 @@ Every time it runs it appends the status check results to `statuses.jsonl` (limi
 
 Each service has a specific method to check it, see [./service-checks](./service-checks)
 
-You may need particular auth environment variables to run the checks. 
+You may need particular auth environment variables to run the checks.
