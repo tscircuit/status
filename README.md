@@ -12,7 +12,7 @@
 
 Status checks for tscircuit internal services.
 
-Runs every 5 minutes using github workflows.
+Runs every 10 minutes using github workflows.
 
 Every time it runs it appends the status check results to `statuses.jsonl` (limiting to
 2 weeks of logs)
