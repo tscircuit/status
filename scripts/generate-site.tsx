@@ -50,11 +50,14 @@ function StatusGrid({ checks }: { checks: StatusCheck[] }) {
 
 function UptimeGraph({ checks }: { checks: StatusCheck[] }) {
   const services = checks[0].checks.map((check) => check.service)
-  const days = [
+  const hours = [
     ...new Set(
-      checks.map((check) => new Date(check.timestamp).toLocaleDateString()),
+      checks.map((check) => {
+        const date = new Date(check.timestamp)
+        return `${date.toLocaleDateString()} ${date.getHours()}:00`
+      }),
     ),
-  ]
+  ].sort()
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
@@ -63,13 +66,17 @@ function UptimeGraph({ checks }: { checks: StatusCheck[] }) {
         {services.map((service) => (
           <div key={service} className="relative">
             <div className="text-sm font-medium mb-1">{service}</div>
-            <div className="flex gap-1">
-              {days.map((day) => {
-                const dayChecks = checks.filter(
-                  (check) =>
-                    new Date(check.timestamp).toLocaleDateString() === day,
-                )
-                const serviceChecks = dayChecks.flatMap((check) =>
+            <div className="flex gap-0.5 overflow-x-auto">
+              {hours.map((hour) => {
+                const [date, time] = hour.split(" ")
+                const hourChecks = checks.filter((check) => {
+                  const checkDate = new Date(check.timestamp)
+                  return (
+                    checkDate.toLocaleDateString() === date &&
+                    checkDate.getHours() === parseInt(time)
+                  )
+                })
+                const serviceChecks = hourChecks.flatMap((check) =>
                   check.checks.filter((c) => c.service === service),
                 )
                 const hasError = serviceChecks.some(
@@ -78,9 +85,9 @@ function UptimeGraph({ checks }: { checks: StatusCheck[] }) {
 
                 return (
                   <div
-                    key={day}
-                    className={`flex-1 h-8 ${hasError ? "bg-red-200" : "bg-green-200"}`}
-                    title={`${day}: ${hasError ? "Issues Detected" : "Operational"}`}
+                    key={hour}
+                    className={`w-4 h-8 flex-shrink-0 ${hasError ? "bg-red-200" : "bg-green-200"}`}
+                    title={`${hour}: ${hasError ? "Issues Detected" : "Operational"}`}
                   />
                 )
               })}
