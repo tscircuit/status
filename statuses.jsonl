@@ -1,0 +1,1 @@
+{"timestamp":"2024-11-20T21:48:57.789Z","checks":[{"service":"registry-api","status":"ok"},{"service":"autorouting-api","status":"ok"},{"service":"freerouting-cluster","status":"ok"}]}

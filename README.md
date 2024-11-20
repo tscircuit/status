@@ -4,10 +4,9 @@
 
 | Service               | Current Status |
 | --------------------- | -------------- |
-| `registry-api`        |                |
-| `jlcpcb-api`          |                |
-| `autorouting-api`     |                |
-| `freerouting-cluster` |                |
+| `registry-api`        | ✅ Operational |
+| `autorouting-api`     | ✅ Operational |
+| `freerouting-cluster` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 

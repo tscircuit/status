@@ -2,7 +2,7 @@ import type { HealthCheckFunction } from "./types"
 import ky from "ky"
 import exampleUnroutedCircuit from "../assets/example-unrouted-circuit.json"
 
-export const checkFreeroutingClusterHealth: HealthCheckFunction = async () => {
+export const checkAutoroutingApiHealth: HealthCheckFunction = async () => {
   try {
     const solveRes = await ky
       .post<{
