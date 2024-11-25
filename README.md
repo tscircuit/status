@@ -6,7 +6,7 @@
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
 | `autorouting-api` | ✅ Operational |
-| `freerouting-cluster` | ✅ Operational |
+| `freerouting-cluster` | ❌ Freerouting Cluster API Health Ping Failed |
 | `jlcsearch-api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
