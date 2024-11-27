@@ -66,7 +66,7 @@ function UptimeGraph({ checks }: { checks: StatusCheck[] }) {
         {services.map((service) => (
           <div key={service} className="relative">
             <div className="text-sm font-medium mb-1">{service}</div>
-            <div className="flex gap-0.5 overflow-x-auto">
+            <div className="grid grid-flow-col auto-cols-fr gap-px w-full">
               {hours.map((hour) => {
                 const [date, time] = hour.split(" ")
                 const hourChecks = checks.filter((check) => {
@@ -86,7 +86,7 @@ function UptimeGraph({ checks }: { checks: StatusCheck[] }) {
                 return (
                   <div
                     key={hour}
-                    className={`w-4 h-8 flex-shrink-0 ${hasError ? "bg-red-200" : "bg-green-200"}`}
+                    className={`h-8 w-full ${hasError ? "bg-red-200" : "bg-green-200"}`}
                     title={`${hour}: ${hasError ? "Issues Detected" : "Operational"}`}
                   />
                 )
