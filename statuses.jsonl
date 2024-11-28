@@ -920,3 +920,4 @@
 {"timestamp":"2024-11-28T04:04:59.523Z","checks":[{"service":"registry-api","status":"ok"},{"service":"autorouting-api","status":"ok"},{"service":"freerouting-cluster","status":"ok"},{"service":"jlcsearch-api","status":"ok"}]}
 {"timestamp":"2024-11-28T04:15:19.343Z","checks":[{"service":"registry-api","status":"ok"},{"service":"autorouting-api","status":"ok"},{"service":"freerouting-cluster","status":"ok"},{"service":"jlcsearch-api","status":"ok"}]}
 {"timestamp":"2024-11-28T04:27:56.474Z","checks":[{"service":"registry-api","status":"ok"},{"service":"autorouting-api","status":"ok"},{"service":"freerouting-cluster","status":"ok"},{"service":"jlcsearch-api","status":"ok"}]}
+{"timestamp":"2024-11-28T04:38:40.759Z","checks":[{"service":"registry-api","status":"error","error":"Registry API Health Ping Failed"},{"service":"autorouting-api","status":"ok"},{"service":"freerouting-cluster","status":"ok"},{"service":"jlcsearch-api","status":"ok"}]}
