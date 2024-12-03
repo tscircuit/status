@@ -1595,3 +1595,4 @@
 {"timestamp":"2024-12-03T11:31:19.548Z","checks":[{"service":"registry-api","status":"ok"},{"service":"autorouting-api","status":"ok"},{"service":"freerouting-cluster","status":"ok"},{"service":"jlcsearch-api","status":"ok"}]}
 {"timestamp":"2024-12-03T11:41:01.788Z","checks":[{"service":"registry-api","status":"ok"},{"service":"autorouting-api","status":"ok"},{"service":"freerouting-cluster","status":"ok"},{"service":"jlcsearch-api","status":"ok"}]}
 {"timestamp":"2024-12-03T11:50:43.401Z","checks":[{"service":"registry-api","status":"ok"},{"service":"autorouting-api","status":"ok"},{"service":"freerouting-cluster","status":"ok"},{"service":"jlcsearch-api","status":"ok"}]}
+{"timestamp":"2024-12-03T12:01:57.348Z","checks":[{"service":"registry-api","status":"ok"},{"service":"autorouting-api","status":"ok"},{"service":"freerouting-cluster","status":"ok"},{"service":"jlcsearch-api","status":"error","error":"JLC Search API Health Check Failed"}]}
