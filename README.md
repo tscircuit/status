@@ -5,8 +5,8 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ❌ TimeoutError: Request timed out: POST https://registry-api.tscircuit.com/autorouting/solve |
-| `freerouting-cluster` | ❌ Freerouting Cluster API Health Ping Failed |
+| `autorouting-api` | ✅ Operational |
+| `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
