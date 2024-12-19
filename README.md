@@ -5,9 +5,9 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ✅ Operational |
+| `autorouting-api` | ❌ HTTPError: Request failed with status code 500 Internal Server Error: POST https://registry-api.tscircuit.com/autorouting/solve |
 | `freerouting-cluster` | ✅ Operational |
-| `jlcsearch-api` | ❌ JLC Search API Health Check Failed |
+| `jlcsearch-api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
