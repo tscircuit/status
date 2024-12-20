@@ -57,7 +57,7 @@ function UptimeGraph({ checks }: { checks: StatusCheck[] }) {
         return `${date.toLocaleDateString()} ${date.getHours()}:00`
       }),
     ),
-  ].sort()
+  ].sort((a, b) => new Date(a).getTime() - new Date(b).getTime())
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
@@ -87,7 +87,9 @@ function UptimeGraph({ checks }: { checks: StatusCheck[] }) {
                   <div
                     key={hour}
                     className={`h-8 w-full ${hasError ? "bg-red-200" : "bg-green-200"}`}
-                    title={`${hour}: ${hasError ? "Issues Detected" : "Operational"}`}
+                    title={`${hour}\n${hourChecks.map(check =>
+                      `${new Date(check.timestamp).toLocaleString()}: ${check.checks.find(c => c.service === service)?.status === "error" ? "Issues Detected" : "Operational"}`
+                    ).join('\n')}`}
                   />
                 )
               })}
