@@ -7,7 +7,7 @@
 | `registry-api` | ✅ Operational |
 | `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
-| `jlcsearch-api` | ✅ Operational |
+| `jlcsearch-api` | ❌ JLC Search API Health Check Failed |
 
 <!-- END_STATUS_TABLE -->
 
