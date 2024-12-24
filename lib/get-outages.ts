@@ -1,15 +1,18 @@
+import type { StatusCheck } from "./types"
+
 export const getOutages = (checks: StatusCheck[]) => {
   const outages: Array<{
     service: string
     start: Date
     end: Date
     duration: number
+    isOngoing: boolean
   }> = []
 
   // Group checks by service
   const serviceChecks = new Map<string, StatusCheck[]>()
-  checks.forEach((check) => {
-    check.checks.forEach((serviceCheck) => {
+  for (const check of checks) {
+    for (const serviceCheck of check.checks) {
       if (!serviceChecks.has(serviceCheck.service)) {
         serviceChecks.set(serviceCheck.service, [])
       }
@@ -17,11 +20,11 @@ export const getOutages = (checks: StatusCheck[]) => {
         ...check,
         checks: [serviceCheck],
       })
-    })
-  })
+    }
+  }
 
   // Find outage periods for each service
-  serviceChecks.forEach((checks, service) => {
+  for (const [service, checks] of serviceChecks) {
     let currentOutage: { start: Date; end: Date } | null = null
 
     checks.sort(
@@ -29,7 +32,7 @@ export const getOutages = (checks: StatusCheck[]) => {
         new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime()
     )
 
-    checks.forEach((check) => {
+    for (const check of checks) {
       const timestamp = new Date(check.timestamp)
       const hasError = check.checks[0].status === "error"
 
@@ -47,13 +50,14 @@ export const getOutages = (checks: StatusCheck[]) => {
           start: currentOutage.start,
           end: currentOutage.end,
           duration: currentOutage.end.getTime() - currentOutage.start.getTime(),
+          isOngoing: false,
         })
         currentOutage = null
       } else if (currentOutage) {
         // Update end time of ongoing outage
         currentOutage.end = timestamp
       }
-    })
+    }
 
     // Handle ongoing outage
     if (currentOutage) {
@@ -62,9 +66,10 @@ export const getOutages = (checks: StatusCheck[]) => {
         start: currentOutage.start,
         end: currentOutage.end,
         duration: currentOutage.end.getTime() - currentOutage.start.getTime(),
+        isOngoing: true,
       })
     }
-  })
+  }
 
   return outages
 }
