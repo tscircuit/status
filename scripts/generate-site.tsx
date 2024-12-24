@@ -29,7 +29,7 @@ async function generateSite() {
       </head>
       <body className="bg-gray-100 min-h-screen p-8">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8">TSCircuit Status</h1>
+          <h1 className="text-3xl font-bold mb-8">tscircuit Status</h1>
           <StatusGrid checks={checks} />
           <UptimeGraph checks={checks} />
           <OutageTable outages={outages} />
