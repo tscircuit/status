@@ -7,6 +7,12 @@
     "moduleDetection": "force",
     "jsx": "react-jsx",
     "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "lib/*": ["lib/*"],
+      "components/*": ["components/*"],
+      "scripts/*": ["scripts/*"]
+    },
 
     // Bundler mode
     "moduleResolution": "bundler",

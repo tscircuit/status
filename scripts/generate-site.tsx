@@ -1,113 +1,24 @@
 import React from "react"
 import { renderToString } from "react-dom/server"
-
-interface StatusCheck {
-  timestamp: string
-  checks: {
-    service: string
-    status: "ok" | "error"
-    error?: string
-  }[]
-}
-
-function calculateUptime(checks: StatusCheck[], service: string): number {
-  const serviceChecks = checks.flatMap((check) =>
-    check.checks.filter((c) => c.service === service),
-  )
-  const successfulChecks = serviceChecks.filter(
-    (check) => check.status === "ok",
-  )
-  return (successfulChecks.length / serviceChecks.length) * 100
-}
-
-function StatusGrid({ checks }: { checks: StatusCheck[] }) {
-  const latestCheck = checks[checks.length - 1]
-  const services = latestCheck.checks.map((check) => check.service)
-
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-      {services.map((service) => {
-        const uptime = calculateUptime(checks, service)
-        const latest = latestCheck.checks.find((c) => c.service === service)
-
-        return (
-          <div key={service} className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-lg font-semibold mb-2">{service}</h3>
-            <div className="flex items-center mb-4">
-              <div
-                className={`w-3 h-3 rounded-full mr-2 ${latest?.status === "ok" ? "bg-green-500" : "bg-red-500"}`}
-              ></div>
-              <span>{latest?.status === "ok" ? "Operational" : "Error"}</span>
-            </div>
-            <div className="text-2xl font-bold mb-1">{uptime.toFixed(2)}%</div>
-            <div className="text-sm text-gray-600">Uptime (14 days)</div>
-          </div>
-        )
-      })}
-    </div>
-  )
-}
-
-function UptimeGraph({ checks }: { checks: StatusCheck[] }) {
-  const services = checks[0].checks.map((check) => check.service)
-  const hours = [
-    ...new Set(
-      checks.map((check) => {
-        const date = new Date(check.timestamp)
-        return `${date.toLocaleDateString()} ${date.getHours()}:00`
-      }),
-    ),
-  ].sort((a, b) => new Date(a).getTime() - new Date(b).getTime())
-
-  return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <h3 className="text-lg font-semibold mb-4">Uptime History</h3>
-      <div className="space-y-4">
-        {services.map((service) => (
-          <div key={service} className="relative">
-            <div className="text-sm font-medium mb-1">{service}</div>
-            <div className="grid grid-flow-col auto-cols-fr gap-px w-full">
-              {hours.map((hour) => {
-                const [date, time] = hour.split(" ")
-                const hourChecks = checks.filter((check) => {
-                  const checkDate = new Date(check.timestamp)
-                  return (
-                    checkDate.toLocaleDateString() === date &&
-                    checkDate.getHours() === parseInt(time)
-                  )
-                })
-                const serviceChecks = hourChecks.flatMap((check) =>
-                  check.checks.filter((c) => c.service === service),
-                )
-                const hasError = serviceChecks.some(
-                  (check) => check.status === "error",
-                )
-
-                return (
-                  <div
-                    key={hour}
-                    className={`h-8 w-full ${hasError ? "bg-red-200" : "bg-green-200"}`}
-                    title={`${hour}\n${hourChecks.map(check =>
-                      `${new Date(check.timestamp).toLocaleString()}: ${check.checks.find(c => c.service === service)?.status === "error" ? "Issues Detected" : "Operational"}`
-                    ).join('\n')}`}
-                  />
-                )
-              })}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
+import { getOutages } from "../lib/get-outages"
+import type { StatusCheck } from "lib/types"
+import { StatusGrid } from "components/StatusGrid"
+import { UptimeGraph } from "components/UptimeGraph"
 
 async function generateSite() {
+  console.log("reading statuses...")
   const content = await Bun.file("./statuses.jsonl").text()
   const checks: StatusCheck[] = content
     .trim()
     .split("\n")
     .map((line) => JSON.parse(line))
+  console.log("found", checks.length, "checks")
 
+  console.log("computing service outages...")
+  const outages = getOutages(checks)
+  console.log("found", outages.length, "outages")
+
+  console.log("rendering html...")
   const html = renderToString(
     <html lang="en">
       <head>
@@ -125,6 +36,7 @@ async function generateSite() {
     </html>,
   )
 
+  console.log("writing to ./public/index.html...")
   await Bun.write("./public/index.html", `<!DOCTYPE html>${html}`)
 }
 
