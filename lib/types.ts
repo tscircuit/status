@@ -6,3 +6,11 @@ export interface StatusCheck {
     error?: string
   }[]
 }
+
+export interface Outage {
+  service: string
+  start: Date
+  end: Date
+  duration: number
+  isOngoing: boolean
+}

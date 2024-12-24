@@ -1,13 +1,7 @@
-import type { StatusCheck } from "./types"
+import type { Outage, StatusCheck } from "./types"
 
 export const getOutages = (checks: StatusCheck[]) => {
-  const outages: Array<{
-    service: string
-    start: Date
-    end: Date
-    duration: number
-    isOngoing: boolean
-  }> = []
+  const outages: Array<Outage> = []
 
   // Group checks by service
   const serviceChecks = new Map<string, StatusCheck[]>()

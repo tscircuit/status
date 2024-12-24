@@ -4,6 +4,7 @@ import { getOutages } from "../lib/get-outages"
 import type { StatusCheck } from "lib/types"
 import { StatusGrid } from "components/StatusGrid"
 import { UptimeGraph } from "components/UptimeGraph"
+import { OutageTable } from "components/OutageTable"
 
 async function generateSite() {
   console.log("reading statuses...")
@@ -31,6 +32,7 @@ async function generateSite() {
           <h1 className="text-3xl font-bold mb-8">TSCircuit Status</h1>
           <StatusGrid checks={checks} />
           <UptimeGraph checks={checks} />
+          <OutageTable outages={outages} />
         </div>
       </body>
     </html>,
