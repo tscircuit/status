@@ -20,7 +20,9 @@ export const OutageTable = ({
             </tr>
           </thead>
           <tbody>
-            {outages.map((outage, i) => (
+            {[...outages]
+              .sort((a, b) => b.start.getTime() - a.start.getTime())
+              .map((outage, i) => (
               // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
               <tr key={i} className="border-b">
                 <td className="py-2">{outage.service}</td>
