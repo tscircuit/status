@@ -1,5 +1,16 @@
 import type { Outage } from "lib/types"
 
+function formatDuration(milliseconds: number): string {
+  const totalMinutes = Math.round(milliseconds / 1000 / 60)
+  if (totalMinutes >= 60) {
+    const hours = Math.floor(totalMinutes / 60)
+    const minutes = totalMinutes % 60
+    return `${hours}hr ${minutes.toString().padStart(2, "0")}min`
+  } else {
+    return `${totalMinutes}min`
+  }
+}
+
 export const OutageTable = ({
   outages,
 }: {
@@ -29,9 +40,7 @@ export const OutageTable = ({
                   <td className="py-2">{outage.service}</td>
                   <td className="py-2">{outage.start.toLocaleString()}</td>
                   <td className="py-2">{outage.end.toLocaleString()}</td>
-                  <td className="py-2">
-                    {Math.round(outage.duration / 1000 / 60)} minutes
-                  </td>
+                  <td className="py-2">{formatDuration(outage.duration)}</td>
                   <td className="py-2">
                     <span
                       className={`px-2 py-1 rounded text-sm ${outage.isOngoing ? "bg-red-100 text-red-800" : "bg-gray-100"}`}
