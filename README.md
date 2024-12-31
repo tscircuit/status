@@ -4,8 +4,8 @@
 
 | Service               | Current Status |
 | --------------------- | -------------- |
-| `registry-api` | ✅ Operational |
-| `autorouting-api` | ✅ Operational |
+| `registry-api` | ❌ Registry API Health Ping Failed |
+| `autorouting-api` | ❌ HTTPError: Request failed with status code 405 Method Not Allowed: POST https://registry-api.tscircuit.com/autorouting/solve |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
 
