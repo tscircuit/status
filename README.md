@@ -4,7 +4,7 @@
 
 | Service               | Current Status |
 | --------------------- | -------------- |
-| `registry-api` | ❌ Registry API Health Ping Failed |
+| `registry-api` | ✅ Operational |
 | `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
