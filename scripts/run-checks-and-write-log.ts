@@ -2,6 +2,7 @@ import { checkRegistryHealth } from "../status-checks/check-registry-health"
 import { checkAutoroutingApiHealth } from "../status-checks/check-autorouting-api-health"
 import { checkFreeroutingClusterHealth } from "../status-checks/check-freerouting-cluster-health"
 import { checkJLCSearchHealth } from "../status-checks/check-jlcsearch-health"
+import { checkRegistryAndBundlingHealth } from "../status-checks/check-registry-and-bundling-health"
 import fs from "node:fs"
 
 interface StatusCheck {
@@ -19,9 +20,10 @@ async function runChecksAndWriteLog() {
     { name: "autorouting-api", fn: checkAutoroutingApiHealth },
     { name: "freerouting-cluster", fn: checkFreeroutingClusterHealth },
     { name: "jlcsearch-api", fn: checkJLCSearchHealth },
+    { name: "registry and bundling", fn: checkRegistryAndBundlingHealth },
   ]
 
-  const results = await Promise.all(
+  const results: StatusCheck["checks"] = await Promise.all(
     checks.map(async (check) => {
       const result = await check.fn()
       if (!result.ok) {
@@ -57,6 +59,7 @@ async function runChecksAndWriteLog() {
 
   await Bun.write(
     "./statuses.jsonl",
+    // biome-ignore lint/style/useTemplate: <explanation>
     recentLogs.map((log) => JSON.stringify(log)).join("\n") + "\n",
   )
 }
