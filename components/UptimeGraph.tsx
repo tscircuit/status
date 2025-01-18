@@ -1,10 +1,8 @@
-import React from "react"
-import { renderToString } from "react-dom/server"
-import { getOutages } from "../lib/get-outages"
 import type { StatusCheck } from "lib/types"
 
 export function UptimeGraph({ checks }: { checks: StatusCheck[] }) {
-  const services = checks[0].checks.map((check) => check.service)
+  const latestCheck = checks[checks.length - 1]
+  const services = latestCheck.checks.map((check) => check.service)
 
   // Create a map of hour strings to checks for efficient lookup
   const hourChecksMap = new Map<string, StatusCheck[]>()
