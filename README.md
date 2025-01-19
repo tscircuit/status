@@ -9,6 +9,7 @@
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
 | `registry and bundling` | ✅ Operational |
+| `fly_registry_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
