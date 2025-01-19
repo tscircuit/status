@@ -8,7 +8,7 @@
 | `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
-| `registry and bundling` | ✅ Operational |
+| `registry and bundling` | ❌ Registry and Bundling Health Check Failed |
 | `fly_registry_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
