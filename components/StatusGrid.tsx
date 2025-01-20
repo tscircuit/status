@@ -6,9 +6,8 @@ function calculateUptime(checks: StatusCheck[], service: string): number {
     check.checks.filter((c) => c.service === service && c.status !== undefined)
   )
   
-  // If no valid checks exist, return 100% as we can't penalize for missing data
   if (serviceChecks.length === 0) {
-    return 100
+    return 0
   }
   
   const successfulChecks = serviceChecks.filter(
