@@ -22,7 +22,7 @@ async function runChecksAndWriteLog() {
     { name: "freerouting-cluster", fn: checkFreeroutingClusterHealth },
     { name: "jlcsearch-api", fn: checkJLCSearchHealth },
     // TODO switch to underscore/dashes
-    { name: "registry and bundling", fn: checkRegistryAndBundlingHealth },
+    { name: "registry_bundling", fn: checkRegistryAndBundlingHealth },
     { name: "fly_registry_api", fn: checkFlyRegistryHealth },
   ]
 

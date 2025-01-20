@@ -4,11 +4,11 @@
 
 | Service               | Current Status |
 | --------------------- | -------------- |
-| `registry-api` | ✅ Operational |
-| `autorouting-api` | ✅ Operational |
+| `registry-api`        | ✅ Operational |
+| `autorouting-api`     | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
-| `jlcsearch-api` | ✅ Operational |
-| `registry and bundling` | ✅ Operational |
+| `jlcsearch-api`       | ✅ Operational |
+| `registry_bundling`   | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
