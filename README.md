@@ -2,14 +2,14 @@
 
 <!-- START_STATUS_TABLE -->
 
-| Service               | Current Status |
-| --------------------- | -------------- |
-| `registry-api` | ✅ Operational |
-| `autorouting-api` | ✅ Operational |
-| `freerouting-cluster` | ✅ Operational |
-| `jlcsearch-api` | ✅ Operational |
-| `registry and bundling` | ❌ Registry and Bundling Health Check Failed |
-| `fly_registry_api` | ✅ Operational |
+| Service               | Current Status                           |
+| --------------------- | ---------------------------------------- |
+| `registry-api`        | ✅ Operational                           |
+| `autorouting-api`     | ✅ Operational                           |
+| `freerouting-cluster` | ✅ Operational                           |
+| `jlcsearch-api`       | ✅ Operational                           |
+| `registry_bundling`   | ❌ registry_bundling Health Check Failed |
+| `fly_registry_api`    | ✅ Operational                           |
 
 <!-- END_STATUS_TABLE -->
 
