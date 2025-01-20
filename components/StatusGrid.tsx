@@ -1,12 +1,21 @@
 import type { StatusCheck } from "lib/types"
 
 function calculateUptime(checks: StatusCheck[], service: string): number {
+  // Get all service checks, filtering out any undefined or missing checks
   const serviceChecks = checks.flatMap((check) =>
-    check.checks.filter((c) => c.service === service),
+    check.checks.filter((c) => c.service === service && c.status !== undefined)
   )
+  
+  // If no valid checks exist, return 100% as we can't penalize for missing data
+  if (serviceChecks.length === 0) {
+    return 100
+  }
+  
   const successfulChecks = serviceChecks.filter(
-    (check) => check.status === "ok",
+    (check) => check.status === "ok"
   )
+  
+  // Calculate percentage only based on periods where we have data
   return (successfulChecks.length / serviceChecks.length) * 100
 }
 
