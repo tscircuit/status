@@ -38,6 +38,17 @@ export function UptimeGraph({ checks }: { checks: StatusCheck[] }) {
                 const serviceChecks = hourChecks.flatMap((check) =>
                   check.checks.filter((c) => c.service === service),
                 )
+                // Handle missing data case
+                if (serviceChecks.length === 0) {
+                  return (
+                    <div
+                      key={hour}
+                      className="h-8 w-full bg-gray-200"
+                      title={`${hour}\nNo data available for this period`}
+                    />
+                  )
+                }
+
                 const hasError = serviceChecks.some(
                   (check) => check.status === "error",
                 )
