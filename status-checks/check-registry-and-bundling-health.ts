@@ -15,7 +15,7 @@ export const checkRegistryAndBundlingHealth: HealthCheckFunction = async () => {
     await Promise.all(
       ENDPOINTS.map((url) =>
         ky.get(`${url}?cachebust=${randomParam}`, {
-          timeout: 5000,
+          timeout: 15000,
         })
       )
     );
