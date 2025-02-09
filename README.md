@@ -5,7 +5,7 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ❌ Autorouting job failed: {"message":"error: duplicate key value violates unique constraint \"autorouting_result_cache_autorouting_cache_key_key\"","error_code":"unknown_autorouting_error"} |
+| `autorouting-api` | ❌ HTTPError: Request failed with status code 400 Bad Request: POST https://registry-api.tscircuit.com/autorouting/jobs/get_output |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
