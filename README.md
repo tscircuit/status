@@ -7,7 +7,7 @@
 | `registry-api` | ✅ Operational |
 | `autorouting-api` | ❌ Autorouting job failed: {"message":"error: duplicate key value violates unique constraint \"autorouting_result_cache_autorouting_cache_key_key\"","error_code":"unknown_autorouting_error"} |
 | `freerouting-cluster` | ✅ Operational |
-| `jlcsearch-api` | ❌ JLC Search API Health Check Failed |
+| `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
 | `fly_registry_api` | ✅ Operational |
 
