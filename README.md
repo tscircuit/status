@@ -5,7 +5,7 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ✅ Operational |
+| `autorouting-api` | ❌ Error: unknown certificate verification error |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
