@@ -7,7 +7,7 @@
 | `registry-api` | ✅ Operational |
 | `autorouting-api` | ❌ Autorouting job timed out |
 | `freerouting-cluster` | ✅ Operational |
-| `jlcsearch-api` | ✅ Operational |
+| `jlcsearch-api` | ❌ JLC Search API Health Check Failed |
 | `registry_bundling` | ✅ Operational |
 | `fly_registry_api` | ❌ Fly Registry API Health Ping Failed |
 
