@@ -5,6 +5,7 @@ import { checkJLCSearchHealth } from "../status-checks/check-jlcsearch-health"
 import { checkRegistryAndBundlingHealth } from "../status-checks/check-registry-and-bundling-health"
 import fs from "node:fs"
 import { checkFlyRegistryHealth } from "status-checks/check-fly-registry-health"
+import { checkCompileApiHealth } from "status-checks/check-compile-api-health"
 
 interface StatusCheck {
   timestamp: string
@@ -24,6 +25,7 @@ async function runChecksAndWriteLog() {
     // TODO switch to underscore/dashes
     { name: "registry_bundling", fn: checkRegistryAndBundlingHealth },
     { name: "fly_registry_api", fn: checkFlyRegistryHealth },
+    { name: "compile_api", fn: checkCompileApiHealth },
   ]
 
   const results: StatusCheck["checks"] = await Promise.all(
