@@ -10,7 +10,7 @@
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
 | `fly_registry_api` | ✅ Operational |
-| `compile_api` | ❌ Compile API Health Ping Failed |
+| `compile_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
