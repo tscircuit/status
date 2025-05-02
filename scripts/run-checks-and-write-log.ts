@@ -6,6 +6,9 @@ import { checkRegistryAndBundlingHealth } from "../status-checks/check-registry-
 import fs from "node:fs"
 import { checkFlyRegistryHealth } from "status-checks/check-fly-registry-health"
 import { checkCompileApiHealth } from "status-checks/check-compile-api-health"
+import { checkSvgServiceHealth } from "../status-checks/check-svg-service-health"
+import { checkPngServiceHealth } from "../status-checks/check-png-service-health"
+import { checkBrowserPreviewHealth } from "../status-checks/check-browser-preview-health"
 
 interface StatusCheck {
   timestamp: string
@@ -26,6 +29,9 @@ async function runChecksAndWriteLog() {
     { name: "registry_bundling", fn: checkRegistryAndBundlingHealth },
     { name: "fly_registry_api", fn: checkFlyRegistryHealth },
     { name: "compile_api", fn: checkCompileApiHealth },
+    { name: "svg_service", fn: checkSvgServiceHealth },
+    { name: "png_service", fn: checkPngServiceHealth },
+    { name: "browser_preview", fn: checkBrowserPreviewHealth },
   ]
 
   const results: StatusCheck["checks"] = await Promise.all(
