@@ -68,12 +68,8 @@ export function UptimeGraph({ checks }: { checks: StatusCheck[] }) {
                     }`}
                     title={`${hour}\n${hourChecks
                       .map(
-                        (check) => {
-                          const serviceCheck = check.checks.find((c) => c.service === service);
-                          const status = serviceCheck?.status === "error" ? "Issues Detected" : "Operational";
-                          const errorMessage = serviceCheck?.error || "";
-                          return `${new Date(check.timestamp).toLocaleString()}: ${status}${errorMessage ? ` - ${errorMessage}` : ""}`;
-                        }
+                        (check) =>
+                          `${new Date(check.timestamp).toLocaleString()}: ${check.checks.find((c) => c.service === service)?.status === "error" ? "Issues Detected" : "Operational"}`,
                       )
                       .join("\n")}`}
                   />
