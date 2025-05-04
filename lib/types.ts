@@ -13,4 +13,5 @@ export interface Outage {
   end: Date
   duration: number
   isOngoing: boolean
+  error?: string
 }

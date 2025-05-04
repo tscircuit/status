@@ -19,7 +19,7 @@ export const getOutages = (checks: StatusCheck[]) => {
 
   // Find outage periods for each service
   for (const [service, checks] of serviceChecks) {
-    let currentOutage: { start: Date; end: Date } | null = null
+    let currentOutage: { start: Date; end: Date; error?: string } | null = null
 
     checks.sort(
       (a, b) =>
@@ -29,12 +29,14 @@ export const getOutages = (checks: StatusCheck[]) => {
     for (const check of checks) {
       const timestamp = new Date(check.timestamp)
       const hasError = check.checks[0].status === "error"
+      const error = check.checks[0].error
 
       if (hasError && !currentOutage) {
         // Start new outage
         currentOutage = {
           start: timestamp,
           end: timestamp,
+          error,
         }
       } else if (!hasError && currentOutage) {
         // End current outage
@@ -45,11 +47,15 @@ export const getOutages = (checks: StatusCheck[]) => {
           end: currentOutage.end,
           duration: currentOutage.end.getTime() - currentOutage.start.getTime(),
           isOngoing: false,
+          error: currentOutage.error,
         })
         currentOutage = null
       } else if (currentOutage) {
         // Update end time of ongoing outage
         currentOutage.end = timestamp
+        if (error) {
+          currentOutage.error = error
+        }
       }
     }
 
@@ -61,6 +67,7 @@ export const getOutages = (checks: StatusCheck[]) => {
         end: currentOutage.end,
         duration: currentOutage.end.getTime() - currentOutage.start.getTime(),
         isOngoing: true,
+        error: currentOutage.error,
       })
     }
   }

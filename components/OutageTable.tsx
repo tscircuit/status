@@ -1,13 +1,16 @@
 import type { Outage } from "lib/types"
 
-function formatDuration(milliseconds: number): string {
-  const totalMinutes = Math.round(milliseconds / 1000 / 60)
-  if (totalMinutes >= 60) {
-    const hours = Math.floor(totalMinutes / 60)
-    const minutes = totalMinutes % 60
-    return `${hours}hr ${minutes.toString().padStart(2, "0")}min`
+function formatDuration(ms: number): string {
+  const seconds = Math.floor(ms / 1000)
+  const minutes = Math.floor(seconds / 60)
+  const hours = Math.floor(minutes / 60)
+
+  if (hours > 0) {
+    return `${hours}h ${minutes % 60}m`
+  } else if (minutes > 0) {
+    return `${minutes}m ${seconds % 60}s`
   } else {
-    return `${totalMinutes}min`
+    return `${seconds}s`
   }
 }
 
@@ -23,11 +26,12 @@ export const OutageTable = ({
         <table className="min-w-full">
           <thead>
             <tr className="border-b">
-              <th className="text-left py-2">Service</th>
-              <th className="text-left py-2">Start Time</th>
-              <th className="text-left py-2">End Time</th>
-              <th className="text-left py-2">Duration</th>
-              <th className="text-left py-2">Status</th>
+              <th className="text-left py-2 px-4 align-middle">Service</th>
+              <th className="text-left py-2 px-4 align-middle">Start Time</th>
+              <th className="text-left py-2 px-4 align-middle">End Time</th>
+              <th className="text-left py-2 px-4 align-middle">Duration</th>
+              <th className="text-left py-2 px-4 align-middle">Status</th>
+              <th className="text-left py-2 px-4 align-middle">Error Message</th>
             </tr>
           </thead>
           <tbody>
@@ -37,16 +41,19 @@ export const OutageTable = ({
               .map((outage, i) => (
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 <tr key={i} className="border-b">
-                  <td className="py-2">{outage.service}</td>
-                  <td className="py-2">{outage.start.toLocaleString()}</td>
-                  <td className="py-2">{outage.end.toLocaleString()}</td>
-                  <td className="py-2">{formatDuration(outage.duration)}</td>
-                  <td className="py-2">
+                  <td className="py-2 px-4 align-middle">{outage.service}</td>
+                  <td className="py-2 px-4 align-middle">{outage.start.toLocaleString()}</td>
+                  <td className="py-2 px-4 align-middle">{outage.end.toLocaleString()}</td>
+                  <td className="py-2 px-4 align-middle">{formatDuration(outage.duration)}</td>
+                  <td className="py-2 px-4 align-middle">
                     <span
                       className={`px-2 py-1 rounded text-sm ${outage.isOngoing ? "bg-red-100 text-red-800" : "bg-gray-100"}`}
                     >
                       {outage.isOngoing ? "Ongoing" : "Resolved"}
                     </span>
+                  </td>
+                  <td className="py-2 px-4 align-middle text-sm text-red-600 max-w-xs break-words">
+                    {outage.error || "Unknown error"}
                   </td>
                 </tr>
               ))}

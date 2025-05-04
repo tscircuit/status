@@ -38,6 +38,11 @@ export function StatusGrid({ checks }: { checks: StatusCheck[] }) {
               />
               <span>{latest?.status === "ok" ? "Operational" : "Error"}</span>
             </div>
+            {latest?.status === "error" && latest.error && (
+              <div className="text-sm text-red-600 mb-4">
+                {latest.error}
+              </div>
+            )}
             <div className="text-2xl font-bold mb-1">{uptime.toFixed(2)}%</div>
             <div className="text-sm text-gray-600">Uptime (14 days)</div>
           </div>
