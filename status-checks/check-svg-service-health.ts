@@ -9,7 +9,7 @@ export const checkSvgServiceHealth: HealthCheckFunction = async () => {
 
     await Promise.all([
       ky.get(pcbUrl, { timeout: 5000 }),
-      ky.get(schematicUrl, { timeout: 5000 })
+      ky.get(schematicUrl, { timeout: 5000 }),
     ])
 
     return { ok: true }
