@@ -55,8 +55,7 @@ export function StatusGrid({ checks }: { checks: StatusCheck[] }) {
         {services.map((service) => {
           const uptime = calculateUptime(checks, service)
           const latest = latestCheck.checks.find((c) => c.service === service)
-          const latestError =
-            latest?.status === "error" ? latest?.error : null
+          const latestError = latest?.status === "error" ? latest?.error : null
 
           return (
             <div
