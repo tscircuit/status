@@ -2,6 +2,11 @@
   "name": "status",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "typecheck": "tsc --noEmit"
+  },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@types/bun": "latest",

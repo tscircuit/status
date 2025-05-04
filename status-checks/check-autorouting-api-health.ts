@@ -29,7 +29,13 @@ export const checkAutoroutingApiHealth: HealthCheckFunction = async () => {
             autorouting_job_id: jobId,
           },
         })
-        .json<{ autorouting_job: { is_finished: boolean; has_error: boolean; error?: any } }>()
+        .json<{
+          autorouting_job: {
+            is_finished: boolean
+            has_error: boolean
+            error?: any
+          }
+        }>()
 
       if (job.has_error) {
         return {
@@ -42,11 +48,14 @@ export const checkAutoroutingApiHealth: HealthCheckFunction = async () => {
 
       if (job.is_finished) {
         const outputRes = await ky
-          .post("https://registry-api.tscircuit.com/autorouting/jobs/get_output", {
-            json: {
-              autorouting_job_id: jobId,
+          .post(
+            "https://registry-api.tscircuit.com/autorouting/jobs/get_output",
+            {
+              json: {
+                autorouting_job_id: jobId,
+              },
             },
-          })
+          )
           .json<{ autorouting_job_output: { output_pcb_traces: any[] } }>()
 
         if (outputRes.autorouting_job_output.output_pcb_traces.length === 0) {
