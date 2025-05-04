@@ -38,13 +38,14 @@ export function StatusGrid({ checks }: { checks: StatusCheck[] }) {
           >
             &times;
           </button>
-          <h4 id="modal-title" className="text-lg font-semibold mb-4 text-gray-800">
+          <h4 
+            id="modal-title" 
+            className="text-lg font-semibold mb-4 text-gray-800"
+          >
             Error Details
           </h4>
           <p id="error-message" className="text-sm text-gray-700"></p>
-          <button
-            className="close-modal mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-200"
-          >
+          <button className="close-modal mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-200">
             Close
           </button>
         </div>
@@ -76,7 +77,9 @@ export function StatusGrid({ checks }: { checks: StatusCheck[] }) {
                 />
                 <span>{latest?.status === "ok" ? "Operational" : "Error"}</span>
               </div>
-              <div className="text-2xl font-bold mb-1">{uptime.toFixed(2)}%</div>
+              <div className="text-2xl font-bold mb-1">
+                {uptime.toFixed(2)}%
+              </div>
               <div className="text-sm text-gray-600">Uptime (14 days)</div>
             </div>
           )
