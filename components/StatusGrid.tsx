@@ -21,6 +21,7 @@ function calculateUptime(checks: StatusCheck[], service: string): number {
 export function StatusGrid({ checks }: { checks: StatusCheck[] }) {
   const latestCheck = checks[checks.length - 1]
   const services = latestCheck.checks.map((check) => check.service)
+  console.log("rendering status grid...")
 
   return (
     <div>
