@@ -71,11 +71,9 @@ export function StatusGrid({ checks }: { checks: StatusCheck[] }) {
               </svg>
             </button>
           </div>
-
           <div className="p-5">
             <p id="error-message" className="text-sm text-red-600"></p>
           </div>
-
           <div className="flex justify-end p-4 border-t bg-gray-50 rounded-b-lg">
             <button className="close-modal px-4 py-2 text-sm font-medium text-white bg-red-500 hover:bg-red-600 rounded-lg transition">
               Close
