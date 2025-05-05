@@ -30,7 +30,10 @@ export function StatusGrid({ checks }: { checks: StatusCheck[] }) {
         const latest = latestCheck.checks.find((c) => c.service === service)
 
         return (
-          <div key={service} className="bg-white rounded-lg shadow-lg p-4 sm:p-6">
+          <div
+            key={service}
+            className="bg-white rounded-lg shadow-lg p-4 sm:p-6"
+          >
             <h3 className="text-lg font-semibold mb-2">{service}</h3>
             <div className="flex items-center mb-4">
               <div
