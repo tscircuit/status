@@ -25,6 +25,11 @@ jobs:
       - name: Run checks and update logs
         run: bun run scripts/run-checks-and-write-log.ts
         
+      - name: Check for outages and send Discord notifications
+        run: bun run scripts/discord-notification.ts
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        
       - name: Generate README
         run: bun run scripts/generate-readme.ts
         
