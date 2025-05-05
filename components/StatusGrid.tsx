@@ -44,7 +44,7 @@ export function StatusGrid({ checks }: { checks: StatusCheck[] }) {
                   d="M12 9v2m0 4h.01M12 5.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13z"
                 />
               </svg>
-              <h2 id="modal-title"  className="text-lg font-semibold text-red-600">Error Details</h2>
+              <h2 id="modal-title" className="text-lg font-semibold text-red-600">Error Details</h2>
             </div>
             <button
               className="close-modal text-gray-500 hover:text-gray-700 transition"
@@ -91,8 +91,8 @@ export function StatusGrid({ checks }: { checks: StatusCheck[] }) {
             >
               <div className="flex items-center mb-2 justify-between">
 
-              <h3 className="text-lg font-semibold">{service}</h3>
-              {latestError && (
+                <h3 className="text-lg font-semibold">{service}</h3>
+                {latestError && (
                   <button
                     className="ml-auto text-red-500 hover:text-red-600"
                     data-service={service}
@@ -101,15 +101,14 @@ export function StatusGrid({ checks }: { checks: StatusCheck[] }) {
                     }
                     aria-label="View Error Details"
                   >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-alert-icon lucide-circle-alert"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-alert-icon lucide-circle-alert"><circle cx="12" cy="12" r="10" /><line x1="12" x2="12" y1="8" y2="12" /><line x1="12" x2="12.01" y1="16" y2="16" /></svg>
                   </button>
-              )}
+                )}
               </div>
               <div className="flex items-center mb-4">
                 <div
-                  className={`w-3 h-3 rounded-full mr-2 ${
-                    latest?.status === "ok" ? "bg-green-500" : "bg-red-500"
-                  }`}
+                  className={`w-3 h-3 rounded-full mr-2 ${latest?.status === "ok" ? "bg-green-500" : "bg-red-500"
+                    }`}
                 />
                 <span>{latest?.status === "ok" ? "Operational" : "Error"}</span>
               </div>
