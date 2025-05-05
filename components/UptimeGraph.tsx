@@ -26,9 +26,9 @@ export function UptimeGraph({ checks }: { checks: StatusCheck[] }) {
   console.log("rendering uptime graph...", hours.length)
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
+    <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 overflow-x-auto">
       <h3 className="text-lg font-semibold mb-4">Uptime History</h3>
-      <div className="space-y-4">
+      <div className="space-y-4 min-w-[640px]">
         {services.map((service) => (
           <div key={service} className="relative">
             <div className="text-sm font-medium mb-1">{service}</div>
