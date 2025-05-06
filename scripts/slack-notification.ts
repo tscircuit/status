@@ -51,7 +51,7 @@ function saveReportedOutages(reportedOutages: Record<string, number>): void {
   try {
     fs.writeFileSync(
       REPORTED_OUTAGES_FILE,
-      JSON.stringify(reportedOutages, null, 2)
+      JSON.stringify(reportedOutages, null, 2),
     )
   } catch (error) {
     console.error("Error saving reported outages:", error)
@@ -101,7 +101,7 @@ function findCurrentOutages(statusChecks: StatusCheck[]): Map<
 
   // Sort checks chronologically
   statusChecks.sort(
-    (a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime()
+    (a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime(),
   )
 
   for (const check of statusChecks) {
@@ -161,7 +161,7 @@ function findCurrentOutages(statusChecks: StatusCheck[]): Map<
     console.log(
       `Outage for ${serviceName}: StartTime = ${outage.startTime.toISOString()}, Now = ${now.toISOString()}, Duration = ${
         outage.duration
-      }ms`
+      }ms`,
     ) // Debug: Outage details
   }
 
@@ -191,7 +191,7 @@ async function sendSlackNotification() {
     for (const serviceName in updatedReportedOutages) {
       if (!currentOutages.has(serviceName)) {
         console.log(
-          `Service ${serviceName} is now resolved, removing from tracking`
+          `Service ${serviceName} is now resolved, removing from tracking`,
         )
         delete updatedReportedOutages[serviceName]
       }
@@ -199,12 +199,12 @@ async function sendSlackNotification() {
 
     // Filter for outages that have lasted more than the threshold
     const longOutages = Array.from(currentOutages.values()).filter(
-      (outage) => outage.duration >= NOTIFICATION_THRESHOLD
+      (outage) => outage.duration >= NOTIFICATION_THRESHOLD,
     )
     console.log(
       `Found ${longOutages.length} outages over ${
         NOTIFICATION_THRESHOLD / (60 * 1000)
-      } minutes`
+      } minutes`,
     )
 
     if (longOutages.length === 0) {
@@ -215,7 +215,7 @@ async function sendSlackNotification() {
 
     // Find new outages that haven't been reported yet
     const newOutages = longOutages.filter(
-      (outage) => !updatedReportedOutages[outage.service]
+      (outage) => !updatedReportedOutages[outage.service],
     )
 
     console.log(`Found ${newOutages.length} new outages to report`)
@@ -246,7 +246,7 @@ async function sendSlackNotification() {
           text: {
             type: "mrkdwn",
             text: `*Service:* ${outage.service}\n*Duration:* ${formatDuration(
-              outage.duration
+              outage.duration,
             )}\n*Start Time:* ${outage.startTime.toLocaleString()}\n*Error:* ${
               outage.error
             }`,
@@ -254,7 +254,7 @@ async function sendSlackNotification() {
         },
         {
           type: "divider",
-        }
+        },
       )
     }
 
@@ -283,7 +283,7 @@ async function sendSlackNotification() {
       } else {
         console.error(
           "Failed to send notification - HTTP error:",
-          response.status
+          response.status,
         )
       }
     } else {

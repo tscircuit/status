@@ -6,7 +6,7 @@ import type { StatusCheck } from "../lib/types"
 if (!process.env.SLACK_WEBHOOK_URL) {
   console.error("Error: SLACK_WEBHOOK_URL environment variable is not set")
   console.error(
-    "Please set it using: export SLACK_WEBHOOK_URL='your-webhook-url'"
+    "Please set it using: export SLACK_WEBHOOK_URL='your-webhook-url'",
   )
   process.exit(1)
 }
@@ -156,7 +156,7 @@ async function runTest() {
     // Write the test checks to statuses.jsonl
     await writeFile(
       "./statuses.jsonl",
-      testChecks.map((check) => JSON.stringify(check)).join("\n") + "\n"
+      testChecks.map((check) => JSON.stringify(check)).join("\n") + "\n",
     )
     console.log("Test outage data written successfully")
 
