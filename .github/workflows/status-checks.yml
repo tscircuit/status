@@ -2,45 +2,50 @@ name: Status Checks
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # Run every 10 minutes
-  workflow_dispatch:  # Allow manual triggers
+    - cron: "*/10 * * * *" # Run every 10 minutes
+  workflow_dispatch: # Allow manual triggers
 
 jobs:
   check-and-update:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Full history for accurate logs
-      
+          fetch-depth: 0 # Full history for accurate logs
+
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
-          
+
       - name: Install dependencies
         run: bun install --frozen-lockfile
-        
+
       - name: Run checks and update logs
         run: bun run scripts/run-checks-and-write-log.ts
-        
+
       - name: Check for outages and send Discord notifications
         run: bun run scripts/discord-notification.ts
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        
+
+      - name: Check for outages and send Slack notifications
+        run: bun run scripts/slack-notification.ts
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
       - name: Generate README
         run: bun run scripts/generate-readme.ts
-        
+
       - name: Build status site
         run: bun run scripts/generate-site.tsx
-        
+
       - name: Configure Git
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
-          
+
       - name: Commit and push if changes
         run: |
           git add -A
