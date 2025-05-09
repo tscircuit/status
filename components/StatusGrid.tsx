@@ -147,9 +147,8 @@ export function StatusGrid({ checks }: { checks: StatusCheck[] }) {
               document.querySelectorAll("button[data-service]").forEach((icon) => {
                 icon.addEventListener("click", () => {
                   const error = icon.getAttribute("data-error")
-                  const hasError = icon.querySelector(".bg-red-500") !== null
 
-                  if (hasError) {
+                  if (error) {
                     errorMessage.textContent = error
                     modalTitle.textContent = "Error Details"
                     errorMessage.className = "text-sm text-red-700"
