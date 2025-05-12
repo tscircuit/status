@@ -174,12 +174,111 @@ async function sendDiscordNotification() {
 
     // Remove resolved outages from tracking
     const updatedReportedOutages = { ...reportedOutages }
+    const resolvedOutages: Array<{
+      service: string
+      startTime: Date
+      endTime: Date
+      duration: number
+    }> = []
+
+    // Helper to find last outage period for a resolved service
+    function findLastOutagePeriod(
+      serviceName: string,
+    ): { startTime: Date; endTime: Date; duration: number } | null {
+      // Go through statusChecks in order, track error periods
+      let inOutage = false
+      let outageStart: Date | null = null
+      let outageEnd: Date | null = null
+      for (const check of statusChecks) {
+        const service = check.checks.find((s) => s.service === serviceName)
+        if (!service) continue
+        if (service.status === "error") {
+          if (!inOutage) {
+            inOutage = true
+            outageStart = new Date(check.timestamp)
+          }
+          outageEnd = new Date(check.timestamp)
+        } else if (service.status === "ok" && inOutage) {
+          // Outage ends here
+          outageEnd = new Date(check.timestamp)
+          break
+        }
+      }
+      if (outageStart && outageEnd) {
+        return {
+          startTime: outageStart,
+          endTime: outageEnd,
+          duration: outageEnd.getTime() - outageStart.getTime(),
+        }
+      }
+      return null
+    }
+
     for (const serviceName in updatedReportedOutages) {
       if (!currentOutages.has(serviceName)) {
         console.log(
           `Service ${serviceName} is now resolved, removing from tracking`,
         )
+        // Find last outage period from status history
+        const period = findLastOutagePeriod(serviceName)
+        if (period) {
+          resolvedOutages.push({
+            service: serviceName,
+            startTime: period.startTime,
+            endTime: period.endTime,
+            duration: period.duration,
+          })
+        }
         delete updatedReportedOutages[serviceName]
+      }
+    }
+
+    // Send resolution notifications if there are any resolved outages
+    if (resolvedOutages.length > 0) {
+      console.log(`Found ${resolvedOutages.length} resolved outages to report`)
+      const resolutionMessage = {
+        content: `**✅ Service Outage Resolved**`,
+        embeds: resolvedOutages.map((outage) => ({
+          title: `✅ Service Restored: ${outage.service}`,
+          description: `This service has been restored after being down for ${formatDuration(outage.duration)}`,
+          color: 0x00ff00, // Green color
+          fields: [
+            {
+              name: "Start Time",
+              value: outage.startTime.toLocaleString(),
+              inline: true,
+            },
+            {
+              name: "End Time",
+              value: outage.endTime.toLocaleString(),
+              inline: true,
+            },
+            {
+              name: "Total Duration",
+              value: formatDuration(outage.duration),
+              inline: true,
+            },
+          ],
+          timestamp: new Date().toISOString(),
+        })),
+      }
+
+      console.log("Sending resolution message to Discord...")
+      if (DISCORD_WEBHOOK_URL) {
+        const response = await ky.post(DISCORD_WEBHOOK_URL, {
+          json: resolutionMessage,
+          timeout: 10000, // 10 second timeout
+        })
+
+        console.log("Discord API Response Status:", response.status)
+        if (response.status >= 200 && response.status < 300) {
+          console.log("Resolution notification sent successfully")
+        } else {
+          console.error(
+            "Failed to send resolution notification - HTTP error:",
+            response.status,
+          )
+        }
       }
     }
 
