@@ -23,11 +23,17 @@ export const OutageTable = ({
         <table className="min-w-full">
           <thead>
             <tr className="border-b">
-              <th className="text-left py-2">Service</th>
-              <th className="text-left py-2">Start Time</th>
-              <th className="text-left py-2">End Time</th>
-              <th className="text-left py-2">Duration</th>
-              <th className="text-left py-2">Status</th>
+              <th className="text-left py-2 px-4 whitespace-nowrap">Service</th>
+              <th className="text-left py-2 px-4 whitespace-nowrap">
+                Start Time
+              </th>
+              <th className="text-left py-2 px-4 whitespace-nowrap">
+                End Time
+              </th>
+              <th className="text-left py-2 px-4 whitespace-nowrap">
+                Duration
+              </th>
+              <th className="text-left py-2 px-4 whitespace-nowrap">Status</th>
             </tr>
           </thead>
           <tbody>
@@ -37,11 +43,19 @@ export const OutageTable = ({
               .map((outage, i) => (
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 <tr key={i} className="border-b">
-                  <td className="py-2">{outage.service}</td>
-                  <td className="py-2">{outage.start.toLocaleString()}</td>
-                  <td className="py-2">{outage.end.toLocaleString()}</td>
-                  <td className="py-2">{formatDuration(outage.duration)}</td>
-                  <td className="py-2">
+                  <td className="py-2 px-4 whitespace-nowrap">
+                    {outage.service}
+                  </td>
+                  <td className="py-2 px-4 whitespace-nowrap">
+                    {outage.start.toLocaleString()}
+                  </td>
+                  <td className="py-2 px-4 whitespace-nowrap">
+                    {outage.end.toLocaleString()}
+                  </td>
+                  <td className="py-2 px-4 whitespace-nowrap">
+                    {formatDuration(outage.duration)}
+                  </td>
+                  <td className="py-2 px-4 whitespace-nowrap">
                     <span
                       className={`px-2 py-1 rounded text-sm ${outage.isOngoing ? "bg-red-100 text-red-800" : "bg-gray-100"}`}
                     >
