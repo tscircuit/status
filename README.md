@@ -4,14 +4,14 @@
 
 | Service               | Current Status |
 | --------------------- | -------------- |
-| `registry-api` | ✅ Operational |
+| `registry-api` | ❌ Registry API Health Ping Failed |
 | `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
-| `fly_registry_api` | ✅ Operational |
-| `compile_api` | ✅ Operational |
-| `svg_service` | ✅ Operational |
+| `fly_registry_api` | ❌ Fly Registry API Health Ping Failed |
+| `compile_api` | ❌ Compile API Health Ping Failed |
+| `svg_service` | ❌ SVG Service Health Check Failed |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
 
