@@ -13,7 +13,7 @@
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
-| `browser_preview` | ❌ Browser Preview Health Check Failed |
+| `browser_preview` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
