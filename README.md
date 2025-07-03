@@ -5,8 +5,8 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ✅ Operational |
-| `freerouting-cluster` | ✅ Operational |
+| `autorouting-api` | ❌ Autorouting job timed out |
+| `freerouting-cluster` | ❌ Freerouting Cluster API Health Ping Failed |
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
 | `fly_registry_api` | ✅ Operational |
