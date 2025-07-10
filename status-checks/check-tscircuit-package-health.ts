@@ -59,7 +59,7 @@ const buildCircuit = async (tempDir: string) => {
 
 const cleanupTempDir = async (tempDir: string | null) => {
   if (!tempDir) return
-  
+
   console.log("Cleaning up temporary directory...")
   try {
     await rm(tempDir, { recursive: true, force: true })
@@ -71,21 +71,21 @@ const cleanupTempDir = async (tempDir: string | null) => {
 export const checkTscircuitPackageHealth: HealthCheckFunction = async () => {
   console.log("Checking tscircuit package health...")
   let tempDir: string | null = null
-  
+
   try {
     console.log("Creating temporary directory...")
     tempDir = await mkdtemp(join(tmpdir(), "tscircuit-health-check-"))
-    
+
     await installTscircuit()
     await initializeProject(tempDir)
     await createCircuitFile(tempDir)
     await buildCircuit(tempDir)
-    
+
     console.log("Circuit built successfully")
     return { ok: true }
-    
   } catch (err) {
-    const errorMessage = err instanceof Error ? err.message : "Unknown error occurred"
+    const errorMessage =
+      err instanceof Error ? err.message : "Unknown error occurred"
     console.error(`tscircuit package health check failed: ${errorMessage}`)
     return {
       ok: false,
