@@ -14,6 +14,11 @@
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
+| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: echo -e 'yes\n\n' | tsci init
+error: Cannot find package 'calculate-elbow' from '/usr/local/lib/node_modules/tscircuit/node_modules/@tscircuit/core/dist/index.js'
+
+Bun v1.2.18 (Linux x64 baseline)
+ |
 
 <!-- END_STATUS_TABLE -->
 
