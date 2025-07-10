@@ -9,6 +9,7 @@ import { checkCompileApiHealth } from "status-checks/check-compile-api-health"
 import { checkSvgServiceHealth } from "../status-checks/check-svg-service-health"
 import { checkPngServiceHealth } from "../status-checks/check-png-service-health"
 import { checkBrowserPreviewHealth } from "../status-checks/check-browser-preview-health"
+import { checkTscircuitPackageHealth } from "../status-checks/check-tscircuit-package-health"
 
 interface StatusCheck {
   timestamp: string
@@ -32,6 +33,7 @@ async function runChecksAndWriteLog() {
     { name: "svg_service", fn: checkSvgServiceHealth },
     { name: "png_service", fn: checkPngServiceHealth },
     { name: "browser_preview", fn: checkBrowserPreviewHealth },
+    { name: "tscircuit_package", fn: checkTscircuitPackageHealth },
   ]
 
   const results: StatusCheck["checks"] = await Promise.all(
