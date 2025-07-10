@@ -1,7 +1,7 @@
 import type { HealthCheckFunction } from "./types"
 import { exec } from "node:child_process"
 import { promisify } from "node:util"
-import { mkdtemp, writeFile, rm } from "node:fs/promises"
+import { mkdtemp, rm } from "node:fs/promises"
 import { join } from "node:path"
 import { tmpdir } from "node:os"
 
@@ -21,32 +21,6 @@ const initializeProject = async (tempDir: string) => {
     timeout: 30000, // 30 second timeout
     shell: "/bin/bash", // Need shell to handle piping
   })
-}
-
-const createCircuitFile = async (tempDir: string) => {
-  console.log("Creating circuit file...")
-  const basicCircuit = `
-export default () => (
-  <board width="10mm" height="10mm">
-    <resistor
-      resistance="1k"
-      footprint="0402"
-      name="R1"
-      schX={3}
-      pcbX={3}
-    />
-    <capacitor
-      capacitance="1000pF"
-      footprint="0402"
-      name="C1"
-      schX={-3}
-      pcbX={-3}
-    />
-    <trace from=".R1 > .pin1" to=".C1 > .pin1" />
-  </board>
-)
-`
-  await writeFile(join(tempDir, "index.tsx"), basicCircuit)
 }
 
 const buildCircuit = async (tempDir: string) => {
@@ -78,7 +52,6 @@ export const checkTscircuitPackageHealth: HealthCheckFunction = async () => {
 
     await installTscircuit()
     await initializeProject(tempDir)
-    await createCircuitFile(tempDir)
     await buildCircuit(tempDir)
 
     console.log("Circuit built successfully")
