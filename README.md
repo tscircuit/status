@@ -14,9 +14,7 @@
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: tsci build ./index.tsx
-Build failed: Error: Invalid JSX Element: Expected a React component but received "{"key":null,"props":{},"_owner":null,"_store":{}}"
- |
+| `tscircuit_package` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
