@@ -4,7 +4,7 @@
 
 | Service               | Current Status |
 | --------------------- | -------------- |
-| `registry-api` | ✅ Operational |
+| `registry-api` | ❌ Registry API Health Ping Failed |
 | `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
@@ -14,7 +14,13 @@
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ✅ Operational |
+| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: echo -e 'yes\n\n' | tsci init
+Resolving dependencies
+Resolved, downloaded and extracted [842]
+warn: incorrect peer dependency "react@19.1.1"
+
+warn: incorrect peer dependency "react@19.1.1"
+ |
 
 <!-- END_STATUS_TABLE -->
 
