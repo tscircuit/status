@@ -5,13 +5,13 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ❌ TimeoutError: Request timed out: POST https://registry-api.tscircuit.com/autorouting/jobs/get |
+| `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
-| `fly_registry_api` | ❌ Fly Registry API Health Ping Failed |
+| `fly_registry_api` | ✅ Operational |
 | `compile_api` | ✅ Operational |
-| `svg_service` | ❌ SVG Service Health Check Failed |
+| `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ✅ Operational |
