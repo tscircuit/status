@@ -4,8 +4,12 @@
 
 | Service               | Current Status |
 | --------------------- | -------------- |
-| `registry-api` | ✅ Operational |
-| `autorouting-api` | ❌ HTTPError: Request failed with status code 405 Method Not Allowed: POST https://registry-api.tscircuit.com/autorouting/jobs/get |
+| `registry-api` | ❌ Registry API Health Ping Failed |
+| `autorouting-api` | ❌ TypeError: undefined is not an object (evaluating '(await ky.post("https://registry-api.tscircuit.com/autorouting/jobs/get_output", {
+          json: {
+            autorouting_job_id: jobId
+          }
+        }).json()).autorouting_job_output.output_pcb_traces') |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
