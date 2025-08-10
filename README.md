@@ -4,12 +4,8 @@
 
 | Service               | Current Status |
 | --------------------- | -------------- |
-| `registry-api` | ❌ Registry API Health Ping Failed |
-| `autorouting-api` | ❌ TypeError: undefined is not an object (evaluating '(await ky.post("https://registry-api.tscircuit.com/autorouting/jobs/get_output", {
-          json: {
-            autorouting_job_id: jobId
-          }
-        }).json()).autorouting_job_output.output_pcb_traces') |
+| `registry-api` | ✅ Operational |
+| `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
