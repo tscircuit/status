@@ -2,7 +2,7 @@ name: Status Checks
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # Run every 10 minutes
+    - cron: '*/30 * * * *'  # Run every 30 minutes
   workflow_dispatch:  # Allow manual triggers
 
 jobs:
