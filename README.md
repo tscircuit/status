@@ -5,15 +5,15 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ❌ Registry API Health Ping Failed |
-| `autorouting-api` | ✅ Operational |
+| `autorouting-api` | ❌ Error: unknown certificate verification error |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
-| `registry_bundling` | ✅ Operational |
+| `registry_bundling` | ❌ registry_bundling Health Check Failed |
 | `fly_registry_api` | ✅ Operational |
-| `compile_api` | ✅ Operational |
-| `svg_service` | ✅ Operational |
+| `compile_api` | ❌ Compile API Health Ping Failed |
+| `svg_service` | ❌ SVG Service Health Check Failed |
 | `png_service` | ✅ Operational |
-| `browser_preview` | ✅ Operational |
+| `browser_preview` | ❌ Browser Preview Health Check Failed |
 | `tscircuit_package` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
