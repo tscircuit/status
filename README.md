@@ -5,13 +5,13 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ❌ Autorouting job timed out |
+| `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
-| `jlcsearch-api` | ✅ Operational |
+| `jlcsearch-api` | ❌ JLC Search API Health Check Failed |
 | `registry_bundling` | ✅ Operational |
 | `fly_registry_api` | ✅ Operational |
 | `compile_api` | ✅ Operational |
-| `svg_service` | ✅ Operational |
+| `svg_service` | ❌ SVG Service Health Check Failed |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ✅ Operational |
