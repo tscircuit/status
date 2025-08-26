@@ -14,15 +14,7 @@
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: npm install -g tscircuit --force
-npm warn using --force Recommended protections disabled.
-npm error code E403
-npm error 403 403 Forbidden - GET https://registry.npmjs.org/tscircuit
-npm error 403 In most cases, you or one of your dependencies are requesting
-npm error 403 a package version that is forbidden by your security policy, or
-npm error 403 on a server you do not have access to.
-npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2025-08-26T06_55_38_183Z-debug-0.log
- |
+| `tscircuit_package` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
