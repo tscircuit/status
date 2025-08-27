@@ -4,8 +4,8 @@
 
 | Service               | Current Status |
 | --------------------- | -------------- |
-| `registry-api` | ✅ Operational |
-| `autorouting-api` | ❌ HTTPError: Request failed with status code 500 Internal Server Error: POST https://registry-api.tscircuit.com/autorouting/jobs/get |
+| `registry-api` | ❌ Registry API Health Ping Failed |
+| `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
