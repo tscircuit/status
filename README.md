@@ -14,7 +14,28 @@
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ✅ Operational |
+| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: echo -e 'yes\n\n' | tsci init
+62369 | 
+62370 | // node_modules/ky/distribution/errors/TimeoutError.js
+62371 | class TimeoutError extends Error {
+62372 |   request;
+62373 |   constructor(request) {
+62374 |     super(`Request timed out: ${request.method} ${request.url}`);
+            ^
+TimeoutError: Request timed out: GET https://registry.npmjs.org/@tscircuit/cli/latest
+ request: Request (0 KB) {
+  method: "GET",
+  url: "https://registry.npmjs.org/@tscircuit/cli/latest",
+  headers: Headers {
+    "accept": "application/json",
+  }
+},
+
+      at new TimeoutError (/usr/local/lib/node_modules/tscircuit/node_modules/@tscircuit/cli/dist/main.js:62374:5)
+      at <anonymous> (/usr/local/lib/node_modules/tscircuit/node_modules/@tscircuit/cli/dist/main.js:62675:14)
+
+Bun v1.2.21 (Linux x64 baseline)
+ |
 
 <!-- END_STATUS_TABLE -->
 
