@@ -14,7 +14,9 @@
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ✅ Operational |
+| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: tsci build ./index.tsx
+Build failed: ResolveMessage: Cannot find package 'sucrase' from '/usr/local/lib/node_modules/tscircuit/node_modules/@tscircuit/eval/dist/lib/index.js'
+ |
 
 <!-- END_STATUS_TABLE -->
 
