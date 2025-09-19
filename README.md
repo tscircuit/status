@@ -4,7 +4,7 @@
 
 | Service               | Current Status |
 | --------------------- | -------------- |
-| `registry-api` | ✅ Operational |
+| `registry-api` | ❌ Registry API Health Ping Failed |
 | `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
@@ -14,9 +14,7 @@
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: tsci build ./index.tsx
-Build failed: ResolveMessage: Cannot find package 'sucrase' from '/usr/local/lib/node_modules/tscircuit/node_modules/@tscircuit/eval/dist/lib/index.js'
- |
+| `tscircuit_package` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
