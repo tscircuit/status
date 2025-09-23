@@ -4,8 +4,8 @@
 
 | Service               | Current Status |
 | --------------------- | -------------- |
-| `registry-api` | ✅ Operational |
-| `autorouting-api` | ✅ Operational |
+| `registry-api` | ❌ Registry API Health Ping Failed |
+| `autorouting-api` | ❌ Autorouting job timed out |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
