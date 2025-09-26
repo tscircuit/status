@@ -38,10 +38,25 @@ async function runChecksAndWriteLog() {
 
   const results: StatusCheck["checks"] = await Promise.all(
     checks.map(async (check) => {
-      const result = await check.fn()
+      let attempt = 0
+      let result = await check.fn()
+      attempt += 1
+
+      while (!result.ok && attempt < 2) {
+        console.warn(
+          `${check.name} health check failed (attempt ${attempt}): ${result.error.message}. Retrying...`,
+        )
+        result = await check.fn()
+        attempt += 1
+      }
+
       if (!result.ok) {
         console.error(
-          `${check.name} health check failed: ${result.error.message}`,
+          `${check.name} health check failed after ${attempt} attempts: ${result.error.message}`,
+        )
+      } else if (attempt > 1) {
+        console.info(
+          `${check.name} health check succeeded after ${attempt} attempts`,
         )
       }
       return {
