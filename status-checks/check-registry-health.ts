@@ -4,7 +4,7 @@ import ky from "ky"
 export const checkRegistryHealth: HealthCheckFunction = async () => {
   try {
     const healthRes = await ky
-      .get("https://registry-api.tscircuit.com/health", {
+      .get("https://api.tscircuit.com/health", {
         timeout: 10_000,
       })
       .json()
