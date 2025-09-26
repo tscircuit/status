@@ -5,7 +5,7 @@ export const checkRegistryHealth: HealthCheckFunction = async () => {
   try {
     const healthRes = await ky
       .get("https://registry-api.tscircuit.com/health", {
-        timeout: 5000,
+        timeout: 10_000,
       })
       .json()
     return { ok: true }
