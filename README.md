@@ -14,30 +14,7 @@
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: npm install -g tscircuit --force
-npm warn using --force Recommended protections disabled.
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v4/core/api.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v4/locales/ar.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/@remix-run/router/dist/utils.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/polished/docs/assets/fonts/OTF/SourceCodePro-Regular.otf'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v4/locales/az.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v4/locales/be.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v4/locales/ca.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v4/classic/checks.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v4/core/checks.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v4/mini/checks.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v4/classic/coerce.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v4/mini/coerce.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v4/classic/compat.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v4/core/core.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v4/locales/cs.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v4/locales/de.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v4/core/doc.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v3/locales/en.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v4/locales/en.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v3/helpers/enumUtil.d.ts'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/usr/local/lib/node_modules/tscircuit/node_modules/zod/v4/locales/eo.d.ts'
- |
+| `tscircuit_package` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
