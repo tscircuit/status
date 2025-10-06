@@ -14,9 +14,7 @@
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: tsci build ./index.tsx
-Build failed: ResolveMessage: Cannot find package 'circuit-json-to-spice' from '/usr/local/lib/node_modules/tscircuit/node_modules/@tscircuit/core/dist/index.js'
- |
+| `tscircuit_package` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
