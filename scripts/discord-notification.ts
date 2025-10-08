@@ -7,6 +7,7 @@ const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL
 const NOTIFICATION_THRESHOLD = 20 * 60 * 1000 // 20 minutes in milliseconds
 const STATUS_FILE = "./statuses.jsonl"
 const REPORTED_OUTAGES_FILE = "./reported-outages.json"
+const IGNORED_SERVICES = ["check-usercode-health"] // Services to ignore for notifications
 
 console.log("Starting Discord notification script for ongoing outages...")
 console.log("Webhook URL present:", !!DISCORD_WEBHOOK_URL)
@@ -98,6 +99,11 @@ function findCurrentOutages(statusChecks: StatusCheck[]): Map<
     // Process each service in the check
     for (const service of check.checks) {
       const serviceName = service.service
+
+      // Skip ignored services
+      if (IGNORED_SERVICES.includes(serviceName)) {
+        continue
+      }
 
       // Service has an error
       if (service.status === "error") {

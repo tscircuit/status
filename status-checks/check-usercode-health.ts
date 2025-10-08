@@ -198,7 +198,7 @@ export const checkUsercodeHealth: HealthCheckFunction = async () => {
     }
 
     // Poll for completion
-    const TIMEOUT = 300_000 // 5 minutes timeout for health check
+    const TIMEOUT = 300_000 // 3 minutes timeout for health check
     const POLL_INTERVAL = 1_000 // 1 second
     const startTime = Date.now()
 
@@ -208,7 +208,6 @@ export const checkUsercodeHealth: HealthCheckFunction = async () => {
         "get job",
       )
 
-      console.log("getResult", getResult)
       if (!getResult.ok) {
         return {
           ok: false,
