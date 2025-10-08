@@ -15,6 +15,7 @@
 | `png_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ✅ Operational |
+| `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
