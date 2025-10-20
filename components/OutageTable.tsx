@@ -1,3 +1,4 @@
+import { formatDateTime } from "lib/format-date"
 import type { Outage } from "lib/types"
 
 function formatDuration(milliseconds: number): string {
@@ -47,10 +48,28 @@ export const OutageTable = ({
                     {outage.service}
                   </td>
                   <td className="py-2 px-4 whitespace-nowrap">
-                    {outage.start.toLocaleString()}
+                    <span
+                      className="timestamp"
+                      data-format="datetime"
+                      data-timestamp={outage.start.toISOString()}
+                    >
+                      {formatDateTime(outage.start, {
+                        timeZone: "UTC",
+                        hour12: false,
+                      })}
+                    </span>
                   </td>
                   <td className="py-2 px-4 whitespace-nowrap">
-                    {outage.end.toLocaleString()}
+                    <span
+                      className="timestamp"
+                      data-format="datetime"
+                      data-timestamp={outage.end.toISOString()}
+                    >
+                      {formatDateTime(outage.end, {
+                        timeZone: "UTC",
+                        hour12: false,
+                      })}
+                    </span>
                   </td>
                   <td className="py-2 px-4 whitespace-nowrap">
                     {formatDuration(outage.duration)}
