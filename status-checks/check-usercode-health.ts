@@ -1,4 +1,12 @@
 import type { HealthCheckFunction } from "./types"
+import { readFile, readdir, mkdtemp, rm } from "node:fs/promises"
+import { join, dirname } from "node:path"
+import { fileURLToPath } from "node:url"
+import { tmpdir } from "node:os"
+import { exec } from "node:child_process"
+import { promisify } from "node:util"
+
+const execAsync = promisify(exec)
 
 interface UserCodeJob {
   user_code_job_id: string
@@ -29,12 +37,12 @@ interface UserCodeLogEntry {
 }
 
 const BASE_URL = "https://usercode.tscircuit.com"
-
-const TEST_CODE = `export default () => (
-  <board>
-    <resistor name="R1" resistance="1k" footprint="0402" />
-  </board>
-)`
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+const ZIP_FILE = join(
+  __dirname,
+  "../assets/seveibar-rp2040-zero-0.0.18-pr5-74798a90-files.zip",
+)
 
 async function parseJsonResponse<T>(
   response: Response,
@@ -80,8 +88,47 @@ async function getJson<T>(url: string, context: string): Promise<T> {
   return parseJsonResponse<T>(response, context)
 }
 
+async function* getAllFiles(
+  dir: string,
+  baseDir = dir,
+): AsyncGenerator<{ relativePath: string; fullPath: string }> {
+  const entries = await readdir(dir, { withFileTypes: true })
+
+  for (const entry of entries) {
+    const fullPath = join(dir, entry.name)
+
+    if (entry.isDirectory()) {
+      // Skip dist and other build directories
+      if (entry.name === "dist" || entry.name === "node_modules") {
+        continue
+      }
+      yield* getAllFiles(fullPath, baseDir)
+    } else if (entry.isFile()) {
+      const relativePath = fullPath.slice(baseDir.length + 1)
+      // Skip hidden files and non-code files
+      if (
+        !entry.name.startsWith(".") &&
+        !entry.name.endsWith(".lock") &&
+        (entry.name.endsWith(".tsx") ||
+          entry.name.endsWith(".ts") ||
+          entry.name.endsWith(".json"))
+      ) {
+        yield { relativePath, fullPath }
+      }
+    }
+  }
+}
+
 export const checkUsercodeHealth: HealthCheckFunction = async () => {
+  let tempDir: string | null = null
+
   try {
+    // Create temporary directory for extraction
+    tempDir = await mkdtemp(join(tmpdir(), "usercode-health-check-"))
+
+    // Extract zip file to temp directory
+    await execAsync(`unzip -q "${ZIP_FILE}" -d "${tempDir}"`)
+
     // Create a new job
     const command = "bunx tscircuit build --preview-images"
     const createResult = await postJson<JobResponse>(
@@ -105,22 +152,32 @@ export const checkUsercodeHealth: HealthCheckFunction = async () => {
 
     const jobId = createResult.user_code_job.user_code_job_id
 
-    // Upload test file
-    const result = await postJson<{ ok: boolean }>(
-      `${BASE_URL}/user_code_jobs/add_file?user_code_job_id=${jobId}`,
-      {
-        filename: "index.tsx",
-        text_content: TEST_CODE,
-      },
-      "add file index.tsx",
-    )
+    // Collect all files from extracted directory
+    const filesToUpload: Array<{ path: string; content: string }> = []
 
-    if (!result.ok) {
-      return {
-        ok: false,
-        error: {
-          message: "Failed to upload test file",
+    for await (const { relativePath, fullPath } of getAllFiles(tempDir)) {
+      const content = await readFile(fullPath, "utf8")
+      filesToUpload.push({ path: relativePath, content })
+    }
+
+    // Upload all files
+    for (const { path, content } of filesToUpload) {
+      const result = await postJson<{ ok: boolean }>(
+        `${BASE_URL}/user_code_jobs/add_file?user_code_job_id=${jobId}`,
+        {
+          filename: path,
+          text_content: content,
         },
+        `add file ${path}`,
+      )
+
+      if (!result.ok) {
+        return {
+          ok: false,
+          error: {
+            message: `Failed to upload file ${path}`,
+          },
+        }
       }
     }
 
@@ -191,6 +248,15 @@ export const checkUsercodeHealth: HealthCheckFunction = async () => {
       error: {
         message: err.toString(),
       },
+    }
+  } finally {
+    // Clean up temporary directory
+    if (tempDir) {
+      try {
+        await rm(tempDir, { recursive: true, force: true })
+      } catch (cleanupErr) {
+        console.error("Failed to cleanup temp directory:", cleanupErr)
+      }
     }
   }
 }
