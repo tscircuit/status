@@ -5,7 +5,7 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ❌ Autorouting job timed out |
+| `autorouting-api` | ❌ HTTPError: Request failed with status code 405 Method Not Allowed: POST https://registry-api.tscircuit.com/autorouting/jobs/get |
 | `freerouting-cluster` | ❌ Freerouting Cluster API Health Ping Failed |
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
