@@ -5,7 +5,7 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ❌ Autorouting job failed: {"message":"TimeoutError: Request timed out: POST https://internal-freerouting.fly.dev/v1/sessions/create","error_code":"unknown_autorouting_error"} |
+| `autorouting-api` | ❌ TypeError: undefined is not an object (evaluating 'job.has_error') |
 | `freerouting-cluster` | ❌ Freerouting Cluster API Health Ping Failed |
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
