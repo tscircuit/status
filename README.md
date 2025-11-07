@@ -14,16 +14,7 @@
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: npm install -g tscircuit --force
-npm warn using --force Recommended protections disabled.
-npm warn ERESOLVE overriding peer dependency
-npm error code 127
-npm error path /usr/local/lib/node_modules/tscircuit/node_modules/rollup
-npm error command failed
-npm error command sh -c patch-package
-npm error sh: 1: patch-package: not found
-npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2025-11-07T18_52_53_326Z-debug-0.log
- |
+| `tscircuit_package` | ✅ Operational |
 | `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
