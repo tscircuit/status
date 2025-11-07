@@ -22,9 +22,9 @@ npm error path /usr/local/lib/node_modules/tscircuit/node_modules/rollup
 npm error command failed
 npm error command sh -c patch-package
 npm error sh: 1: patch-package: not found
-npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2025-11-07T18_03_16_801Z-debug-0.log
+npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2025-11-07T18_17_22_413Z-debug-0.log
  |
-| `usercode_api` | ❌ Usercode job timed out |
+| `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
