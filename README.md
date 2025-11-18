@@ -7,15 +7,15 @@
 | `registry-api` | ✅ Operational |
 | `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
-| `jlcsearch-api` | ✅ Operational |
-| `registry_bundling` | ✅ Operational |
+| `jlcsearch-api` | ❌ JLC Search API Health Check Failed |
+| `registry_bundling` | ❌ registry_bundling Health Check Failed |
 | `fly_registry_api` | ✅ Operational |
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
-| `png_service` | ✅ Operational |
+| `png_service` | ❌ PNG Service Health Check Failed |
 | `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ✅ Operational |
-| `usercode_api` | ✅ Operational |
+| `usercode_api` | ❌ Usercode job failed: Unknown error |
 
 <!-- END_STATUS_TABLE -->
 
