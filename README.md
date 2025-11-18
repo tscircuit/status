@@ -7,13 +7,13 @@
 | `registry-api` | ✅ Operational |
 | `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
-| `jlcsearch-api` | ✅ Operational |
+| `jlcsearch-api` | ❌ JLC Search API Health Check Failed |
 | `registry_bundling` | ✅ Operational |
 | `fly_registry_api` | ✅ Operational |
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
-| `browser_preview` | ✅ Operational |
+| `browser_preview` | ❌ Browser Preview Health Check Failed |
 | `tscircuit_package` | ✅ Operational |
 | `usercode_api` | ✅ Operational |
 
