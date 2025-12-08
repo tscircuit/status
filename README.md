@@ -7,17 +7,14 @@
 | `registry-api` | ✅ Operational |
 | `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
-| `jlcsearch-api` | ❌ JLC Search API Health Check Failed |
+| `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
 | `fly_registry_api` | ✅ Operational |
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
-| `browser_preview` | ❌ Browser Preview Health Check Failed |
-| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: tsci build ./index.tsx
-Failed to fetch supplier part numbers for <capacitor#11 name=".C1" />: Failed to parse JSON
-Build failed with 1 error(s). Use --ignore-errors to continue.
- |
+| `browser_preview` | ✅ Operational |
+| `tscircuit_package` | ✅ Operational |
 | `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
