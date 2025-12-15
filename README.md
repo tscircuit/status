@@ -5,15 +5,15 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ✅ Operational |
+| `autorouting-api` | ❌ Autorouting job failed: {"message":"TimeoutError: Request timed out: POST https://internal-freerouting.fly.dev/v1/sessions/create","error_code":"unknown_autorouting_error"} |
 | `freerouting-cluster` | ✅ Operational |
-| `jlcsearch-api` | ❌ JLC Search API Health Check Failed |
+| `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
 | `fly_registry_api` | ✅ Operational |
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
-| `browser_preview` | ❌ Browser Preview Health Check Failed |
+| `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ✅ Operational |
 | `usercode_api` | ✅ Operational |
 
