@@ -5,16 +5,16 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ✅ Operational |
+| `autorouting-api` | ❌ TimeoutError: Request timed out: POST https://registry-api.tscircuit.com/autorouting/jobs/get |
 | `freerouting-cluster` | ✅ Operational |
-| `jlcsearch-api` | ✅ Operational |
+| `jlcsearch-api` | ❌ JLC Search API Health Check Failed |
 | `registry_bundling` | ✅ Operational |
 | `fly_registry_api` | ✅ Operational |
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
-| `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ✅ Operational |
+| `browser_preview` | ❌ Browser Preview Health Check Failed |
+| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: tsci build ./index.tsx |
 | `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
