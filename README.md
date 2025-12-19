@@ -4,7 +4,7 @@
 
 | Service               | Current Status |
 | --------------------- | -------------- |
-| `registry-api` | ❌ Registry API Health Ping Failed |
+| `registry-api` | ✅ Operational |
 | `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
@@ -14,9 +14,7 @@
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: npm install -g tscircuit --force
-npm warn using --force Recommended protections disabled.
- |
+| `tscircuit_package` | ✅ Operational |
 | `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
