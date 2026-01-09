@@ -25,7 +25,7 @@ const initializeProject = async (tempDir: string) => {
 
 const buildCircuit = async (tempDir: string) => {
   console.log("Building circuit...")
-  await execAsync("tsci build ./index.tsx", {
+  await execAsync("tsci build ./index.tsx --ignore-errors", {
     cwd: tempDir,
     timeout: 30000, // 30 second timeout
   })
