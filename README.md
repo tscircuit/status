@@ -14,11 +14,7 @@
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: tsci build ./index.tsx
-PCB trace trace[source_trace_0_0] overlaps with pcb_smtpad "pcb_port[.C1 > .pin2]" (gap: 0.021mm)
-PCB trace trace[source_trace_0_0] overlaps with pcb_smtpad "pcb_port[.C1 > .pin2]" (gap: 0.021mm)
-Build failed with 2 error(s). Use --ignore-errors to continue.
- |
+| `tscircuit_package` | ✅ Operational |
 | `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
