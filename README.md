@@ -5,14 +5,7 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ❌ TypeError: undefined is not an object (evaluating '(await ky.post("https://registry-api.tscircuit.com/autorouting/jobs/create", {
-      json: {
-        input_circuit_json: exampleUnroutedCircuit,
-        provider: "freerouting",
-        autostart: !0,
-        display_name: "health_check"
-      }
-    }).json()).autorouting_job.autorouting_job_id') |
+| `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
