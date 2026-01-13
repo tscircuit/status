@@ -12,7 +12,6 @@
     "@types/bun": "latest",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "@vercel/node": "^5.5.17",
     "ky": "^1.7.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
