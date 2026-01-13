@@ -35,23 +35,21 @@ const VALID_SERVICES = [
 
 function getLatestStatuses(): StatusCheck | null {
   console.log("[getLatestStatuses] __dirname:", __dirname)
-  const filePath = join(__dirname, "..", "statuses.jsonl")
+  const filePath = join(__dirname, "..", "latest_statuses.jsonl")
   console.log("[getLatestStatuses] filePath:", filePath)
-  const content = readFileSync(filePath, "utf-8")
+  const content = readFileSync(filePath, "utf-8").trim()
   console.log("[getLatestStatuses] content length:", content.length)
-  const lines = content.trim().split("\n").filter(Boolean)
-  console.log("[getLatestStatuses] lines count:", lines.length)
-  if (lines.length === 0) return null
-  const parsed = JSON.parse(lines[lines.length - 1])
+  if (!content) return null
+  const parsed = JSON.parse(content)
   console.log("[getLatestStatuses] parsed timestamp:", parsed.timestamp)
   return parsed
 }
 
-export const maxDuration = 60;
+export const maxDuration = 60
 
 export default function handler(req: Request): Response {
   console.log("[handler] Request received:", req.url)
-  const url = new URL('https://status.tscircuit.com' + req.url)
+  const url = new URL("https://status.tscircuit.com" + req.url)
   console.log("[handler] Parsed URL:", url.toString())
   const service = url.searchParams.get("service")
   console.log("[handler] Service param:", service)
@@ -124,7 +122,10 @@ export default function handler(req: Request): Response {
     })),
   }
 
-  console.log("[handler] Returning all services response, count:", response.services.length)
+  console.log(
+    "[handler] Returning all services response, count:",
+    response.services.length,
+  )
   return new Response(JSON.stringify(response), {
     status: 200,
     headers: { "Content-Type": "application/json" },

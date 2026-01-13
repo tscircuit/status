@@ -77,6 +77,12 @@ async function runChecksAndWriteLog() {
   // Append to statuses.jsonl
   fs.appendFileSync("./statuses.jsonl", `${JSON.stringify(statusCheck)}\n`)
 
+  // Write latest status to separate file for API consumption
+  fs.writeFileSync(
+    "./latest_statuses.jsonl",
+    `${JSON.stringify(statusCheck)}\n`,
+  )
+
   // Limit to 2 weeks of logs
   const twoWeeksAgo = new Date()
   twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14)
