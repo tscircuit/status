@@ -71,5 +71,3 @@ export const checkTscircuitPackageHealth: HealthCheckFunction = async () => {
     await cleanupTempDir(tempDir)
   }
 }
-
-checkTscircuitPackageHealth()
