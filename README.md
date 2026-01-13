@@ -14,7 +14,7 @@
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ❌ Browser Preview Health Check Failed |
-| `tscircuit_package` | ✅ Operational |
+| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: tscircuit build ./index.tsx --ignore-errors |
 | `usercode_api` | ❌ Usercode job timed out |
 
 <!-- END_STATUS_TABLE -->
