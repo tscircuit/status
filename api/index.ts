@@ -35,35 +35,24 @@ const VALID_SERVICES = [
 ]
 
 function getLatestStatuses(): StatusCheck | null {
-  console.log("[getLatestStatuses] __dirname:", __dirname)
   const filePath = join(__dirname, "..", "latest_statuses.jsonl")
-  console.log("[getLatestStatuses] filePath:", filePath)
   const content = readFileSync(filePath, "utf-8").trim()
-  console.log("[getLatestStatuses] content length:", content.length)
   if (!content) return null
   const parsed = JSON.parse(content)
-  console.log("[getLatestStatuses] parsed timestamp:", parsed.timestamp)
   return parsed
 }
 
 export default function handler(req: VercelRequest, res: VercelResponse) {
-  console.log("[handler] Request received:", req.url)
   const service = req.query.service as string | undefined
-  console.log("[handler] Service param:", service)
 
-  console.log("[handler] Fetching latest statuses...")
   const latestStatus = getLatestStatuses()
-  console.log("[handler] Got latestStatus:", latestStatus ? "yes" : "null")
 
   if (!latestStatus) {
-    console.log("[handler] No status data, returning 404")
     return res.status(404).json({ error: "No status data available" })
   }
 
   if (service) {
-    console.log("[handler] Filtering for service:", service)
     if (!VALID_SERVICES.includes(service)) {
-      console.log("[handler] Invalid service, returning 400")
       return res.status(400).json({
         error: "Invalid service",
         validServices: VALID_SERVICES,
@@ -71,10 +60,8 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     const serviceData = latestStatus.checks.find((c) => c.service === service)
-    console.log("[handler] Found serviceData:", serviceData ? "yes" : "null")
 
     if (!serviceData) {
-      console.log("[handler] Service not found in checks, returning 404")
       return res.status(404).json({
         error: `Service '${service}' not found in latest check`,
       })
@@ -92,11 +79,9 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
       ],
     }
 
-    console.log("[handler] Returning single service response")
     return res.status(200).json(response)
   }
 
-  console.log("[handler] Building all services response")
   const response: ApiResponse = {
     timestamp: latestStatus.timestamp,
     services: latestStatus.checks.map((c) => ({
@@ -107,9 +92,5 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
     })),
   }
 
-  console.log(
-    "[handler] Returning all services response, count:",
-    response.services.length,
-  )
   return res.status(200).json(response)
 }
