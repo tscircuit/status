@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs"
 import { dirname, join } from "node:path"
 import { fileURLToPath } from "node:url"
+import type { VercelRequest, VercelResponse } from "@vercel/node"
 import type { StatusCheck } from "../lib/types"
 
 const __filename = fileURLToPath(import.meta.url)
@@ -45,13 +46,9 @@ function getLatestStatuses(): StatusCheck | null {
   return parsed
 }
 
-export const maxDuration = 60
-
-export default function handler(req: Request): Response {
+export default function handler(req: VercelRequest, res: VercelResponse) {
   console.log("[handler] Request received:", req.url)
-  const url = new URL("https://status.tscircuit.com" + req.url)
-  console.log("[handler] Parsed URL:", url.toString())
-  const service = url.searchParams.get("service")
+  const service = req.query.service as string | undefined
   console.log("[handler] Service param:", service)
 
   console.log("[handler] Fetching latest statuses...")
@@ -60,23 +57,17 @@ export default function handler(req: Request): Response {
 
   if (!latestStatus) {
     console.log("[handler] No status data, returning 404")
-    return new Response(JSON.stringify({ error: "No status data available" }), {
-      status: 404,
-      headers: { "Content-Type": "application/json" },
-    })
+    return res.status(404).json({ error: "No status data available" })
   }
 
   if (service) {
     console.log("[handler] Filtering for service:", service)
     if (!VALID_SERVICES.includes(service)) {
       console.log("[handler] Invalid service, returning 400")
-      return new Response(
-        JSON.stringify({
-          error: "Invalid service",
-          validServices: VALID_SERVICES,
-        }),
-        { status: 400, headers: { "Content-Type": "application/json" } },
-      )
+      return res.status(400).json({
+        error: "Invalid service",
+        validServices: VALID_SERVICES,
+      })
     }
 
     const serviceData = latestStatus.checks.find((c) => c.service === service)
@@ -84,12 +75,9 @@ export default function handler(req: Request): Response {
 
     if (!serviceData) {
       console.log("[handler] Service not found in checks, returning 404")
-      return new Response(
-        JSON.stringify({
-          error: `Service '${service}' not found in latest check`,
-        }),
-        { status: 404, headers: { "Content-Type": "application/json" } },
-      )
+      return res.status(404).json({
+        error: `Service '${service}' not found in latest check`,
+      })
     }
 
     const response: ApiResponse = {
@@ -105,10 +93,7 @@ export default function handler(req: Request): Response {
     }
 
     console.log("[handler] Returning single service response")
-    return new Response(JSON.stringify(response), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    })
+    return res.status(200).json(response)
   }
 
   console.log("[handler] Building all services response")
@@ -126,8 +111,5 @@ export default function handler(req: Request): Response {
     "[handler] Returning all services response, count:",
     response.services.length,
   )
-  return new Response(JSON.stringify(response), {
-    status: 200,
-    headers: { "Content-Type": "application/json" },
-  })
+  return res.status(200).json(response)
 }
