@@ -1,6 +1,10 @@
 import { readFileSync } from "node:fs"
-import { join } from "node:path"
+import { dirname, join } from "node:path"
+import { fileURLToPath } from "node:url"
 import type { StatusCheck } from "../lib/types"
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 interface ServiceStatus {
   service: string
@@ -30,7 +34,7 @@ const VALID_SERVICES = [
 ]
 
 function getLatestStatuses(): StatusCheck | null {
-  const filePath = join(process.cwd(), "statuses.jsonl")
+  const filePath = join(__dirname, "..", "statuses.jsonl")
   const content = readFileSync(filePath, "utf-8")
   const lines = content.trim().split("\n").filter(Boolean)
   if (lines.length === 0) return null
