@@ -38,7 +38,7 @@ function getLatestStatuses(): StatusCheck | null {
 }
 
 export default function handler(req: Request): Response {
-  const url = new URL(req.url)
+  const url = new URL('https://status.tscircuit.com' + req.url)
   const service = url.searchParams.get("service")
 
   const latestStatus = getLatestStatuses()
