@@ -34,20 +34,34 @@ const VALID_SERVICES = [
 ]
 
 function getLatestStatuses(): StatusCheck | null {
+  console.log("[getLatestStatuses] __dirname:", __dirname)
   const filePath = join(__dirname, "..", "statuses.jsonl")
+  console.log("[getLatestStatuses] filePath:", filePath)
   const content = readFileSync(filePath, "utf-8")
+  console.log("[getLatestStatuses] content length:", content.length)
   const lines = content.trim().split("\n").filter(Boolean)
+  console.log("[getLatestStatuses] lines count:", lines.length)
   if (lines.length === 0) return null
-  return JSON.parse(lines[lines.length - 1])
+  const parsed = JSON.parse(lines[lines.length - 1])
+  console.log("[getLatestStatuses] parsed timestamp:", parsed.timestamp)
+  return parsed
 }
 
-export default function handler(req: Request): Response {
-  const url = new URL('https://status.tscircuit.com' + req.url)
-  const service = url.searchParams.get("service")
+export const maxDuration = 60;
 
+export default function handler(req: Request): Response {
+  console.log("[handler] Request received:", req.url)
+  const url = new URL('https://status.tscircuit.com' + req.url)
+  console.log("[handler] Parsed URL:", url.toString())
+  const service = url.searchParams.get("service")
+  console.log("[handler] Service param:", service)
+
+  console.log("[handler] Fetching latest statuses...")
   const latestStatus = getLatestStatuses()
+  console.log("[handler] Got latestStatus:", latestStatus ? "yes" : "null")
 
   if (!latestStatus) {
+    console.log("[handler] No status data, returning 404")
     return new Response(JSON.stringify({ error: "No status data available" }), {
       status: 404,
       headers: { "Content-Type": "application/json" },
@@ -55,7 +69,9 @@ export default function handler(req: Request): Response {
   }
 
   if (service) {
+    console.log("[handler] Filtering for service:", service)
     if (!VALID_SERVICES.includes(service)) {
+      console.log("[handler] Invalid service, returning 400")
       return new Response(
         JSON.stringify({
           error: "Invalid service",
@@ -66,8 +82,10 @@ export default function handler(req: Request): Response {
     }
 
     const serviceData = latestStatus.checks.find((c) => c.service === service)
+    console.log("[handler] Found serviceData:", serviceData ? "yes" : "null")
 
     if (!serviceData) {
+      console.log("[handler] Service not found in checks, returning 404")
       return new Response(
         JSON.stringify({
           error: `Service '${service}' not found in latest check`,
@@ -88,12 +106,14 @@ export default function handler(req: Request): Response {
       ],
     }
 
+    console.log("[handler] Returning single service response")
     return new Response(JSON.stringify(response), {
       status: 200,
       headers: { "Content-Type": "application/json" },
     })
   }
 
+  console.log("[handler] Building all services response")
   const response: ApiResponse = {
     timestamp: latestStatus.timestamp,
     services: latestStatus.checks.map((c) => ({
@@ -104,6 +124,7 @@ export default function handler(req: Request): Response {
     })),
   }
 
+  console.log("[handler] Returning all services response, count:", response.services.length)
   return new Response(JSON.stringify(response), {
     status: 200,
     headers: { "Content-Type": "application/json" },
