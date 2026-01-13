@@ -16,7 +16,7 @@ const installTscircuit = async () => {
 
 const initializeProject = async (tempDir: string) => {
   console.log("Initializing project...")
-  await execAsync("echo -e 'yes\\n\\n' | tsci init", {
+  await execAsync("echo -e 'yes\\n\\n' | tscircuit init", {
     cwd: tempDir,
     timeout: 30000, // 30 second timeout
     shell: "/bin/bash", // Need shell to handle piping
@@ -25,7 +25,7 @@ const initializeProject = async (tempDir: string) => {
 
 const buildCircuit = async (tempDir: string) => {
   console.log("Building circuit...")
-  await execAsync("tsci build ./index.tsx --ignore-errors", {
+  await execAsync("tscircuit build ./index.tsx --ignore-errors", {
     cwd: tempDir,
     timeout: 30000, // 30 second timeout
   })
@@ -71,3 +71,5 @@ export const checkTscircuitPackageHealth: HealthCheckFunction = async () => {
     await cleanupTempDir(tempDir)
   }
 }
+
+checkTscircuitPackageHealth()
