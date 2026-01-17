@@ -14,7 +14,7 @@
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ❌ Browser Preview Health Check Failed |
-| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: tscircuit build ./index.tsx --ignore-errors |
+| `tscircuit_package` | ✅ Operational |
 | `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
