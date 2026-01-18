@@ -5,7 +5,7 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ❌ Autorouting job timed out |
+| `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
@@ -14,7 +14,7 @@
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ✅ Operational |
+| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: tscircuit build ./index.tsx --ignore-errors |
 | `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
