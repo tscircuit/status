@@ -25,7 +25,7 @@ const initializeProject = async (tempDir: string) => {
 
 const buildCircuit = async (tempDir: string) => {
   console.log("Building circuit...")
-  await execAsync("tscircuit build ./index.tsx --ignore-errors", {
+  await execAsync("tscircuit build ./index.tsx --ignore-errors --disable-parts-engine", {
     cwd: tempDir,
     timeout: 30000, // 30 second timeout
   })
