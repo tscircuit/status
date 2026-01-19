@@ -5,7 +5,7 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ✅ Operational |
+| `autorouting-api` | ❌ TimeoutError: Request timed out: POST https://registry-api.tscircuit.com/autorouting/jobs/get |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
@@ -13,7 +13,7 @@
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
 | `png_service` | ✅ Operational |
-| `browser_preview` | ❌ Browser Preview Health Check Failed |
+| `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ✅ Operational |
 | `usercode_api` | ✅ Operational |
 
