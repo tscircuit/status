@@ -12,7 +12,7 @@
 | `fly_registry_api` | ✅ Operational |
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
-| `png_service` | ✅ Operational |
+| `png_service` | ❌ PNG Service Health Check Failed |
 | `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ✅ Operational |
 | `usercode_api` | ✅ Operational |
