@@ -7,7 +7,6 @@ import fs from "node:fs"
 import { checkFlyRegistryHealth } from "status-checks/check-fly-registry-health"
 import { checkCompileApiHealth } from "status-checks/check-compile-api-health"
 import { checkSvgServiceHealth } from "../status-checks/check-svg-service-health"
-import { checkPngServiceHealth } from "../status-checks/check-png-service-health"
 import { checkBrowserPreviewHealth } from "../status-checks/check-browser-preview-health"
 import { checkTscircuitPackageHealth } from "../status-checks/check-tscircuit-package-health"
 import { checkUsercodeHealth } from "../status-checks/check-usercode-health"
@@ -32,7 +31,6 @@ async function runChecksAndWriteLog() {
     { name: "fly_registry_api", fn: checkFlyRegistryHealth },
     { name: "compile_api", fn: checkCompileApiHealth },
     { name: "svg_service", fn: checkSvgServiceHealth },
-    { name: "png_service", fn: checkPngServiceHealth },
     { name: "browser_preview", fn: checkBrowserPreviewHealth },
     { name: "tscircuit_package", fn: checkTscircuitPackageHealth },
     { name: "usercode_api", fn: checkUsercodeHealth },
