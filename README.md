@@ -13,7 +13,27 @@
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ✅ Operational |
+| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: echo -e 'yes\n\n' | tscircuit init
+73884 |   return new Promise((resolve, reject) => {
+73885 |     const timeoutId = setTimeout(() => {
+73886 |       if (abortController) {
+73887 |         abortController.abort();
+73888 |       }
+73889 |       reject(new TimeoutError(request));
+                     ^
+TimeoutError: Request timed out: GET https://registry.npmjs.org/@tscircuit/cli/latest
+ request: Request (0 KB) {
+  method: "GET",
+  url: "https://registry.npmjs.org/@tscircuit/cli/latest",
+  headers: Headers {
+    "accept": "application/json",
+  }
+},
+
+      at <anonymous> (/usr/local/lib/node_modules/tscircuit/node_modules/@tscircuit/cli/dist/main.js:73889:14)
+
+Bun v1.3.8 (Linux x64 baseline)
+ |
 | `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
