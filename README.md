@@ -5,7 +5,7 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ✅ Operational |
+| `autorouting-api` | ❌ Autorouting job failed: {"message":"TimeoutError: Request timed out: GET https://internal-freerouting.fly.dev/v1/jobs/a45bc212-6bcc-4aa1-bc1a-1d1e4d63bb06","error_code":"unknown_autorouting_error"} |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
