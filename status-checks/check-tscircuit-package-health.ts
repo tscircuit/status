@@ -16,7 +16,7 @@ const installTscircuit = async () => {
 
 const initializeProject = async (tempDir: string) => {
   console.log("Initializing project...")
-  await execAsync("echo -e 'yes\\n\\n' | tscircuit init", {
+  await execAsync("tscircuit init -y", {
     cwd: tempDir,
     timeout: 30000, // 30 second timeout
     shell: "/bin/bash", // Need shell to handle piping
@@ -26,7 +26,7 @@ const initializeProject = async (tempDir: string) => {
 const buildCircuit = async (tempDir: string) => {
   console.log("Building circuit...")
   await execAsync(
-    "tscircuit build ./index.tsx --ignore-errors --disable-parts-engine",
+    "tscircuit build ./index.circuit.tsx --ignore-errors --disable-parts-engine",
     {
       cwd: tempDir,
       timeout: 30000, // 30 second timeout
