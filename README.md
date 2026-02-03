@@ -13,10 +13,7 @@
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: tscircuit build ./index.tsx --ignore-errors --disable-parts-engine
-error: Cannot find module '/tmp/tscircuit-health-check-n8YbTD/index.tsx' from '/usr/local/lib/node_modules/tscircuit/node_modules/@tscircuit/cli/dist/cli/main.js'
-Fatal error [circuit_generation_failed]: ResolveMessage: Cannot find module '/tmp/tscircuit-health-check-n8YbTD/index.tsx' from '/usr/local/lib/node_modules/tscircuit/node_modules/@tscircuit/cli/dist/cli/main.js'
- |
+| `tscircuit_package` | ✅ Operational |
 | `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
