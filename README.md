@@ -5,17 +5,17 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ❌ Autorouting job timed out |
+| `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
-| `jlcsearch-api` | ❌ JLC Search API Health Check Failed |
+| `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
 | `fly_registry_api` | ✅ Operational |
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
-| `browser_preview` | ❌ Browser Preview Health Check Failed |
+| `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: tscircuit build ./index.tsx --ignore-errors --disable-parts-engine
-error: Cannot find module '/tmp/tscircuit-health-check-OiOWIU/index.tsx' from '/usr/local/lib/node_modules/tscircuit/node_modules/@tscircuit/cli/dist/cli/main.js'
-Fatal error [circuit_generation_failed]: ResolveMessage: Cannot find module '/tmp/tscircuit-health-check-OiOWIU/index.tsx' from '/usr/local/lib/node_modules/tscircuit/node_modules/@tscircuit/cli/dist/cli/main.js'
+error: Cannot find module '/tmp/tscircuit-health-check-n8YbTD/index.tsx' from '/usr/local/lib/node_modules/tscircuit/node_modules/@tscircuit/cli/dist/cli/main.js'
+Fatal error [circuit_generation_failed]: ResolveMessage: Cannot find module '/tmp/tscircuit-health-check-n8YbTD/index.tsx' from '/usr/local/lib/node_modules/tscircuit/node_modules/@tscircuit/cli/dist/cli/main.js'
  |
 | `usercode_api` | ✅ Operational |
 
