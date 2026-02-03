@@ -14,8 +14,8 @@
 | `svg_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: tscircuit build ./index.tsx --ignore-errors --disable-parts-engine
-error: Cannot find module '/tmp/tscircuit-health-check-ueXk3X/index.tsx' from '/usr/local/lib/node_modules/tscircuit/node_modules/@tscircuit/cli/dist/cli/main.js'
-Fatal error [circuit_generation_failed]: ResolveMessage: Cannot find module '/tmp/tscircuit-health-check-ueXk3X/index.tsx' from '/usr/local/lib/node_modules/tscircuit/node_modules/@tscircuit/cli/dist/cli/main.js'
+error: Cannot find module '/tmp/tscircuit-health-check-Qdzz5i/index.tsx' from '/usr/local/lib/node_modules/tscircuit/node_modules/@tscircuit/cli/dist/cli/main.js'
+Fatal error [circuit_generation_failed]: ResolveMessage: Cannot find module '/tmp/tscircuit-health-check-Qdzz5i/index.tsx' from '/usr/local/lib/node_modules/tscircuit/node_modules/@tscircuit/cli/dist/cli/main.js'
  |
 | `usercode_api` | ✅ Operational |
 
