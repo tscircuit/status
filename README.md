@@ -5,14 +5,14 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ❌ HTTPError: Request failed with status code 403 Forbidden: POST https://registry-api.tscircuit.com/autorouting/jobs/create |
+| `autorouting-api` | ✅ Operational |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
-| `registry_bundling` | ❌ registry_bundling Health Check Failed |
+| `registry_bundling` | ✅ Operational |
 | `fly_registry_api` | ✅ Operational |
-| `compile_api` | ❌ Compile API Health Ping Failed |
-| `svg_service` | ❌ SVG Service Health Check Failed |
-| `browser_preview` | ❌ Browser Preview Health Check Failed |
+| `compile_api` | ✅ Operational |
+| `svg_service` | ✅ Operational |
+| `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ✅ Operational |
 | `usercode_api` | ✅ Operational |
 
