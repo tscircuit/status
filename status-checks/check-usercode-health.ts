@@ -130,7 +130,7 @@ export const checkUsercodeHealth: HealthCheckFunction = async () => {
     await execAsync(`unzip -q "${ZIP_FILE}" -d "${tempDir}"`)
 
     // Create a new job
-    const command = "bunx tscircuit build --preview-images"
+    const command = "bunx tscircuit build --ci"
     const createResult = await postJson<JobResponse>(
       `${BASE_URL}/user_code_jobs/create`,
       {
