@@ -14,7 +14,7 @@
 | `svg_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ✅ Operational |
-| `usercode_api` | ✅ Operational |
+| `usercode_api` | ❌ Usercode job failed: Unknown error |
 
 <!-- END_STATUS_TABLE -->
 
