@@ -12,7 +12,7 @@
 | `fly_registry_api` | ✅ Operational |
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
-| `browser_preview` | ✅ Operational |
+| `browser_preview` | ❌ Browser Preview Health Check Failed |
 | `tscircuit_package` | ✅ Operational |
 | `usercode_api` | ✅ Operational |
 
