@@ -13,8 +13,21 @@
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ✅ Operational |
-| `usercode_api` | ✅ Operational |
+| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: npm install -g tscircuit --force
+npm warn using --force Recommended protections disabled.
+npm warn ERESOLVE overriding peer dependency
+npm warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm error code E404
+npm error 404 Not Found - GET https://registry.npmjs.org/@tscircuit/cli/-/cli-0.1.1086.tgz - Not found
+npm error 404
+npm error 404  '@tscircuit/cli@https://registry.npmjs.org/@tscircuit/cli/-/cli-0.1.1086.tgz' is not in this registry.
+npm error 404
+npm error 404 Note that you can also install from a
+npm error 404 tarball, folder, http url, or git url.
+npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-03-11T20_15_05_900Z-debug-0.log
+ |
+| `usercode_api` | ❌ Usercode job failed: Unknown error |
 
 <!-- END_STATUS_TABLE -->
 
