@@ -13,21 +13,8 @@
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: npm install -g tscircuit --force
-npm warn using --force Recommended protections disabled.
-npm warn ERESOLVE overriding peer dependency
-npm warn skipping integrity check for git dependency ssh://git@github.com/tscircuit/high-density-repair02.git
-npm warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
-npm error code E404
-npm error 404 Not Found - GET https://registry.npmjs.org/@tscircuit/cli/-/cli-0.1.1198.tgz - Not found
-npm error 404
-npm error 404  '@tscircuit/cli@https://registry.npmjs.org/@tscircuit/cli/-/cli-0.1.1198.tgz' is not in this registry.
-npm error 404
-npm error 404 Note that you can also install from a
-npm error 404 tarball, folder, http url, or git url.
-npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-04-04T20_18_18_896Z-debug-0.log
- |
-| `usercode_api` | ❌ Usercode job failed: Unknown error |
+| `tscircuit_package` | ✅ Operational |
+| `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
