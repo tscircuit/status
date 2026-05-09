@@ -10,8 +10,8 @@
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
 | `fly_registry_api` | ✅ Operational |
-| `compile_api` | ✅ Operational |
-| `svg_service` | ✅ Operational |
+| `compile_api` | ❌ Compile API Health Ping Failed |
+| `svg_service` | ❌ SVG Service Health Check Failed |
 | `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ✅ Operational |
 | `usercode_api` | ✅ Operational |
