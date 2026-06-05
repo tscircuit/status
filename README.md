@@ -11,11 +11,9 @@
 | `registry_bundling` | ✅ Operational |
 | `fly_registry_api` | ✅ Operational |
 | `compile_api` | ✅ Operational |
-| `svg_service` | ❌ SVG Service Health Check Failed |
+| `svg_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: tscircuit init -y
-Resolving dependencies
- |
+| `tscircuit_package` | ✅ Operational |
 | `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
