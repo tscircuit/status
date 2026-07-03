@@ -14,7 +14,7 @@
 | `svg_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ✅ Operational |
-| `usercode_api` | ❌ Error: Failed to parse JSON from create job: JSON Parse error: Unrecognized token '<' |
+| `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
