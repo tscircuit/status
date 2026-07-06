@@ -14,7 +14,7 @@
 | `svg_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ✅ Operational |
-| `usercode_api` | ❌ Error: Failed to parse JSON from add file seveibar-rp2040-zero-0.0.18-pr5-74798a90-files/tsconfig.json: JSON Parse error: Unrecognized token '<' |
+| `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
