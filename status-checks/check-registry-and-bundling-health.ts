@@ -1,7 +1,7 @@
 import type { HealthCheckFunction } from "./types"
 import ky from "ky"
 
-const EXAMPLE_PACKAGE = "seveibar/usb-c-flashlight"
+const EXAMPLE_PACKAGE = "seveibar/led-water-accelerometer"
 const ENDPOINTS = [
   `https://esm.tscircuit.com/${EXAMPLE_PACKAGE}`,
   `https://cjs.tscircuit.com/${EXAMPLE_PACKAGE}`,
