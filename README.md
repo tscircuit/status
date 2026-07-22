@@ -13,39 +13,7 @@
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: npm install -g tscircuit --force
-npm warn using --force Recommended protections disabled.
-npm warn ERESOLVE overriding peer dependency
-npm warn While resolving: @tscircuit/cli@0.1.1713
-npm warn Found: circuit-json@0.0.450
-npm warn node_modules/tscircuit/node_modules/circuit-json
-npm warn   circuit-json@"^0.0.450" from tscircuit@0.0.2126
-npm warn   node_modules/tscircuit
-npm warn     tscircuit@"*" from the root project
-npm warn     2 more (@tscircuit/cli, @tscircuit/krt-wasm)
-npm warn   11 more (@tscircuit/checks, @tscircuit/circuit-json-util, ...)
-npm warn
-npm warn Could not resolve dependency:
-npm warn peer circuit-json@"^0.0.446" from @tscircuit/cli@0.1.1713
-npm warn node_modules/tscircuit/node_modules/@tscircuit/cli
-npm warn   @tscircuit/cli@"^0.1.1713" from tscircuit@0.0.2126
-npm warn   node_modules/tscircuit
-npm warn
-npm warn Conflicting peer dependency: circuit-json@0.0.446
-npm warn node_modules/circuit-json
-npm warn   peer circuit-json@"^0.0.446" from @tscircuit/cli@0.1.1713
-npm warn   node_modules/tscircuit/node_modules/@tscircuit/cli
-npm warn     @tscircuit/cli@"^0.1.1713" from tscircuit@0.0.2126
-npm warn     node_modules/tscircuit
-npm warn ERESOLVE overriding peer dependency
-npm warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
-npm error code ENOTEMPTY
-npm error syscall rmdir
-npm error path /usr/local/lib/node_modules/tscircuit/node_modules/three/build
-npm error errno -39
-npm error ENOTEMPTY: directory not empty, rmdir '/usr/local/lib/node_modules/tscircuit/node_modules/three/build'
-npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-22T07_22_46_724Z-debug-0.log
- |
+| `tscircuit_package` | ✅ Operational |
 | `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
