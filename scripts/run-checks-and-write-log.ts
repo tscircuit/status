@@ -1,13 +1,14 @@
-import { checkRegistryHealth } from "../status-checks/check-registry-health"
+import fs from "node:fs"
+import { checkCompileApiHealth } from "status-checks/check-compile-api-health"
+import { checkFlyRegistryHealth } from "status-checks/check-fly-registry-health"
 import { checkAutoroutingApiHealth } from "../status-checks/check-autorouting-api-health"
+import { checkBrowserPreviewHealth } from "../status-checks/check-browser-preview-health"
 import { checkFreeroutingClusterHealth } from "../status-checks/check-freerouting-cluster-health"
+import { checkFullCircuitRenderHealth } from "../status-checks/check-full-circuit-render-health"
 import { checkJLCSearchHealth } from "../status-checks/check-jlcsearch-health"
 import { checkRegistryAndBundlingHealth } from "../status-checks/check-registry-and-bundling-health"
-import fs from "node:fs"
-import { checkFlyRegistryHealth } from "status-checks/check-fly-registry-health"
-import { checkCompileApiHealth } from "status-checks/check-compile-api-health"
+import { checkRegistryHealth } from "../status-checks/check-registry-health"
 import { checkSvgServiceHealth } from "../status-checks/check-svg-service-health"
-import { checkBrowserPreviewHealth } from "../status-checks/check-browser-preview-health"
 import { checkTscircuitPackageHealth } from "../status-checks/check-tscircuit-package-health"
 import { checkUsercodeHealth } from "../status-checks/check-usercode-health"
 
@@ -34,6 +35,7 @@ async function runChecksAndWriteLog() {
     { name: "browser_preview", fn: checkBrowserPreviewHealth },
     { name: "tscircuit_package", fn: checkTscircuitPackageHealth },
     { name: "usercode_api", fn: checkUsercodeHealth },
+    { name: "full_circuit_render", fn: checkFullCircuitRenderHealth },
   ]
 
   const results: StatusCheck["checks"] = await Promise.all(
