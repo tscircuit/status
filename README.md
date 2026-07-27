@@ -5,7 +5,7 @@
 | Service               | Current Status |
 | --------------------- | -------------- |
 | `registry-api` | ✅ Operational |
-| `autorouting-api` | ✅ Operational |
+| `autorouting-api` | ❌ TimeoutError: Request timed out: POST https://registry-api.tscircuit.com/autorouting/jobs/get |
 | `freerouting-cluster` | ✅ Operational |
 | `jlcsearch-api` | ✅ Operational |
 | `registry_bundling` | ✅ Operational |
@@ -13,20 +13,7 @@
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: tscircuit init -y
-Resolving dependencies
-Resolved, downloaded and extracted [0]
-warn: incorrect peer dependency "circuit-json@0.0.455"
-
-warn: incorrect peer dependency "react-dom@19.2.8"
-
-warn: incorrect peer dependency "react@19.2.8"
-
-warn: incorrect peer dependency "circuit-json@0.0.455"
-
-warn: incorrect peer dependency "@tscircuit/alphabet@0.0.25"
-Saved lockfile
- |
+| `tscircuit_package` | ✅ Operational |
 | `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
