@@ -13,7 +13,32 @@
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ✅ Operational |
+| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: npm install -g tscircuit --force
+npm warn using --force Recommended protections disabled.
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @tscircuit/cli@0.1.1777
+npm warn Found: circuit-json@0.0.455
+npm warn node_modules/tscircuit/node_modules/circuit-json
+npm warn   circuit-json@"^0.0.455" from tscircuit@0.0.2180
+npm warn   node_modules/tscircuit
+npm warn     tscircuit@"*" from the root project
+npm warn     2 more (@tscircuit/cli, @tscircuit/krt-wasm)
+npm warn   11 more (@tscircuit/checks, @tscircuit/circuit-json-util, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer circuit-json@"^0.0.446" from @tscircuit/cli@0.1.1777
+npm warn node_modules/tscircuit/node_modules/@tscircuit/cli
+npm warn   @tscircuit/cli@"^0.1.1777" from tscircuit@0.0.2180
+npm warn   node_modules/tscircuit
+npm warn
+npm warn Conflicting peer dependency: circuit-json@0.0.446
+npm warn node_modules/circuit-json
+npm warn   peer circuit-json@"^0.0.446" from @tscircuit/cli@0.1.1777
+npm warn   node_modules/tscircuit/node_modules/@tscircuit/cli
+npm warn     @tscircuit/cli@"^0.1.1777" from tscircuit@0.0.2180
+npm warn     node_modules/tscircuit
+npm warn ERESOLVE overriding peer dependency
+ |
 | `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
