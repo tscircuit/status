@@ -4,18 +4,85 @@ import type { StatusCheck, Outage } from "../lib/types"
 
 // Configuration
 const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL
+const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL
 const NOTIFICATION_THRESHOLD = 20 * 60 * 1000 // 20 minutes in milliseconds
 const STATUS_FILE = "./statuses.jsonl"
 const REPORTED_OUTAGES_FILE = "./reported-outages.json"
 const IGNORED_SERVICES = [""] // Services to ignore for notifications
 
 console.log("Starting Discord notification script for ongoing outages...")
-console.log("Webhook URL present:", !!DISCORD_WEBHOOK_URL)
+console.log("Discord webhook URL present:", !!DISCORD_WEBHOOK_URL)
+console.log("Slack webhook URL present:", !!SLACK_WEBHOOK_URL)
 
-// Exit if webhook URL is not set
-if (!DISCORD_WEBHOOK_URL) {
-  console.error("DISCORD_WEBHOOK_URL environment variable is not set")
+// Exit if no webhook URL is set
+if (!DISCORD_WEBHOOK_URL && !SLACK_WEBHOOK_URL) {
+  console.error(
+    "DISCORD_WEBHOOK_URL or SLACK_WEBHOOK_URL environment variable must be set",
+  )
   process.exit(1)
+}
+
+type CurrentOutage = {
+  service: string
+  startTime: Date
+  duration: number
+  error: string
+  isOngoing: boolean
+}
+
+type ResolvedOutage = {
+  service: string
+  startTime: Date
+  endTime: Date
+  duration: number
+}
+
+async function postWebhook(
+  channelName: "Discord" | "Slack",
+  webhookUrl: string,
+  message: unknown,
+): Promise<boolean> {
+  const response = await ky.post(webhookUrl, {
+    json: message,
+    timeout: 10000, // 10 second timeout
+  })
+
+  console.log(`${channelName} API Response Status:`, response.status)
+
+  if (response.status >= 200 && response.status < 300) {
+    console.log(`${channelName} notification sent successfully`)
+    return true
+  }
+
+  console.error(
+    `Failed to send ${channelName} notification - HTTP error:`,
+    response.status,
+  )
+  return false
+}
+
+async function sendToConfiguredWebhooks({
+  discordMessage,
+  slackMessage,
+}: {
+  discordMessage: unknown
+  slackMessage: unknown
+}) {
+  let notificationSent = false
+
+  if (DISCORD_WEBHOOK_URL) {
+    notificationSent =
+      (await postWebhook("Discord", DISCORD_WEBHOOK_URL, discordMessage)) ||
+      notificationSent
+  }
+
+  if (SLACK_WEBHOOK_URL) {
+    notificationSent =
+      (await postWebhook("Slack", SLACK_WEBHOOK_URL, slackMessage)) ||
+      notificationSent
+  }
+
+  return notificationSent
 }
 
 /**
@@ -61,6 +128,88 @@ function formatDuration(milliseconds: number): string {
   }
 }
 
+function buildSlackOutageMessage(outages: CurrentOutage[]) {
+  return {
+    text: `Service Outage Notification: ${outages
+      .map((outage) => outage.service)
+      .join(", ")}`,
+    blocks: [
+      {
+        type: "header",
+        text: {
+          type: "plain_text",
+          text: "Service Outage Notification",
+        },
+      },
+      ...outages.flatMap((outage, index) => [
+        {
+          type: "section",
+          fields: [
+            {
+              type: "mrkdwn",
+              text: `*Service*\n${outage.service}`,
+            },
+            {
+              type: "mrkdwn",
+              text: `*Current Duration*\n${formatDuration(outage.duration)}`,
+            },
+            {
+              type: "mrkdwn",
+              text: `*Start Time*\n${outage.startTime.toLocaleString()}`,
+            },
+            {
+              type: "mrkdwn",
+              text: `*Error*\n${outage.error}`,
+            },
+          ],
+        },
+        ...(index < outages.length - 1 ? [{ type: "divider" }] : []),
+      ]),
+    ],
+  }
+}
+
+function buildSlackResolutionMessage(outages: ResolvedOutage[]) {
+  return {
+    text: `Service Outage Resolved: ${outages
+      .map((outage) => outage.service)
+      .join(", ")}`,
+    blocks: [
+      {
+        type: "header",
+        text: {
+          type: "plain_text",
+          text: "Service Outage Resolved",
+        },
+      },
+      ...outages.flatMap((outage, index) => [
+        {
+          type: "section",
+          fields: [
+            {
+              type: "mrkdwn",
+              text: `*Service*\n${outage.service}`,
+            },
+            {
+              type: "mrkdwn",
+              text: `*Total Duration*\n${formatDuration(outage.duration)}`,
+            },
+            {
+              type: "mrkdwn",
+              text: `*Start Time*\n${outage.startTime.toLocaleString()}`,
+            },
+            {
+              type: "mrkdwn",
+              text: `*End Time*\n${outage.endTime.toLocaleString()}`,
+            },
+          ],
+        },
+        ...(index < outages.length - 1 ? [{ type: "divider" }] : []),
+      ]),
+    ],
+  }
+}
+
 /**
  * Read the status checks from statuses.jsonl
  */
@@ -75,16 +224,9 @@ async function readStatusChecks(): Promise<StatusCheck[]> {
 /**
  * Find current outages from status checks
  */
-function findCurrentOutages(statusChecks: StatusCheck[]): Map<
-  string,
-  {
-    service: string
-    startTime: Date
-    duration: number
-    error: string
-    isOngoing: boolean
-  }
-> {
+function findCurrentOutages(
+  statusChecks: StatusCheck[],
+): Map<string, CurrentOutage> {
   const outageMap = new Map()
   const serviceStatus = new Map()
 
@@ -269,23 +411,11 @@ async function sendDiscordNotification() {
         })),
       }
 
-      console.log("Sending resolution message to Discord...")
-      if (DISCORD_WEBHOOK_URL) {
-        const response = await ky.post(DISCORD_WEBHOOK_URL, {
-          json: resolutionMessage,
-          timeout: 10000, // 10 second timeout
-        })
-
-        console.log("Discord API Response Status:", response.status)
-        if (response.status >= 200 && response.status < 300) {
-          console.log("Resolution notification sent successfully")
-        } else {
-          console.error(
-            "Failed to send resolution notification - HTTP error:",
-            response.status,
-          )
-        }
-      }
+      console.log("Sending resolution message to configured webhooks...")
+      await sendToConfiguredWebhooks({
+        discordMessage: resolutionMessage,
+        slackMessage: buildSlackResolutionMessage(resolvedOutages),
+      })
     }
 
     // Filter for outages that have lasted more than the threshold
@@ -344,32 +474,18 @@ async function sendDiscordNotification() {
       })),
     }
 
-    console.log("Sending message to Discord...")
+    console.log("Sending message to configured webhooks...")
 
-    // Send to Discord
-    if (DISCORD_WEBHOOK_URL) {
-      const response = await ky.post(DISCORD_WEBHOOK_URL, {
-        json: message,
-        timeout: 10000, // 10 second timeout
+    const notificationSent = await sendToConfiguredWebhooks({
+      discordMessage: message,
+      slackMessage: buildSlackOutageMessage(newOutages),
+    })
+
+    if (notificationSent) {
+      // Update reported outages
+      newOutages.forEach((outage) => {
+        updatedReportedOutages[outage.service] = Date.now()
       })
-
-      console.log("Discord API Response Status:", response.status)
-
-      if (response.status >= 200 && response.status < 300) {
-        console.log("Discord notification sent successfully")
-
-        // Update reported outages
-        newOutages.forEach((outage) => {
-          updatedReportedOutages[outage.service] = Date.now()
-        })
-      } else {
-        console.error(
-          "Failed to send notification - HTTP error:",
-          response.status,
-        )
-      }
-    } else {
-      console.error("DISCORD_WEBHOOK_URL is not defined")
     }
 
     // Save the updated outages tracking file
