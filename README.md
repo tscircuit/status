@@ -13,7 +13,19 @@
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ✅ Operational |
+| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: tscircuit init -y
+Resolving dependencies
+Resolved, downloaded and extracted [1142]
+warn: incorrect peer dependency "circuit-json@0.0.469"
+
+warn: incorrect peer dependency "react-dom@19.2.8"
+
+warn: incorrect peer dependency "react@19.2.8"
+
+warn: incorrect peer dependency "circuit-json@0.0.469"
+
+warn: incorrect peer dependency "@tscircuit/alphabet@0.0.25"
+ |
 | `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
