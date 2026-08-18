@@ -13,7 +13,7 @@
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ✅ Operational |
+| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: tscircuit init -y |
 | `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
