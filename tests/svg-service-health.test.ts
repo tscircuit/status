@@ -14,13 +14,29 @@ const svg =
   '<svg xmlns="http://www.w3.org/2000/svg"><path d="M0 0 L1 1"/></svg>'
 const headers = {
   "content-type": "image/svg+xml",
-  "cache-control": "public, max-age=86400, immutable",
+  "cache-control":
+    "public, max-age=300, stale-while-revalidate=604800, stale-if-error=604800",
 }
 
-test("accepts an actual rendered image", async () => {
+test("accepts an actual rendered image without immutable caching", async () => {
   await expect(
     checkSvgImage(serve(() => new Response(svg, { headers }))),
   ).resolves.toBeUndefined()
+})
+test("rejects no-store error images even with public caching", async () => {
+  await expect(
+    checkSvgImage(
+      serve(
+        () =>
+          new Response(svg, {
+            headers: {
+              ...headers,
+              "cache-control": "public, no-store",
+            },
+          }),
+      ),
+    ),
+  ).rejects.toThrow("not a successful rendered SVG")
 })
 test("rejects HTTP 200 error images", async () => {
   await expect(

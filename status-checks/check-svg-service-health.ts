@@ -15,9 +15,11 @@ export async function checkSvgImage(
     signal: AbortSignal.timeout(timeoutMs),
   })
   const svg = await response.text()
+  const cacheControl = response.headers.get("cache-control") ?? ""
   if (
     !response.headers.get("content-type")?.includes("image/svg+xml") ||
-    !response.headers.get("cache-control")?.includes("immutable") ||
+    !/(?:^|,)\s*public\s*(?:,|$)/i.test(cacheControl) ||
+    /(?:^|,)\s*no-store\s*(?:,|$)/i.test(cacheControl) ||
     !/<svg[ >]/.test(svg) ||
     !/<(path|rect|circle|polygon|line)[ >]/.test(svg)
   ) {
