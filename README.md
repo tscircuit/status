@@ -11,7 +11,7 @@
 | `registry_bundling` | ✅ Operational |
 | `fly_registry_api` | ✅ Operational |
 | `compile_api` | ✅ Operational |
-| `svg_service` | ✅ Operational |
+| `svg_service` | ❌ SVG Service Health Check Failed: pcb render failed after 1332ms: Response is not a successful rendered SVG |
 | `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ✅ Operational |
 | `usercode_api` | ✅ Operational |
