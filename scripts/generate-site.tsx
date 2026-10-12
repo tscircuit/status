@@ -13,6 +13,13 @@ async function generateSite() {
     .trim()
     .split("\n")
     .map((line) => JSON.parse(line))
+    // Hide the disabled service from the status grid, history, and outages.
+    .map((check: StatusCheck) => ({
+      ...check,
+      checks: check.checks.filter(
+        (service) => service.service !== "autorouting-api",
+      ),
+    }))
   console.log("found", checks.length, "checks")
 
   console.log("computing service outages...")
