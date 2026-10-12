@@ -1,5 +1,5 @@
 import { checkRegistryHealth } from "../status-checks/check-registry-health"
-import { checkAutoroutingApiHealth } from "../status-checks/check-autorouting-api-health"
+// import { checkAutoroutingApiHealth } from "../status-checks/check-autorouting-api-health"
 import { checkFreeroutingClusterHealth } from "../status-checks/check-freerouting-cluster-health"
 import { checkJLCSearchHealth } from "../status-checks/check-jlcsearch-health"
 import { checkRegistryAndBundlingHealth } from "../status-checks/check-registry-and-bundling-health"
@@ -23,7 +23,7 @@ interface StatusCheck {
 async function runChecksAndWriteLog() {
   const checks = [
     { name: "registry-api", fn: checkRegistryHealth },
-    { name: "autorouting-api", fn: checkAutoroutingApiHealth },
+    // { name: "autorouting-api", fn: checkAutoroutingApiHealth },
     { name: "freerouting-cluster", fn: checkFreeroutingClusterHealth },
     { name: "jlcsearch-api", fn: checkJLCSearchHealth },
     // TODO switch to underscore/dashes
