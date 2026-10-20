@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><title>tscircuit Status</title><script src="https://cdn.tailwindcss.com"></script><meta name="viewport" content="width=device-width, initial-scale=1"/></head><body class="bg-gray-100 min-h-screen p-8"><div class="max-w-6xl mx-auto"><h1 class="text-3xl font-bold mb-8">tscircuit Status</h1><div><div id="error-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"><div id="modal-content" class="bg-white rounded-lg shadow-xl w-full max-w-md mx-auto"><div class="flex items-center justify-between p-5 border-b"><div class="flex items-center gap-2"><svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M12 5.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13z"></path></svg><h2 id="modal-title" class="text-lg font-semibold text-red-600">Error Details</h2></div><button class="close-modal text-gray-500 hover:text-gray-700 transition" aria-label="Close"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg></button></div><div class="p-5"><p id="error-message" class="text-sm text-red-600"></p></div><div class="flex justify-end p-4 border-t bg-gray-50 rounded-b-lg"><button class="close-modal px-4 py-2 text-sm font-medium text-white bg-red-500 hover:bg-red-600 rounded-lg transition">Close</button></div></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">registry-api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">freerouting-cluster</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">99.93<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">jlcsearch-api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">registry_bundling</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">fly_registry_api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">compile_api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">svg_service</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">98.41<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">browser_preview</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">tscircuit_package</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">99.93<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">usercode_api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">98.56<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div></div><script>
+<!DOCTYPE html><html lang="en"><head><title>tscircuit Status</title><script src="https://cdn.tailwindcss.com"></script><meta name="viewport" content="width=device-width, initial-scale=1"/></head><body class="bg-gray-100 min-h-screen p-8"><div class="max-w-6xl mx-auto"><h1 class="text-3xl font-bold mb-8">tscircuit Status</h1><div><div id="error-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"><div id="modal-content" class="bg-white rounded-lg shadow-xl w-full max-w-md mx-auto"><div class="flex items-center justify-between p-5 border-b"><div class="flex items-center gap-2"><svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M12 5.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13z"></path></svg><h2 id="modal-title" class="text-lg font-semibold text-red-600">Error Details</h2></div><button class="close-modal text-gray-500 hover:text-gray-700 transition" aria-label="Close"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg></button></div><div class="p-5"><p id="error-message" class="text-sm text-red-600"></p></div><div class="flex justify-end p-4 border-t bg-gray-50 rounded-b-lg"><button class="close-modal px-4 py-2 text-sm font-medium text-white bg-red-500 hover:bg-red-600 rounded-lg transition">Close</button></div></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">registry-api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">freerouting-cluster</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">99.93<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">jlcsearch-api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">registry_bundling</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">fly_registry_api</h3><button class="ml-auto text-red-500 hover:text-red-600" data-service="fly_registry_api" data-error="Fly Registry API Health Ping Failed" aria-label="View Error Details"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert-icon lucide-circle-alert"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg></button></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-red-500"></div><span>Error</span></div><div class="text-2xl font-bold mb-1">99.93<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">compile_api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">svg_service</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">98.41<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">browser_preview</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">tscircuit_package</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">99.93<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">usercode_api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">98.56<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div></div><script>
             document.addEventListener("DOMContentLoaded", () => {
               const modal = document.getElementById("error-modal")
               const modalContent = document.getElementById("modal-content")
@@ -28,7 +28,6 @@
               });
             })
           </script></div><div class="bg-white rounded-lg shadow-lg p-4 sm:p-6 overflow-hidden"><h3 class="text-lg font-semibold mb-4">Uptime History</h3><div class="space-y-4 sm:overflow-visible overflow-x-auto pb-2"><div class="relative"><div class="text-sm font-medium mb-1">registry-api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
-10/6/2026, 4:29:55 PM: Operational
 10/6/2026, 4:44:29 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 17:00
 10/6/2026, 5:04:01 PM: Operational
 10/6/2026, 5:23:56 PM: Operational
@@ -1415,8 +1414,8 @@
 10/20/2026, 3:47:51 PM: Operational
 10/20/2026, 3:57:20 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 16:00
 10/20/2026, 4:05:58 PM: Operational
-10/20/2026, 4:27:56 PM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">freerouting-cluster</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
-10/6/2026, 4:29:55 PM: Operational
+10/20/2026, 4:27:56 PM: Operational
+10/20/2026, 4:40:02 PM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">freerouting-cluster</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
 10/6/2026, 4:44:29 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 17:00
 10/6/2026, 5:04:01 PM: Operational
 10/6/2026, 5:23:56 PM: Operational
@@ -2803,8 +2802,8 @@
 10/20/2026, 3:47:51 PM: Operational
 10/20/2026, 3:57:20 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 16:00
 10/20/2026, 4:05:58 PM: Operational
-10/20/2026, 4:27:56 PM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">jlcsearch-api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
-10/6/2026, 4:29:55 PM: Operational
+10/20/2026, 4:27:56 PM: Operational
+10/20/2026, 4:40:02 PM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">jlcsearch-api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
 10/6/2026, 4:44:29 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 17:00
 10/6/2026, 5:04:01 PM: Operational
 10/6/2026, 5:23:56 PM: Operational
@@ -4191,8 +4190,8 @@
 10/20/2026, 3:47:51 PM: Operational
 10/20/2026, 3:57:20 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 16:00
 10/20/2026, 4:05:58 PM: Operational
-10/20/2026, 4:27:56 PM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">registry_bundling</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
-10/6/2026, 4:29:55 PM: Operational
+10/20/2026, 4:27:56 PM: Operational
+10/20/2026, 4:40:02 PM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">registry_bundling</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
 10/6/2026, 4:44:29 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 17:00
 10/6/2026, 5:04:01 PM: Operational
 10/6/2026, 5:23:56 PM: Operational
@@ -5579,8 +5578,1396 @@
 10/20/2026, 3:47:51 PM: Operational
 10/20/2026, 3:57:20 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 16:00
 10/20/2026, 4:05:58 PM: Operational
-10/20/2026, 4:27:56 PM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">fly_registry_api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
-10/6/2026, 4:29:55 PM: Operational
+10/20/2026, 4:27:56 PM: Operational
+10/20/2026, 4:40:02 PM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">fly_registry_api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
+10/6/2026, 4:44:29 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 17:00
+10/6/2026, 5:04:01 PM: Operational
+10/6/2026, 5:23:56 PM: Operational
+10/6/2026, 5:37:14 PM: Operational
+10/6/2026, 5:48:59 PM: Operational
+10/6/2026, 5:56:43 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 18:00
+10/6/2026, 6:06:48 PM: Operational
+10/6/2026, 6:31:36 PM: Operational
+10/6/2026, 6:50:27 PM: Operational
+10/6/2026, 6:59:37 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 19:00
+10/6/2026, 7:08:48 PM: Operational
+10/6/2026, 7:24:05 PM: Operational
+10/6/2026, 7:34:44 PM: Operational
+10/6/2026, 7:48:17 PM: Operational
+10/6/2026, 7:54:45 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 20:00
+10/6/2026, 8:06:57 PM: Operational
+10/6/2026, 8:28:37 PM: Operational
+10/6/2026, 8:40:28 PM: Operational
+10/6/2026, 8:57:49 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 21:00
+10/6/2026, 9:12:22 PM: Operational
+10/6/2026, 9:24:52 PM: Operational
+10/6/2026, 9:41:45 PM: Operational
+10/6/2026, 9:47:16 PM: Operational
+10/6/2026, 9:54:34 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 22:00
+10/6/2026, 10:05:16 PM: Operational
+10/6/2026, 10:25:45 PM: Operational
+10/6/2026, 10:37:55 PM: Operational
+10/6/2026, 10:47:56 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 23:00
+10/6/2026, 11:01:06 PM: Operational
+10/6/2026, 11:09:05 PM: Operational
+10/6/2026, 11:24:36 PM: Operational
+10/6/2026, 11:37:20 PM: Operational
+10/6/2026, 11:47:58 PM: Operational
+10/6/2026, 11:55:41 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 0:00
+10/7/2026, 12:10:20 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 1:00
+10/7/2026, 1:06:00 AM: Operational
+10/7/2026, 1:45:30 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 2:00
+10/7/2026, 2:10:23 AM: Operational
+10/7/2026, 2:42:17 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 3:00
+10/7/2026, 3:00:55 AM: Operational
+10/7/2026, 3:20:33 AM: Operational
+10/7/2026, 3:43:59 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 4:00
+10/7/2026, 4:00:39 AM: Operational
+10/7/2026, 4:23:52 AM: Operational
+10/7/2026, 4:43:45 AM: Operational
+10/7/2026, 4:55:05 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 5:00
+10/7/2026, 5:06:52 AM: Operational
+10/7/2026, 5:28:27 AM: Operational
+10/7/2026, 5:42:20 AM: Operational
+10/7/2026, 5:53:20 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 6:00
+10/7/2026, 6:06:09 AM: Operational
+10/7/2026, 6:40:42 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 7:00
+10/7/2026, 7:05:06 AM: Operational
+10/7/2026, 7:35:03 AM: Operational
+10/7/2026, 7:56:06 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 8:00
+10/7/2026, 8:07:31 AM: Operational
+10/7/2026, 8:37:22 AM: Operational
+10/7/2026, 8:56:30 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 9:00
+10/7/2026, 9:07:14 AM: Operational
+10/7/2026, 9:30:59 AM: Operational
+10/7/2026, 9:48:17 AM: Operational
+10/7/2026, 9:59:06 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 10:00
+10/7/2026, 10:07:01 AM: Operational
+10/7/2026, 10:27:20 AM: Operational
+10/7/2026, 10:39:21 AM: Operational
+10/7/2026, 10:50:20 AM: Operational
+10/7/2026, 10:58:46 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 11:00
+10/7/2026, 11:07:45 AM: Operational
+10/7/2026, 11:25:06 AM: Operational
+10/7/2026, 11:39:00 AM: Operational
+10/7/2026, 11:49:57 AM: Operational
+10/7/2026, 11:56:50 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 12:00
+10/7/2026, 12:07:18 PM: Operational
+10/7/2026, 12:39:32 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 13:00
+10/7/2026, 1:01:26 PM: Operational
+10/7/2026, 1:23:38 PM: Operational
+10/7/2026, 1:40:55 PM: Operational
+10/7/2026, 1:51:21 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 14:00
+10/7/2026, 2:00:11 PM: Operational
+10/7/2026, 2:14:54 PM: Operational
+10/7/2026, 2:35:36 PM: Operational
+10/7/2026, 2:49:48 PM: Operational
+10/7/2026, 2:58:37 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 15:00
+10/7/2026, 3:05:56 PM: Operational
+10/7/2026, 3:37:02 PM: Operational
+10/7/2026, 3:54:49 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 16:00
+10/7/2026, 4:12:00 PM: Operational
+10/7/2026, 4:34:00 PM: Operational
+10/7/2026, 4:46:30 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 17:00
+10/7/2026, 5:06:02 PM: Operational
+10/7/2026, 5:28:10 PM: Operational
+10/7/2026, 5:39:47 PM: Operational
+10/7/2026, 5:50:49 PM: Operational
+10/7/2026, 5:58:17 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 18:00
+10/7/2026, 6:09:38 PM: Operational
+10/7/2026, 6:33:37 PM: Operational
+10/7/2026, 6:55:40 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 19:00
+10/7/2026, 7:05:55 PM: Operational
+10/7/2026, 7:26:58 PM: Operational
+10/7/2026, 7:36:59 PM: Operational
+10/7/2026, 7:53:34 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 20:00
+10/7/2026, 8:04:44 PM: Operational
+10/7/2026, 8:28:49 PM: Operational
+10/7/2026, 8:40:22 PM: Operational
+10/7/2026, 8:50:30 PM: Operational
+10/7/2026, 8:59:08 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 21:00
+10/7/2026, 9:05:29 PM: Operational
+10/7/2026, 9:25:19 PM: Operational
+10/7/2026, 9:45:41 PM: Operational
+10/7/2026, 9:59:16 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 22:00
+10/7/2026, 10:04:40 PM: Operational
+10/7/2026, 10:23:43 PM: Operational
+10/7/2026, 10:37:59 PM: Operational
+10/7/2026, 10:48:26 PM: Operational
+10/7/2026, 10:55:52 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 23:00
+10/7/2026, 11:04:44 PM: Operational
+10/7/2026, 11:27:13 PM: Operational
+10/7/2026, 11:33:51 PM: Operational
+10/7/2026, 11:47:45 PM: Operational
+10/7/2026, 11:54:43 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 0:00
+10/8/2026, 12:09:50 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 1:00
+10/8/2026, 1:05:02 AM: Operational
+10/8/2026, 1:45:45 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 2:00
+10/8/2026, 2:09:39 AM: Operational
+10/8/2026, 2:40:12 AM: Operational
+10/8/2026, 2:58:25 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 3:00
+10/8/2026, 3:09:12 AM: Operational
+10/8/2026, 3:35:01 AM: Operational
+10/8/2026, 3:57:24 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 4:00
+10/8/2026, 4:06:17 AM: Operational
+10/8/2026, 4:32:28 AM: Operational
+10/8/2026, 4:52:22 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 5:00
+10/8/2026, 5:01:49 AM: Operational
+10/8/2026, 5:23:38 AM: Operational
+10/8/2026, 5:40:38 AM: Operational
+10/8/2026, 5:52:15 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 6:00
+10/8/2026, 6:00:56 AM: Operational
+10/8/2026, 6:28:30 AM: Operational
+10/8/2026, 6:59:05 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 7:00
+10/8/2026, 7:15:41 AM: Operational
+10/8/2026, 7:45:25 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 8:00
+10/8/2026, 8:02:23 AM: Operational
+10/8/2026, 8:33:01 AM: Operational
+10/8/2026, 8:53:54 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 9:00
+10/8/2026, 9:08:14 AM: Operational
+10/8/2026, 9:32:06 AM: Operational
+10/8/2026, 9:49:09 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 10:00
+10/8/2026, 10:02:28 AM: Operational
+10/8/2026, 10:16:37 AM: Operational
+10/8/2026, 10:35:07 AM: Operational
+10/8/2026, 10:51:31 AM: Operational
+10/8/2026, 10:59:56 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 11:00
+10/8/2026, 11:08:44 AM: Operational
+10/8/2026, 11:27:44 AM: Operational
+10/8/2026, 11:38:44 AM: Operational
+10/8/2026, 11:50:25 AM: Operational
+10/8/2026, 11:57:43 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 12:00
+10/8/2026, 12:07:53 PM: Operational
+10/8/2026, 12:38:54 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 13:00
+10/8/2026, 1:00:53 PM: Operational
+10/8/2026, 1:23:37 PM: Operational
+10/8/2026, 1:42:34 PM: Operational
+10/8/2026, 1:53:40 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 14:00
+10/8/2026, 2:01:01 PM: Operational
+10/8/2026, 2:23:38 PM: Operational
+10/8/2026, 2:42:43 PM: Operational
+10/8/2026, 2:55:06 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 15:00
+10/8/2026, 3:05:11 PM: Operational
+10/8/2026, 3:27:49 PM: Operational
+10/8/2026, 3:40:50 PM: Operational
+10/8/2026, 3:55:12 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 16:00
+10/8/2026, 4:00:46 PM: Operational
+10/8/2026, 4:19:43 PM: Operational
+10/8/2026, 4:39:42 PM: Operational
+10/8/2026, 4:53:37 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 17:00
+10/8/2026, 5:06:05 PM: Operational
+10/8/2026, 5:25:02 PM: Operational
+10/8/2026, 5:39:11 PM: Operational
+10/8/2026, 5:49:43 PM: Operational
+10/8/2026, 5:57:51 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 18:00
+10/8/2026, 6:05:21 PM: Operational
+10/8/2026, 6:32:56 PM: Operational
+10/8/2026, 6:53:13 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 19:00
+10/8/2026, 7:02:12 PM: Operational
+10/8/2026, 7:20:36 PM: Operational
+10/8/2026, 7:33:26 PM: Operational
+10/8/2026, 7:46:04 PM: Operational
+10/8/2026, 7:55:50 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 20:00
+10/8/2026, 8:05:51 PM: Operational
+10/8/2026, 8:29:08 PM: Operational
+10/8/2026, 8:42:33 PM: Operational
+10/8/2026, 8:52:39 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 21:00
+10/8/2026, 9:00:49 PM: Operational
+10/8/2026, 9:16:13 PM: Operational
+10/8/2026, 9:31:54 PM: Operational
+10/8/2026, 9:46:05 PM: Operational
+10/8/2026, 9:55:38 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 22:00
+10/8/2026, 10:05:10 PM: Operational
+10/8/2026, 10:26:45 PM: Operational
+10/8/2026, 10:39:06 PM: Operational
+10/8/2026, 10:50:26 PM: Operational
+10/8/2026, 10:57:08 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 23:00
+10/8/2026, 11:05:12 PM: Operational
+10/8/2026, 11:25:34 PM: Operational
+10/8/2026, 11:39:01 PM: Operational
+10/8/2026, 11:48:24 PM: Operational
+10/8/2026, 11:55:50 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 0:00
+10/9/2026, 12:10:10 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 1:00
+10/9/2026, 1:07:41 AM: Operational
+10/9/2026, 1:48:02 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 2:00
+10/9/2026, 2:11:18 AM: Operational
+10/9/2026, 2:42:41 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 3:00
+10/9/2026, 3:00:27 AM: Operational
+10/9/2026, 3:20:42 AM: Operational
+10/9/2026, 3:45:15 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 4:00
+10/9/2026, 4:03:40 AM: Operational
+10/9/2026, 4:29:19 AM: Operational
+10/9/2026, 4:47:14 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 5:00
+10/9/2026, 5:01:01 AM: Operational
+10/9/2026, 5:19:36 AM: Operational
+10/9/2026, 5:38:06 AM: Operational
+10/9/2026, 5:52:31 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 6:00
+10/9/2026, 6:01:20 AM: Operational
+10/9/2026, 6:29:18 AM: Operational
+10/9/2026, 6:59:08 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 7:00
+10/9/2026, 7:18:49 AM: Operational
+10/9/2026, 7:45:39 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 8:00
+10/9/2026, 8:03:19 AM: Operational
+10/9/2026, 8:32:51 AM: Operational
+10/9/2026, 8:54:25 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 9:00
+10/9/2026, 9:08:29 AM: Operational
+10/9/2026, 9:33:39 AM: Operational
+10/9/2026, 9:49:39 AM: Operational
+10/9/2026, 9:59:41 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 10:00
+10/9/2026, 10:15:52 AM: Operational
+10/9/2026, 10:36:32 AM: Operational
+10/9/2026, 10:50:51 AM: Operational
+10/9/2026, 10:58:01 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 11:00
+10/9/2026, 11:08:01 AM: Operational
+10/9/2026, 11:25:24 AM: Operational
+10/9/2026, 11:37:25 AM: Operational
+10/9/2026, 11:49:00 AM: Operational
+10/9/2026, 11:57:19 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 12:00
+10/9/2026, 12:05:36 PM: Operational
+10/9/2026, 12:36:51 PM: Operational
+10/9/2026, 12:59:18 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 13:00
+10/9/2026, 1:13:41 PM: Operational
+10/9/2026, 1:37:01 PM: Operational
+10/9/2026, 1:52:38 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 14:00
+10/9/2026, 2:01:09 PM: Operational
+10/9/2026, 2:20:45 PM: Operational
+10/9/2026, 2:40:31 PM: Operational
+10/9/2026, 2:53:48 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 15:00
+10/9/2026, 3:05:55 PM: Operational
+10/9/2026, 3:26:12 PM: Operational
+10/9/2026, 3:38:54 PM: Operational
+10/9/2026, 3:51:44 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 16:00
+10/9/2026, 4:00:05 PM: Operational
+10/9/2026, 4:13:33 PM: Operational
+10/9/2026, 4:30:09 PM: Operational
+10/9/2026, 4:44:26 PM: Operational
+10/9/2026, 4:57:46 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 17:00
+10/9/2026, 5:05:06 PM: Operational
+10/9/2026, 5:24:15 PM: Operational
+10/9/2026, 5:37:36 PM: Operational
+10/9/2026, 5:49:35 PM: Operational
+10/9/2026, 5:57:10 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 18:00
+10/9/2026, 6:06:15 PM: Operational
+10/9/2026, 6:31:25 PM: Operational
+10/9/2026, 6:49:21 PM: Operational
+10/9/2026, 6:59:30 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 19:00
+10/9/2026, 7:07:28 PM: Operational
+10/9/2026, 7:22:22 PM: Operational
+10/9/2026, 7:34:55 PM: Operational
+10/9/2026, 7:48:21 PM: Operational
+10/9/2026, 7:55:38 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 20:00
+10/9/2026, 8:05:25 PM: Operational
+10/9/2026, 8:26:24 PM: Operational
+10/9/2026, 8:40:16 PM: Operational
+10/9/2026, 8:51:38 PM: Operational
+10/9/2026, 8:59:15 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 21:00
+10/9/2026, 9:09:38 PM: Operational
+10/9/2026, 9:27:33 PM: Operational
+10/9/2026, 9:37:31 PM: Operational
+10/9/2026, 9:49:25 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 22:00
+10/9/2026, 10:01:19 PM: Operational
+10/9/2026, 10:05:27 PM: Operational
+10/9/2026, 10:26:34 PM: Operational
+10/9/2026, 10:39:14 PM: Operational
+10/9/2026, 10:49:48 PM: Operational
+10/9/2026, 10:57:34 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 23:00
+10/9/2026, 11:05:29 PM: Operational
+10/9/2026, 11:25:10 PM: Operational
+10/9/2026, 11:38:36 PM: Operational
+10/9/2026, 11:48:18 PM: Operational
+10/9/2026, 11:55:18 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 0:00
+10/10/2026, 12:09:34 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 1:00
+10/10/2026, 1:05:22 AM: Operational
+10/10/2026, 1:45:11 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 2:00
+10/10/2026, 2:09:09 AM: Operational
+10/10/2026, 2:40:01 AM: Operational
+10/10/2026, 2:58:23 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 3:00
+10/10/2026, 3:13:12 AM: Operational
+10/10/2026, 3:47:39 AM: Operational
+10/10/2026, 3:56:26 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 4:00
+10/10/2026, 4:07:29 AM: Operational
+10/10/2026, 4:31:04 AM: Operational
+10/10/2026, 4:47:53 AM: Operational
+10/10/2026, 4:58:30 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 5:00
+10/10/2026, 5:05:24 AM: Operational
+10/10/2026, 5:27:06 AM: Operational
+10/10/2026, 5:39:21 AM: Operational
+10/10/2026, 5:50:41 AM: Operational
+10/10/2026, 5:58:22 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 6:00
+10/10/2026, 6:06:15 AM: Operational
+10/10/2026, 6:39:44 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 7:00
+10/10/2026, 7:01:23 AM: Operational
+10/10/2026, 7:22:31 AM: Operational
+10/10/2026, 7:39:23 AM: Operational
+10/10/2026, 7:51:37 AM: Operational
+10/10/2026, 7:58:52 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 8:00
+10/10/2026, 8:10:10 AM: Operational
+10/10/2026, 8:32:53 AM: Operational
+10/10/2026, 8:49:19 AM: Operational
+10/10/2026, 8:58:03 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 9:00
+10/10/2026, 9:04:35 AM: Operational
+10/10/2026, 9:27:05 AM: Operational
+10/10/2026, 9:39:34 AM: Operational
+10/10/2026, 9:49:07 AM: Operational
+10/10/2026, 9:56:48 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 10:00
+10/10/2026, 10:05:18 AM: Operational
+10/10/2026, 10:25:41 AM: Operational
+10/10/2026, 10:38:16 AM: Operational
+10/10/2026, 10:46:59 AM: Operational
+10/10/2026, 10:55:18 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 11:00
+10/10/2026, 11:04:40 AM: Operational
+10/10/2026, 11:23:07 AM: Operational
+10/10/2026, 11:33:54 AM: Operational
+10/10/2026, 11:47:37 AM: Operational
+10/10/2026, 11:55:16 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 12:00
+10/10/2026, 12:05:27 PM: Operational
+10/10/2026, 12:33:36 PM: Operational
+10/10/2026, 12:55:36 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 13:00
+10/10/2026, 1:05:49 PM: Operational
+10/10/2026, 1:24:30 PM: Operational
+10/10/2026, 1:38:21 PM: Operational
+10/10/2026, 1:46:52 PM: Operational
+10/10/2026, 1:55:03 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 14:00
+10/10/2026, 2:05:27 PM: Operational
+10/10/2026, 2:24:43 PM: Operational
+10/10/2026, 2:38:00 PM: Operational
+10/10/2026, 2:47:37 PM: Operational
+10/10/2026, 2:55:37 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 15:00
+10/10/2026, 3:04:19 PM: Operational
+10/10/2026, 3:24:22 PM: Operational
+10/10/2026, 3:37:54 PM: Operational
+10/10/2026, 3:48:06 PM: Operational
+10/10/2026, 3:55:06 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 16:00
+10/10/2026, 4:05:28 PM: Operational
+10/10/2026, 4:26:52 PM: Operational
+10/10/2026, 4:38:55 PM: Operational
+10/10/2026, 4:49:57 PM: Operational
+10/10/2026, 4:57:22 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 17:00
+10/10/2026, 5:04:04 PM: Operational
+10/10/2026, 5:22:49 PM: Operational
+10/10/2026, 5:32:30 PM: Operational
+10/10/2026, 5:42:35 PM: Operational
+10/10/2026, 5:49:02 PM: Operational
+10/10/2026, 5:54:38 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 18:00
+10/10/2026, 6:05:34 PM: Operational
+10/10/2026, 6:30:32 PM: Operational
+10/10/2026, 6:45:19 PM: Operational
+10/10/2026, 6:58:05 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 19:00
+10/10/2026, 7:05:14 PM: Operational
+10/10/2026, 7:21:22 PM: Operational
+10/10/2026, 7:31:17 PM: Operational
+10/10/2026, 7:41:18 PM: Operational
+10/10/2026, 7:47:06 PM: Operational
+10/10/2026, 7:54:29 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 20:00
+10/10/2026, 8:04:32 PM: Operational
+10/10/2026, 8:25:25 PM: Operational
+10/10/2026, 8:38:13 PM: Operational
+10/10/2026, 8:48:07 PM: Operational
+10/10/2026, 8:56:08 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 21:00
+10/10/2026, 9:05:26 PM: Operational
+10/10/2026, 9:23:51 PM: Operational
+10/10/2026, 9:37:48 PM: Operational
+10/10/2026, 9:47:45 PM: Operational
+10/10/2026, 9:55:02 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 22:00
+10/10/2026, 10:05:18 PM: Operational
+10/10/2026, 10:24:50 PM: Operational
+10/10/2026, 10:37:55 PM: Operational
+10/10/2026, 10:47:24 PM: Operational
+10/10/2026, 10:55:50 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 23:00
+10/10/2026, 11:05:26 PM: Operational
+10/10/2026, 11:23:42 PM: Operational
+10/10/2026, 11:36:48 PM: Operational
+10/10/2026, 11:47:38 PM: Operational
+10/10/2026, 11:55:23 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 0:00
+10/11/2026, 12:09:37 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 1:00
+10/11/2026, 1:11:39 AM: Operational
+10/11/2026, 1:47:26 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 2:00
+10/11/2026, 2:10:48 AM: Operational
+10/11/2026, 2:45:41 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 3:00
+10/11/2026, 3:06:12 AM: Operational
+10/11/2026, 3:35:16 AM: Operational
+10/11/2026, 3:57:44 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 4:00
+10/11/2026, 4:07:41 AM: Operational
+10/11/2026, 4:38:37 AM: Operational
+10/11/2026, 4:52:57 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 5:00
+10/11/2026, 5:08:43 AM: Operational
+10/11/2026, 5:19:38 AM: Operational
+10/11/2026, 5:35:07 AM: Operational
+10/11/2026, 5:50:05 AM: Operational
+10/11/2026, 5:58:12 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 6:00
+10/11/2026, 6:05:54 AM: Operational
+10/11/2026, 6:40:39 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 7:00
+10/11/2026, 7:03:11 AM: Operational
+10/11/2026, 7:27:45 AM: Operational
+10/11/2026, 7:42:51 AM: Operational
+10/11/2026, 7:52:44 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 8:00
+10/11/2026, 8:05:46 AM: Operational
+10/11/2026, 8:32:26 AM: Operational
+10/11/2026, 8:53:53 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 9:00
+10/11/2026, 9:07:26 AM: Operational
+10/11/2026, 9:17:26 AM: Operational
+10/11/2026, 9:34:16 AM: Operational
+10/11/2026, 9:48:09 AM: Operational
+10/11/2026, 9:56:55 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 10:00
+10/11/2026, 10:05:11 AM: Operational
+10/11/2026, 10:25:24 AM: Operational
+10/11/2026, 10:38:54 AM: Operational
+10/11/2026, 10:48:25 AM: Operational
+10/11/2026, 10:56:23 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 11:00
+10/11/2026, 11:05:02 AM: Operational
+10/11/2026, 11:30:55 AM: Operational
+10/11/2026, 11:39:45 AM: Operational
+10/11/2026, 11:47:46 AM: Operational
+10/11/2026, 11:55:10 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 12:00
+10/11/2026, 12:06:30 PM: Operational
+10/11/2026, 12:36:00 PM: Operational
+10/11/2026, 12:57:21 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 13:00
+10/11/2026, 1:06:50 PM: Operational
+10/11/2026, 1:28:08 PM: Operational
+10/11/2026, 1:38:13 PM: Operational
+10/11/2026, 1:47:55 PM: Operational
+10/11/2026, 1:55:05 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 14:00
+10/11/2026, 2:04:32 PM: Operational
+10/11/2026, 2:25:19 PM: Operational
+10/11/2026, 2:40:00 PM: Operational
+10/11/2026, 2:48:51 PM: Operational
+10/11/2026, 2:56:53 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 15:00
+10/11/2026, 3:05:53 PM: Operational
+10/11/2026, 3:23:38 PM: Operational
+10/11/2026, 3:39:33 PM: Operational
+10/11/2026, 3:54:19 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 16:00
+10/11/2026, 4:05:32 PM: Operational
+10/11/2026, 4:27:48 PM: Operational
+10/11/2026, 4:39:31 PM: Operational
+10/11/2026, 4:49:29 PM: Operational
+10/11/2026, 4:58:13 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 17:00
+10/11/2026, 5:05:13 PM: Operational
+10/11/2026, 5:23:37 PM: Operational
+10/11/2026, 5:34:21 PM: Operational
+10/11/2026, 5:47:30 PM: Operational
+10/11/2026, 5:54:28 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 18:00
+10/11/2026, 6:06:08 PM: Operational
+10/11/2026, 6:30:53 PM: Operational
+10/11/2026, 6:47:41 PM: Operational
+10/11/2026, 6:58:42 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 19:00
+10/11/2026, 7:05:41 PM: Operational
+10/11/2026, 7:22:17 PM: Operational
+10/11/2026, 7:32:51 PM: Operational
+10/11/2026, 7:43:03 PM: Operational
+10/11/2026, 7:49:09 PM: Operational
+10/11/2026, 7:54:46 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 20:00
+10/11/2026, 8:06:59 PM: Operational
+10/11/2026, 8:27:06 PM: Operational
+10/11/2026, 8:39:22 PM: Operational
+10/11/2026, 8:50:06 PM: Operational
+10/11/2026, 8:57:49 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 21:00
+10/11/2026, 9:05:23 PM: Operational
+10/11/2026, 9:23:55 PM: Operational
+10/11/2026, 9:37:33 PM: Operational
+10/11/2026, 9:48:22 PM: Operational
+10/11/2026, 9:56:00 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 22:00
+10/11/2026, 10:05:20 PM: Operational
+10/11/2026, 10:25:27 PM: Operational
+10/11/2026, 10:38:05 PM: Operational
+10/11/2026, 10:47:58 PM: Operational
+10/11/2026, 10:56:26 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 23:00
+10/11/2026, 11:05:44 PM: Operational
+10/11/2026, 11:24:26 PM: Operational
+10/11/2026, 11:38:26 PM: Operational
+10/11/2026, 11:48:17 PM: Operational
+10/11/2026, 11:55:35 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 0:00
+10/12/2026, 12:10:07 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 1:00
+10/12/2026, 1:13:22 AM: Operational
+10/12/2026, 1:55:29 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 2:00
+10/12/2026, 2:23:47 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 3:00
+10/12/2026, 3:02:00 AM: Operational
+10/12/2026, 3:35:04 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 4:00
+10/12/2026, 4:04:18 AM: Operational
+10/12/2026, 4:37:51 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 5:00
+10/12/2026, 5:01:58 AM: Operational
+10/12/2026, 5:27:59 AM: Operational
+10/12/2026, 5:47:48 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 6:00
+10/12/2026, 6:02:32 AM: Operational
+10/12/2026, 6:59:57 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 7:00
+10/12/2026, 7:40:12 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 8:00
+10/12/2026, 8:12:20 AM: Operational
+10/12/2026, 8:50:50 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 9:00
+10/12/2026, 9:11:28 AM: Operational
+10/12/2026, 9:45:35 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 10:00
+10/12/2026, 10:06:57 AM: Operational
+10/12/2026, 10:33:00 AM: Operational
+10/12/2026, 10:50:58 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 11:00
+10/12/2026, 11:02:21 AM: Operational
+10/12/2026, 11:22:48 AM: Operational
+10/12/2026, 11:40:35 AM: Operational
+10/12/2026, 11:52:41 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 12:00
+10/12/2026, 12:01:38 PM: Operational
+10/12/2026, 12:44:18 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 13:00
+10/12/2026, 1:20:43 PM: Operational
+10/12/2026, 1:55:18 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 14:00
+10/12/2026, 2:12:09 PM: Operational
+10/12/2026, 2:38:07 PM: Operational
+10/12/2026, 2:58:35 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 15:00
+10/12/2026, 3:29:48 PM: Operational
+10/12/2026, 3:58:46 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 16:00
+10/12/2026, 4:06:26 PM: Operational
+10/12/2026, 4:28:55 PM: Operational
+10/12/2026, 4:42:16 PM: Operational
+10/12/2026, 4:53:50 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 17:00
+10/12/2026, 5:05:32 PM: Operational
+10/12/2026, 5:26:25 PM: Operational
+10/12/2026, 5:39:17 PM: Operational
+10/12/2026, 5:52:19 PM: Operational
+10/12/2026, 5:58:07 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 18:00
+10/12/2026, 6:05:37 PM: Operational
+10/12/2026, 6:32:51 PM: Operational
+10/12/2026, 6:53:27 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 19:00
+10/12/2026, 7:06:04 PM: Operational
+10/12/2026, 7:24:06 PM: Operational
+10/12/2026, 7:37:27 PM: Operational
+10/12/2026, 7:49:11 PM: Operational
+10/12/2026, 7:55:56 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 20:00
+10/12/2026, 8:05:24 PM: Operational
+10/12/2026, 8:29:03 PM: Operational
+10/12/2026, 8:41:57 PM: Operational
+10/12/2026, 8:54:34 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 21:00
+10/12/2026, 9:04:57 PM: Operational
+10/12/2026, 9:23:41 PM: Operational
+10/12/2026, 9:37:50 PM: Operational
+10/12/2026, 9:49:20 PM: Operational
+10/12/2026, 9:55:28 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 22:00
+10/12/2026, 10:05:12 PM: Operational
+10/12/2026, 10:26:11 PM: Operational
+10/12/2026, 10:39:35 PM: Operational
+10/12/2026, 10:50:09 PM: Operational
+10/12/2026, 10:58:06 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 23:00
+10/12/2026, 11:05:18 PM: Operational
+10/12/2026, 11:26:09 PM: Operational
+10/12/2026, 11:39:10 PM: Operational
+10/12/2026, 11:48:58 PM: Operational
+10/12/2026, 11:59:21 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 0:00
+10/13/2026, 12:09:25 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 1:00
+10/13/2026, 1:08:47 AM: Operational
+10/13/2026, 1:49:26 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 2:00
+10/13/2026, 2:13:48 AM: Operational
+10/13/2026, 2:53:18 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 3:00
+10/13/2026, 3:11:15 AM: Operational
+10/13/2026, 3:40:20 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 4:00
+10/13/2026, 4:00:45 AM: Operational
+10/13/2026, 4:29:32 AM: Operational
+10/13/2026, 4:50:15 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 5:00
+10/13/2026, 5:03:55 AM: Operational
+10/13/2026, 5:31:55 AM: Operational
+10/13/2026, 5:51:58 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 6:00
+10/13/2026, 6:01:58 AM: Operational
+10/13/2026, 6:39:06 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 7:00
+10/13/2026, 7:08:23 AM: Operational
+10/13/2026, 7:38:37 AM: Operational
+10/13/2026, 7:58:49 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 8:00
+10/13/2026, 8:12:51 AM: Operational
+10/13/2026, 8:41:50 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 9:00
+10/13/2026, 9:01:06 AM: Operational
+10/13/2026, 9:22:20 AM: Operational
+10/13/2026, 9:44:01 AM: Operational
+10/13/2026, 9:56:35 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 10:00
+10/13/2026, 10:07:04 AM: Operational
+10/13/2026, 10:30:52 AM: Operational
+10/13/2026, 10:46:43 AM: Operational
+10/13/2026, 10:59:52 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 11:00
+10/13/2026, 11:11:13 AM: Operational
+10/13/2026, 11:28:32 AM: Operational
+10/13/2026, 11:40:07 AM: Operational
+10/13/2026, 11:52:20 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 12:00
+10/13/2026, 12:05:08 PM: Operational
+10/13/2026, 12:30:37 PM: Operational
+10/13/2026, 12:59:05 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 13:00
+10/13/2026, 1:17:37 PM: Operational
+10/13/2026, 1:44:52 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 14:00
+10/13/2026, 2:03:05 PM: Operational
+10/13/2026, 2:28:00 PM: Operational
+10/13/2026, 2:43:57 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 15:00
+10/13/2026, 3:02:18 PM: Operational
+10/13/2026, 3:20:36 PM: Operational
+10/13/2026, 3:37:02 PM: Operational
+10/13/2026, 3:53:35 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 16:00
+10/13/2026, 4:01:18 PM: Operational
+10/13/2026, 4:19:06 PM: Operational
+10/13/2026, 4:39:14 PM: Operational
+10/13/2026, 4:55:03 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 17:00
+10/13/2026, 5:02:13 PM: Operational
+10/13/2026, 5:19:23 PM: Operational
+10/13/2026, 5:33:30 PM: Operational
+10/13/2026, 5:46:42 PM: Operational
+10/13/2026, 5:57:25 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 18:00
+10/13/2026, 6:07:01 PM: Operational
+10/13/2026, 6:34:04 PM: Operational
+10/13/2026, 6:55:46 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 19:00
+10/13/2026, 7:06:34 PM: Operational
+10/13/2026, 7:23:57 PM: Operational
+10/13/2026, 7:33:31 PM: Operational
+10/13/2026, 7:44:12 PM: Operational
+10/13/2026, 7:49:48 PM: Operational
+10/13/2026, 7:54:58 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 20:00
+10/13/2026, 8:06:10 PM: Operational
+10/13/2026, 8:27:41 PM: Operational
+10/13/2026, 8:39:57 PM: Operational
+10/13/2026, 8:50:05 PM: Operational
+10/13/2026, 8:55:46 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 21:00
+10/13/2026, 9:05:52 PM: Operational
+10/13/2026, 9:22:14 PM: Operational
+10/13/2026, 9:30:26 PM: Operational
+10/13/2026, 9:39:19 PM: Operational
+10/13/2026, 9:46:44 PM: Operational
+10/13/2026, 9:54:06 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 22:00
+10/13/2026, 10:05:32 PM: Operational
+10/13/2026, 10:22:06 PM: Operational
+10/13/2026, 10:31:46 PM: Operational
+10/13/2026, 10:41:33 PM: Operational
+10/13/2026, 10:47:26 PM: Operational
+10/13/2026, 10:54:08 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 23:00
+10/13/2026, 11:05:02 PM: Operational
+10/13/2026, 11:21:05 PM: Operational
+10/13/2026, 11:29:53 PM: Operational
+10/13/2026, 11:36:20 PM: Operational
+10/13/2026, 11:45:13 PM: Operational
+10/13/2026, 11:54:34 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 0:00
+10/14/2026, 12:08:48 AM: Operational
+10/14/2026, 12:55:42 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 1:00
+10/14/2026, 1:18:40 AM: Operational
+10/14/2026, 1:38:35 AM: Operational
+10/14/2026, 1:53:42 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 2:00
+10/14/2026, 2:06:37 AM: Operational
+10/14/2026, 2:32:57 AM: Operational
+10/14/2026, 2:49:59 AM: Operational
+10/14/2026, 2:58:24 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 3:00
+10/14/2026, 3:06:15 AM: Operational
+10/14/2026, 3:29:15 AM: Operational
+10/14/2026, 3:43:06 AM: Operational
+10/14/2026, 3:53:39 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 4:00
+10/14/2026, 4:00:23 AM: Operational
+10/14/2026, 4:12:40 AM: Operational
+10/14/2026, 4:31:30 AM: Operational
+10/14/2026, 4:46:14 AM: Operational
+10/14/2026, 4:57:22 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 5:00
+10/14/2026, 5:05:30 AM: Operational
+10/14/2026, 5:25:11 AM: Operational
+10/14/2026, 5:39:13 AM: Operational
+10/14/2026, 5:49:16 AM: Operational
+10/14/2026, 5:55:45 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 6:00
+10/14/2026, 6:06:37 AM: Operational
+10/14/2026, 6:40:36 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 7:00
+10/14/2026, 7:01:08 AM: Operational
+10/14/2026, 7:22:00 AM: Operational
+10/14/2026, 7:39:20 AM: Operational
+10/14/2026, 7:52:09 AM: Operational
+10/14/2026, 7:59:45 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 8:00
+10/14/2026, 8:06:09 AM: Operational
+10/14/2026, 8:33:14 AM: Operational
+10/14/2026, 8:50:42 AM: Operational
+10/14/2026, 8:59:59 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 9:00
+10/14/2026, 9:11:48 AM: Operational
+10/14/2026, 9:30:01 AM: Operational
+10/14/2026, 9:41:39 AM: Operational
+10/14/2026, 9:52:06 AM: Operational
+10/14/2026, 9:58:39 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 10:00
+10/14/2026, 10:06:37 AM: Operational
+10/14/2026, 10:25:40 AM: Operational
+10/14/2026, 10:37:37 AM: Operational
+10/14/2026, 10:48:06 AM: Operational
+10/14/2026, 10:55:12 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 11:00
+10/14/2026, 11:05:04 AM: Operational
+10/14/2026, 11:26:00 AM: Operational
+10/14/2026, 11:38:31 AM: Operational
+10/14/2026, 11:47:37 AM: Operational
+10/14/2026, 11:55:40 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 12:00
+10/14/2026, 12:06:06 PM: Operational
+10/14/2026, 12:35:27 PM: Operational
+10/14/2026, 12:54:15 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 13:00
+10/14/2026, 1:05:36 PM: Operational
+10/14/2026, 1:25:29 PM: Operational
+10/14/2026, 1:38:24 PM: Operational
+10/14/2026, 1:47:42 PM: Operational
+10/14/2026, 1:55:44 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 14:00
+10/14/2026, 2:06:56 PM: Operational
+10/14/2026, 2:26:27 PM: Operational
+10/14/2026, 2:39:31 PM: Operational
+10/14/2026, 2:49:11 PM: Operational
+10/14/2026, 2:55:58 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 15:00
+10/14/2026, 3:05:44 PM: Operational
+10/14/2026, 3:28:12 PM: Operational
+10/14/2026, 3:40:32 PM: Operational
+10/14/2026, 3:51:58 PM: Operational
+10/14/2026, 3:59:00 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 16:00
+10/14/2026, 4:10:28 PM: Operational
+10/14/2026, 4:28:26 PM: Operational
+10/14/2026, 4:40:12 PM: Operational
+10/14/2026, 4:51:43 PM: Operational
+10/14/2026, 4:59:03 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 17:00
+10/14/2026, 5:05:42 PM: Operational
+10/14/2026, 5:22:57 PM: Operational
+10/14/2026, 5:35:13 PM: Operational
+10/14/2026, 5:48:03 PM: Operational
+10/14/2026, 5:56:38 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 18:00
+10/14/2026, 6:05:57 PM: Operational
+10/14/2026, 6:31:59 PM: Operational
+10/14/2026, 6:47:58 PM: Operational
+10/14/2026, 6:58:02 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 19:00
+10/14/2026, 7:05:09 PM: Operational
+10/14/2026, 7:23:39 PM: Operational
+10/14/2026, 7:33:31 PM: Operational
+10/14/2026, 7:43:50 PM: Operational
+10/14/2026, 7:49:54 PM: Operational
+10/14/2026, 7:55:31 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 20:00
+10/14/2026, 8:05:55 PM: Operational
+10/14/2026, 8:24:15 PM: Operational
+10/14/2026, 8:37:08 PM: Operational
+10/14/2026, 8:48:13 PM: Operational
+10/14/2026, 8:56:48 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 21:00
+10/14/2026, 9:11:03 PM: Operational
+10/14/2026, 9:22:35 PM: Operational
+10/14/2026, 9:32:47 PM: Operational
+10/14/2026, 9:43:59 PM: Operational
+10/14/2026, 9:48:31 PM: Operational
+10/14/2026, 9:54:09 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 22:00
+10/14/2026, 10:05:51 PM: Operational
+10/14/2026, 10:22:57 PM: Operational
+10/14/2026, 10:33:18 PM: Operational
+10/14/2026, 10:43:27 PM: Operational
+10/14/2026, 10:47:16 PM: Operational
+10/14/2026, 10:55:08 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 23:00
+10/14/2026, 11:06:12 PM: Operational
+10/14/2026, 11:23:27 PM: Operational
+10/14/2026, 11:31:59 PM: Operational
+10/14/2026, 11:37:56 PM: Operational
+10/14/2026, 11:45:09 PM: Operational
+10/14/2026, 11:54:44 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 0:00
+10/15/2026, 12:09:11 AM: Operational
+10/15/2026, 12:53:48 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 1:00
+10/15/2026, 1:15:56 AM: Operational
+10/15/2026, 1:40:08 AM: Operational
+10/15/2026, 1:55:48 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 2:00
+10/15/2026, 2:07:58 AM: Operational
+10/15/2026, 2:34:12 AM: Operational
+10/15/2026, 2:50:41 AM: Operational
+10/15/2026, 2:58:26 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 3:00
+10/15/2026, 3:05:39 AM: Operational
+10/15/2026, 3:29:53 AM: Operational
+10/15/2026, 3:42:35 AM: Operational
+10/15/2026, 3:54:23 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 4:00
+10/15/2026, 4:07:05 AM: Operational
+10/15/2026, 4:27:58 AM: Operational
+10/15/2026, 4:40:36 AM: Operational
+10/15/2026, 4:50:09 AM: Operational
+10/15/2026, 4:57:54 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 5:00
+10/15/2026, 5:05:44 AM: Operational
+10/15/2026, 5:25:56 AM: Operational
+10/15/2026, 5:39:47 AM: Operational
+10/15/2026, 5:49:08 AM: Operational
+10/15/2026, 5:56:19 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 6:00
+10/15/2026, 6:07:34 AM: Operational
+10/15/2026, 6:40:31 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 7:00
+10/15/2026, 7:01:57 AM: Operational
+10/15/2026, 7:22:15 AM: Operational
+10/15/2026, 7:38:56 AM: Operational
+10/15/2026, 7:51:42 AM: Operational
+10/15/2026, 7:58:45 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 8:00
+10/15/2026, 8:06:26 AM: Operational
+10/15/2026, 8:33:49 AM: Operational
+10/15/2026, 8:53:23 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 9:00
+10/15/2026, 9:01:37 AM: Operational
+10/15/2026, 9:17:23 AM: Operational
+10/15/2026, 9:41:54 AM: Operational
+10/15/2026, 9:50:02 AM: Operational
+10/15/2026, 9:57:12 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 10:00
+10/15/2026, 10:05:58 AM: Operational
+10/15/2026, 10:25:30 AM: Operational
+10/15/2026, 10:39:02 AM: Operational
+10/15/2026, 10:49:20 AM: Operational
+10/15/2026, 10:55:41 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 11:00
+10/15/2026, 11:05:32 AM: Operational
+10/15/2026, 11:23:02 AM: Operational
+10/15/2026, 11:37:44 AM: Operational
+10/15/2026, 11:48:24 AM: Operational
+10/15/2026, 11:55:46 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 12:00
+10/15/2026, 12:07:07 PM: Operational
+10/15/2026, 12:36:18 PM: Operational
+10/15/2026, 12:57:50 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 13:00
+10/15/2026, 1:08:09 PM: Operational
+10/15/2026, 1:27:59 PM: Operational
+10/15/2026, 1:38:49 PM: Operational
+10/15/2026, 1:50:12 PM: Operational
+10/15/2026, 1:59:01 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 14:00
+10/15/2026, 2:06:22 PM: Operational
+10/15/2026, 2:26:53 PM: Operational
+10/15/2026, 2:37:58 PM: Operational
+10/15/2026, 2:48:27 PM: Operational
+10/15/2026, 2:55:49 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 15:00
+10/15/2026, 3:05:35 PM: Operational
+10/15/2026, 3:27:10 PM: Operational
+10/15/2026, 3:40:11 PM: Operational
+10/15/2026, 3:51:16 PM: Operational
+10/15/2026, 3:55:41 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 16:00
+10/15/2026, 4:05:57 PM: Operational
+10/15/2026, 4:27:13 PM: Operational
+10/15/2026, 4:39:40 PM: Operational
+10/15/2026, 4:51:47 PM: Operational
+10/15/2026, 4:59:30 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 17:00
+10/15/2026, 5:07:27 PM: Operational
+10/15/2026, 5:24:07 PM: Operational
+10/15/2026, 5:33:36 PM: Operational
+10/15/2026, 5:43:59 PM: Operational
+10/15/2026, 5:49:50 PM: Operational
+10/15/2026, 5:54:51 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 18:00
+10/15/2026, 6:06:38 PM: Operational
+10/15/2026, 6:28:33 PM: Operational
+10/15/2026, 6:44:16 PM: Operational
+10/15/2026, 6:58:48 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 19:00
+10/15/2026, 7:04:19 PM: Operational
+10/15/2026, 7:21:57 PM: Operational
+10/15/2026, 7:30:30 PM: Operational
+10/15/2026, 7:37:09 PM: Operational
+10/15/2026, 7:45:57 PM: Operational
+10/15/2026, 7:55:17 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 20:00
+10/15/2026, 8:04:51 PM: Operational
+10/15/2026, 8:23:37 PM: Operational
+10/15/2026, 8:36:29 PM: Operational
+10/15/2026, 8:47:12 PM: Operational
+10/15/2026, 8:56:12 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 21:00
+10/15/2026, 9:05:16 PM: Operational
+10/15/2026, 9:25:41 PM: Operational
+10/15/2026, 9:37:56 PM: Operational
+10/15/2026, 9:46:17 PM: Operational
+10/15/2026, 9:55:19 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 22:00
+10/15/2026, 10:05:41 PM: Operational
+10/15/2026, 10:26:08 PM: Operational
+10/15/2026, 10:37:05 PM: Operational
+10/15/2026, 10:47:03 PM: Operational
+10/15/2026, 10:54:31 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 23:00
+10/15/2026, 11:05:48 PM: Operational
+10/15/2026, 11:20:16 PM: Operational
+10/15/2026, 11:29:53 PM: Operational
+10/15/2026, 11:34:55 PM: Operational
+10/15/2026, 11:50:32 PM: Operational
+10/15/2026, 11:53:35 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 0:00
+10/16/2026, 12:08:57 AM: Operational
+10/16/2026, 12:55:07 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 1:00
+10/16/2026, 1:16:13 AM: Operational
+10/16/2026, 1:39:24 AM: Operational
+10/16/2026, 1:55:41 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 2:00
+10/16/2026, 2:06:12 AM: Operational
+10/16/2026, 2:35:16 AM: Operational
+10/16/2026, 2:50:57 AM: Operational
+10/16/2026, 2:58:01 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 3:00
+10/16/2026, 3:06:16 AM: Operational
+10/16/2026, 3:29:04 AM: Operational
+10/16/2026, 3:42:53 AM: Operational
+10/16/2026, 3:53:04 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 4:00
+10/16/2026, 4:00:38 AM: Operational
+10/16/2026, 4:10:38 AM: Operational
+10/16/2026, 4:28:53 AM: Operational
+10/16/2026, 4:41:54 AM: Operational
+10/16/2026, 4:52:08 AM: Operational
+10/16/2026, 4:59:10 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 5:00
+10/16/2026, 5:08:33 AM: Operational
+10/16/2026, 5:25:28 AM: Operational
+10/16/2026, 5:39:46 AM: Operational
+10/16/2026, 5:48:30 AM: Operational
+10/16/2026, 5:55:53 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 6:00
+10/16/2026, 6:06:07 AM: Operational
+10/16/2026, 6:39:16 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 7:00
+10/16/2026, 7:01:52 AM: Operational
+10/16/2026, 7:20:24 AM: Operational
+10/16/2026, 7:36:23 AM: Operational
+10/16/2026, 7:50:06 AM: Operational
+10/16/2026, 7:57:48 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 8:00
+10/16/2026, 8:06:09 AM: Operational
+10/16/2026, 8:32:48 AM: Operational
+10/16/2026, 8:48:39 AM: Operational
+10/16/2026, 8:58:38 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 9:00
+10/16/2026, 9:06:00 AM: Operational
+10/16/2026, 9:27:17 AM: Operational
+10/16/2026, 9:38:26 AM: Operational
+10/16/2026, 9:48:25 AM: Operational
+10/16/2026, 9:56:16 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 10:00
+10/16/2026, 10:05:06 AM: Operational
+10/16/2026, 10:25:55 AM: Operational
+10/16/2026, 10:37:45 AM: Operational
+10/16/2026, 10:47:20 AM: Operational
+10/16/2026, 10:55:28 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 11:00
+10/16/2026, 11:05:38 AM: Operational
+10/16/2026, 11:23:18 AM: Operational
+10/16/2026, 11:36:40 AM: Operational
+10/16/2026, 11:47:52 AM: Operational
+10/16/2026, 11:54:46 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 12:00
+10/16/2026, 12:06:26 PM: Operational
+10/16/2026, 12:36:09 PM: Operational
+10/16/2026, 12:56:48 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 13:00
+10/16/2026, 1:06:53 PM: Operational
+10/16/2026, 1:26:53 PM: Operational
+10/16/2026, 1:39:02 PM: Operational
+10/16/2026, 1:48:24 PM: Operational
+10/16/2026, 1:55:43 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 14:00
+10/16/2026, 2:05:50 PM: Operational
+10/16/2026, 2:26:18 PM: Operational
+10/16/2026, 2:40:21 PM: Operational
+10/16/2026, 2:50:24 PM: Operational
+10/16/2026, 2:57:30 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 15:00
+10/16/2026, 3:04:56 PM: Operational
+10/16/2026, 3:23:36 PM: Operational
+10/16/2026, 3:34:04 PM: Operational
+10/16/2026, 3:44:11 PM: Operational
+10/16/2026, 3:55:29 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 16:00
+10/16/2026, 4:05:02 PM: Operational
+10/16/2026, 4:26:56 PM: Operational
+10/16/2026, 4:38:54 PM: Operational
+10/16/2026, 4:47:34 PM: Operational
+10/16/2026, 4:57:01 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 17:00
+10/16/2026, 5:04:29 PM: Operational
+10/16/2026, 5:22:02 PM: Operational
+10/16/2026, 5:30:33 PM: Operational
+10/16/2026, 5:39:04 PM: Operational
+10/16/2026, 5:46:43 PM: Operational
+10/16/2026, 5:55:01 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 18:00
+10/16/2026, 6:05:32 PM: Operational
+10/16/2026, 6:29:07 PM: Operational
+10/16/2026, 6:43:10 PM: Operational
+10/16/2026, 6:52:29 PM: Operational
+10/16/2026, 6:58:58 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 19:00
+10/16/2026, 7:05:31 PM: Operational
+10/16/2026, 7:20:42 PM: Operational
+10/16/2026, 7:30:48 PM: Operational
+10/16/2026, 7:39:17 PM: Operational
+10/16/2026, 7:46:04 PM: Operational
+10/16/2026, 7:54:42 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 20:00
+10/16/2026, 8:09:04 PM: Operational
+10/16/2026, 8:24:30 PM: Operational
+10/16/2026, 8:38:12 PM: Operational
+10/16/2026, 8:48:52 PM: Operational
+10/16/2026, 8:54:57 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 21:00
+10/16/2026, 9:04:42 PM: Operational
+10/16/2026, 9:21:10 PM: Operational
+10/16/2026, 9:30:27 PM: Operational
+10/16/2026, 9:37:56 PM: Operational
+10/16/2026, 9:44:24 PM: Operational
+10/16/2026, 9:54:51 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 22:00
+10/16/2026, 10:05:32 PM: Operational
+10/16/2026, 10:23:18 PM: Operational
+10/16/2026, 10:33:35 PM: Operational
+10/16/2026, 10:42:30 PM: Operational
+10/16/2026, 10:48:37 PM: Operational
+10/16/2026, 10:54:12 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 23:00
+10/16/2026, 11:05:15 PM: Operational
+10/16/2026, 11:21:59 PM: Operational
+10/16/2026, 11:30:06 PM: Operational
+10/16/2026, 11:36:47 PM: Operational
+10/16/2026, 11:44:14 PM: Operational
+10/16/2026, 11:54:21 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 0:00
+10/17/2026, 12:08:45 AM: Operational
+10/17/2026, 12:55:04 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 1:00
+10/17/2026, 1:17:05 AM: Operational
+10/17/2026, 1:36:34 AM: Operational
+10/17/2026, 1:54:16 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 2:00
+10/17/2026, 2:05:51 AM: Operational
+10/17/2026, 2:32:05 AM: Operational
+10/17/2026, 2:47:20 AM: Operational
+10/17/2026, 2:56:54 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 3:00
+10/17/2026, 3:06:10 AM: Operational
+10/17/2026, 3:26:08 AM: Operational
+10/17/2026, 3:39:54 AM: Operational
+10/17/2026, 3:50:21 AM: Operational
+10/17/2026, 3:56:09 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 4:00
+10/17/2026, 4:05:40 AM: Operational
+10/17/2026, 4:26:31 AM: Operational
+10/17/2026, 4:39:53 AM: Operational
+10/17/2026, 4:48:56 AM: Operational
+10/17/2026, 4:56:32 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 5:00
+10/17/2026, 5:05:23 AM: Operational
+10/17/2026, 5:23:31 AM: Operational
+10/17/2026, 5:34:14 AM: Operational
+10/17/2026, 5:46:22 AM: Operational
+10/17/2026, 5:54:29 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 6:00
+10/17/2026, 6:06:20 AM: Operational
+10/17/2026, 6:35:19 AM: Operational
+10/17/2026, 6:56:43 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 7:00
+10/17/2026, 7:05:30 AM: Operational
+10/17/2026, 7:24:49 AM: Operational
+10/17/2026, 7:37:49 AM: Operational
+10/17/2026, 7:46:13 AM: Operational
+10/17/2026, 7:54:18 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 8:00
+10/17/2026, 8:05:38 AM: Operational
+10/17/2026, 8:28:21 AM: Operational
+10/17/2026, 8:38:36 AM: Operational
+10/17/2026, 8:48:59 AM: Operational
+10/17/2026, 8:55:17 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 9:00
+10/17/2026, 9:05:22 AM: Operational
+10/17/2026, 9:23:36 AM: Operational
+10/17/2026, 9:32:43 AM: Operational
+10/17/2026, 9:43:01 AM: Operational
+10/17/2026, 9:48:01 AM: Operational
+10/17/2026, 9:53:26 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 10:00
+10/17/2026, 10:05:11 AM: Operational
+10/17/2026, 10:22:35 AM: Operational
+10/17/2026, 10:32:34 AM: Operational
+10/17/2026, 10:40:10 AM: Operational
+10/17/2026, 10:45:57 AM: Operational
+10/17/2026, 10:54:20 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 11:00
+10/17/2026, 11:05:10 AM: Operational
+10/17/2026, 11:21:39 AM: Operational
+10/17/2026, 11:30:15 AM: Operational
+10/17/2026, 11:36:16 AM: Operational
+10/17/2026, 11:43:36 AM: Operational
+10/17/2026, 11:55:11 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 12:00
+10/17/2026, 12:06:27 PM: Operational
+10/17/2026, 12:29:25 PM: Operational
+10/17/2026, 12:44:55 PM: Operational
+10/17/2026, 12:55:30 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 13:00
+10/17/2026, 1:04:25 PM: Operational
+10/17/2026, 1:21:42 PM: Operational
+10/17/2026, 1:31:18 PM: Operational
+10/17/2026, 1:36:49 PM: Operational
+10/17/2026, 1:44:59 PM: Operational
+10/17/2026, 1:53:40 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 14:00
+10/17/2026, 2:04:16 PM: Operational
+10/17/2026, 2:22:12 PM: Operational
+10/17/2026, 2:31:24 PM: Operational
+10/17/2026, 2:39:25 PM: Operational
+10/17/2026, 2:45:13 PM: Operational
+10/17/2026, 2:54:50 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 15:00
+10/17/2026, 3:04:44 PM: Operational
+10/17/2026, 3:22:12 PM: Operational
+10/17/2026, 3:30:58 PM: Operational
+10/17/2026, 3:37:19 PM: Operational
+10/17/2026, 3:44:40 PM: Operational
+10/17/2026, 3:54:57 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 16:00
+10/17/2026, 4:06:28 PM: Operational
+10/17/2026, 4:23:50 PM: Operational
+10/17/2026, 4:36:55 PM: Operational
+10/17/2026, 4:45:10 PM: Operational
+10/17/2026, 4:54:11 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 17:00
+10/17/2026, 5:05:50 PM: Operational
+10/17/2026, 5:20:22 PM: Operational
+10/17/2026, 5:27:46 PM: Operational
+10/17/2026, 5:34:01 PM: Operational
+10/17/2026, 5:43:54 PM: Operational
+10/17/2026, 5:55:07 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 18:00
+10/17/2026, 6:04:55 PM: Operational
+10/17/2026, 6:31:28 PM: Operational
+10/17/2026, 6:42:24 PM: Operational
+10/17/2026, 6:46:19 PM: Operational
+10/17/2026, 6:54:09 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 19:00
+10/17/2026, 7:05:18 PM: Operational
+10/17/2026, 7:17:46 PM: Operational
+10/17/2026, 7:25:11 PM: Operational
+10/17/2026, 7:34:05 PM: Operational
+10/17/2026, 7:44:26 PM: Operational
+10/17/2026, 7:53:35 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 20:00
+10/17/2026, 8:05:22 PM: Operational
+10/17/2026, 8:23:09 PM: Operational
+10/17/2026, 8:38:03 PM: Operational
+10/17/2026, 8:45:43 PM: Operational
+10/17/2026, 8:54:15 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 21:00
+10/17/2026, 9:05:10 PM: Operational
+10/17/2026, 9:20:43 PM: Operational
+10/17/2026, 9:29:35 PM: Operational
+10/17/2026, 9:36:02 PM: Operational
+10/17/2026, 9:43:11 PM: Operational
+10/17/2026, 9:54:16 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 22:00
+10/17/2026, 10:05:02 PM: Operational
+10/17/2026, 10:21:02 PM: Operational
+10/17/2026, 10:29:48 PM: Operational
+10/17/2026, 10:36:26 PM: Operational
+10/17/2026, 10:44:08 PM: Operational
+10/17/2026, 10:54:09 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 23:00
+10/17/2026, 11:04:37 PM: Operational
+10/17/2026, 11:19:57 PM: Operational
+10/17/2026, 11:26:25 PM: Operational
+10/17/2026, 11:34:03 PM: Operational
+10/17/2026, 11:43:52 PM: Operational
+10/17/2026, 11:53:51 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 0:00
+10/18/2026, 12:08:44 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 1:00
+10/18/2026, 1:00:55 AM: Operational
+10/18/2026, 1:26:34 AM: Operational
+10/18/2026, 1:45:25 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 2:00
+10/18/2026, 2:08:12 AM: Operational
+10/18/2026, 2:26:20 AM: Operational
+10/18/2026, 2:41:08 AM: Operational
+10/18/2026, 2:53:23 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 3:00
+10/18/2026, 3:00:02 AM: Operational
+10/18/2026, 3:10:28 AM: Operational
+10/18/2026, 3:29:56 AM: Operational
+10/18/2026, 3:42:13 AM: Operational
+10/18/2026, 3:52:07 AM: Operational
+10/18/2026, 3:58:44 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 4:00
+10/18/2026, 4:07:08 AM: Operational
+10/18/2026, 4:27:38 AM: Operational
+10/18/2026, 4:39:58 AM: Operational
+10/18/2026, 4:49:05 AM: Operational
+10/18/2026, 4:56:44 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 5:00
+10/18/2026, 5:05:08 AM: Operational
+10/18/2026, 5:23:27 AM: Operational
+10/18/2026, 5:33:37 AM: Operational
+10/18/2026, 5:43:25 AM: Operational
+10/18/2026, 5:49:32 AM: Operational
+10/18/2026, 5:55:15 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 6:00
+10/18/2026, 6:05:45 AM: Operational
+10/18/2026, 6:36:49 AM: Operational
+10/18/2026, 6:57:51 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 7:00
+10/18/2026, 7:06:06 AM: Operational
+10/18/2026, 7:25:16 AM: Operational
+10/18/2026, 7:37:29 AM: Operational
+10/18/2026, 7:46:46 AM: Operational
+10/18/2026, 7:55:16 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 8:00
+10/18/2026, 8:06:24 AM: Operational
+10/18/2026, 8:28:45 AM: Operational
+10/18/2026, 8:40:12 AM: Operational
+10/18/2026, 8:49:45 AM: Operational
+10/18/2026, 8:56:29 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 9:00
+10/18/2026, 9:06:10 AM: Operational
+10/18/2026, 9:23:25 AM: Operational
+10/18/2026, 9:35:54 AM: Operational
+10/18/2026, 9:46:26 AM: Operational
+10/18/2026, 9:54:08 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 10:00
+10/18/2026, 10:05:29 AM: Operational
+10/18/2026, 10:22:38 AM: Operational
+10/18/2026, 10:32:13 AM: Operational
+10/18/2026, 10:41:24 AM: Operational
+10/18/2026, 10:47:12 AM: Operational
+10/18/2026, 10:54:00 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 11:00
+10/18/2026, 11:05:17 AM: Operational
+10/18/2026, 11:20:04 AM: Operational
+10/18/2026, 11:29:53 AM: Operational
+10/18/2026, 11:36:10 AM: Operational
+10/18/2026, 11:44:05 AM: Operational
+10/18/2026, 11:54:15 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 12:00
+10/18/2026, 12:05:48 PM: Operational
+10/18/2026, 12:30:56 PM: Operational
+10/18/2026, 12:46:23 PM: Operational
+10/18/2026, 12:56:43 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 13:00
+10/18/2026, 1:05:17 PM: Operational
+10/18/2026, 1:21:46 PM: Operational
+10/18/2026, 1:30:58 PM: Operational
+10/18/2026, 1:38:48 PM: Operational
+10/18/2026, 1:44:02 PM: Operational
+10/18/2026, 1:54:58 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 14:00
+10/18/2026, 2:05:21 PM: Operational
+10/18/2026, 2:22:43 PM: Operational
+10/18/2026, 2:32:19 PM: Operational
+10/18/2026, 2:40:32 PM: Operational
+10/18/2026, 2:47:57 PM: Operational
+10/18/2026, 2:53:56 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 15:00
+10/18/2026, 3:04:49 PM: Operational
+10/18/2026, 3:22:14 PM: Operational
+10/18/2026, 3:32:04 PM: Operational
+10/18/2026, 3:39:51 PM: Operational
+10/18/2026, 3:45:19 PM: Operational
+10/18/2026, 3:58:16 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 16:00
+10/18/2026, 4:06:16 PM: Operational
+10/18/2026, 4:24:40 PM: Operational
+10/18/2026, 4:43:02 PM: Operational
+10/18/2026, 4:53:31 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 17:00
+10/18/2026, 5:05:29 PM: Operational
+10/18/2026, 5:18:29 PM: Operational
+10/18/2026, 5:29:27 PM: Operational
+10/18/2026, 5:35:27 PM: Operational
+10/18/2026, 5:45:08 PM: Operational
+10/18/2026, 5:53:47 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 18:00
+10/18/2026, 6:05:49 PM: Operational
+10/18/2026, 6:26:30 PM: Operational
+10/18/2026, 6:39:06 PM: Operational
+10/18/2026, 6:47:55 PM: Operational
+10/18/2026, 6:54:08 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 19:00
+10/18/2026, 7:05:30 PM: Operational
+10/18/2026, 7:18:30 PM: Operational
+10/18/2026, 7:26:56 PM: Operational
+10/18/2026, 7:34:00 PM: Operational
+10/18/2026, 7:44:16 PM: Operational
+10/18/2026, 7:53:27 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 20:00
+10/18/2026, 8:06:04 PM: Operational
+10/18/2026, 8:23:03 PM: Operational
+10/18/2026, 8:32:27 PM: Operational
+10/18/2026, 8:42:41 PM: Operational
+10/18/2026, 8:48:09 PM: Operational
+10/18/2026, 8:53:41 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 21:00
+10/18/2026, 9:05:20 PM: Operational
+10/18/2026, 9:21:46 PM: Operational
+10/18/2026, 9:30:05 PM: Operational
+10/18/2026, 9:36:46 PM: Operational
+10/18/2026, 9:44:51 PM: Operational
+10/18/2026, 9:54:12 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 22:00
+10/18/2026, 10:04:14 PM: Operational
+10/18/2026, 10:26:02 PM: Operational
+10/18/2026, 10:31:18 PM: Operational
+10/18/2026, 10:46:05 PM: Operational
+10/18/2026, 10:53:41 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 23:00
+10/18/2026, 11:04:10 PM: Operational
+10/18/2026, 11:20:47 PM: Operational
+10/18/2026, 11:35:48 PM: Operational
+10/18/2026, 11:50:08 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 0:00
+10/19/2026, 12:00:40 AM: Operational
+10/19/2026, 12:14:58 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 1:00
+10/19/2026, 1:00:39 AM: Operational
+10/19/2026, 1:28:01 AM: Operational
+10/19/2026, 1:49:31 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 2:00
+10/19/2026, 2:06:09 AM: Operational
+10/19/2026, 2:37:15 AM: Operational
+10/19/2026, 2:54:58 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 3:00
+10/19/2026, 3:05:53 AM: Operational
+10/19/2026, 3:32:00 AM: Operational
+10/19/2026, 3:51:32 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 4:00
+10/19/2026, 4:00:12 AM: Operational
+10/19/2026, 4:17:55 AM: Operational
+10/19/2026, 4:38:56 AM: Operational
+10/19/2026, 4:54:22 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 5:00
+10/19/2026, 5:05:09 AM: Operational
+10/19/2026, 5:27:27 AM: Operational
+10/19/2026, 5:40:10 AM: Operational
+10/19/2026, 5:52:20 AM: Operational
+10/19/2026, 5:58:39 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 6:00
+10/19/2026, 6:08:48 AM: Operational
+10/19/2026, 6:51:55 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 7:00
+10/19/2026, 7:18:04 AM: Operational
+10/19/2026, 7:48:40 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 8:00
+10/19/2026, 8:03:10 AM: Operational
+10/19/2026, 8:39:00 AM: Operational
+10/19/2026, 8:57:01 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 9:00
+10/19/2026, 9:08:38 AM: Operational
+10/19/2026, 9:37:07 AM: Operational
+10/19/2026, 9:55:11 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 10:00
+10/19/2026, 10:05:27 AM: Operational
+10/19/2026, 10:26:58 AM: Operational
+10/19/2026, 10:40:20 AM: Operational
+10/19/2026, 10:50:10 AM: Operational
+10/19/2026, 10:57:26 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 11:00
+10/19/2026, 11:05:26 AM: Operational
+10/19/2026, 11:24:34 AM: Operational
+10/19/2026, 11:37:45 AM: Operational
+10/19/2026, 11:48:31 AM: Operational
+10/19/2026, 11:56:09 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 12:00
+10/19/2026, 12:06:57 PM: Operational
+10/19/2026, 12:38:03 PM: Operational
+10/19/2026, 12:58:48 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 13:00
+10/19/2026, 1:10:14 PM: Operational
+10/19/2026, 1:30:59 PM: Operational
+10/19/2026, 1:49:20 PM: Operational
+10/19/2026, 1:59:15 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 14:00
+10/19/2026, 2:08:06 PM: Operational
+10/19/2026, 2:27:44 PM: Operational
+10/19/2026, 2:39:57 PM: Operational
+10/19/2026, 2:50:25 PM: Operational
+10/19/2026, 2:58:55 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 15:00
+10/19/2026, 3:11:54 PM: Operational
+10/19/2026, 3:28:43 PM: Operational
+10/19/2026, 3:38:29 PM: Operational
+10/19/2026, 3:48:15 PM: Operational
+10/19/2026, 3:56:28 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 16:00
+10/19/2026, 4:05:52 PM: Operational
+10/19/2026, 4:28:02 PM: Operational
+10/19/2026, 4:41:49 PM: Operational
+10/19/2026, 4:52:59 PM: Operational
+10/19/2026, 4:59:55 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 17:00
+10/19/2026, 5:07:05 PM: Operational
+10/19/2026, 5:24:02 PM: Operational
+10/19/2026, 5:34:32 PM: Operational
+10/19/2026, 5:54:26 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 18:00
+10/19/2026, 6:06:59 PM: Operational
+10/19/2026, 6:33:18 PM: Operational
+10/19/2026, 6:49:21 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 19:00
+10/19/2026, 7:02:52 PM: Operational
+10/19/2026, 7:08:34 PM: Operational
+10/19/2026, 7:20:55 PM: Operational
+10/19/2026, 7:32:41 PM: Operational
+10/19/2026, 7:41:42 PM: Operational
+10/19/2026, 7:48:40 PM: Operational
+10/19/2026, 7:56:13 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 20:00
+10/19/2026, 8:05:41 PM: Operational
+10/19/2026, 8:26:30 PM: Operational
+10/19/2026, 8:39:24 PM: Operational
+10/19/2026, 8:48:21 PM: Operational
+10/19/2026, 8:55:59 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 21:00
+10/19/2026, 9:05:57 PM: Operational
+10/19/2026, 9:23:20 PM: Operational
+10/19/2026, 9:33:51 PM: Operational
+10/19/2026, 9:46:49 PM: Operational
+10/19/2026, 9:54:21 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 22:00
+10/19/2026, 10:06:21 PM: Operational
+10/19/2026, 10:23:04 PM: Operational
+10/19/2026, 10:36:49 PM: Operational
+10/19/2026, 10:45:53 PM: Operational
+10/19/2026, 10:54:13 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 23:00
+10/19/2026, 11:05:43 PM: Operational
+10/19/2026, 11:23:49 PM: Operational
+10/19/2026, 11:36:55 PM: Operational
+10/19/2026, 11:47:45 PM: Operational
+10/19/2026, 11:53:31 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 0:00
+10/20/2026, 12:09:28 AM: Operational
+10/20/2026, 12:55:19 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 1:00
+10/20/2026, 1:18:50 AM: Operational
+10/20/2026, 1:41:42 AM: Operational
+10/20/2026, 1:56:21 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 2:00
+10/20/2026, 2:07:01 AM: Operational
+10/20/2026, 2:32:55 AM: Operational
+10/20/2026, 2:51:11 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 3:00
+10/20/2026, 3:00:07 AM: Operational
+10/20/2026, 3:11:35 AM: Operational
+10/20/2026, 3:31:06 AM: Operational
+10/20/2026, 3:44:39 AM: Operational
+10/20/2026, 3:57:14 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 4:00
+10/20/2026, 4:06:26 AM: Operational
+10/20/2026, 4:28:54 AM: Operational
+10/20/2026, 4:40:07 AM: Operational
+10/20/2026, 4:51:14 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 5:00
+10/20/2026, 5:00:01 AM: Operational
+10/20/2026, 5:10:48 AM: Operational
+10/20/2026, 5:26:37 AM: Operational
+10/20/2026, 5:40:54 AM: Operational
+10/20/2026, 5:50:33 AM: Operational
+10/20/2026, 5:57:20 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 6:00
+10/20/2026, 6:06:49 AM: Operational
+10/20/2026, 6:39:46 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 7:00
+10/20/2026, 7:00:26 AM: Operational
+10/20/2026, 7:21:49 AM: Operational
+10/20/2026, 7:41:06 AM: Operational
+10/20/2026, 7:52:58 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 8:00
+10/20/2026, 8:00:12 AM: Operational
+10/20/2026, 8:16:50 AM: Operational
+10/20/2026, 8:41:26 AM: Operational
+10/20/2026, 8:56:03 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 9:00
+10/20/2026, 9:05:29 AM: Operational
+10/20/2026, 9:28:04 AM: Operational
+10/20/2026, 9:40:11 AM: Operational
+10/20/2026, 9:51:08 AM: Operational
+10/20/2026, 9:58:43 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 10:00
+10/20/2026, 10:05:37 AM: Operational
+10/20/2026, 10:24:26 AM: Operational
+10/20/2026, 10:38:22 AM: Operational
+10/20/2026, 10:48:19 AM: Operational
+10/20/2026, 10:55:56 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 11:00
+10/20/2026, 11:05:37 AM: Operational
+10/20/2026, 11:24:33 AM: Operational
+10/20/2026, 11:37:32 AM: Operational
+10/20/2026, 11:47:57 AM: Operational
+10/20/2026, 11:56:26 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 12:00
+10/20/2026, 12:10:26 PM: Operational
+10/20/2026, 12:36:07 PM: Operational
+10/20/2026, 12:57:00 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 13:00
+10/20/2026, 1:07:18 PM: Operational
+10/20/2026, 1:28:45 PM: Operational
+10/20/2026, 1:38:50 PM: Operational
+10/20/2026, 1:50:39 PM: Operational
+10/20/2026, 1:57:06 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 14:00
+10/20/2026, 2:07:05 PM: Operational
+10/20/2026, 2:27:22 PM: Operational
+10/20/2026, 2:39:26 PM: Operational
+10/20/2026, 2:50:31 PM: Operational
+10/20/2026, 2:58:46 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 15:00
+10/20/2026, 3:06:29 PM: Operational
+10/20/2026, 3:26:32 PM: Operational
+10/20/2026, 3:38:15 PM: Operational
+10/20/2026, 3:47:51 PM: Operational
+10/20/2026, 3:57:20 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-yellow-200" title="10/20/2026 16:00
+10/20/2026, 4:05:58 PM: Operational
+10/20/2026, 4:27:56 PM: Operational
+10/20/2026, 4:40:02 PM: Issues Detected"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">compile_api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
 10/6/2026, 4:44:29 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 17:00
 10/6/2026, 5:04:01 PM: Operational
 10/6/2026, 5:23:56 PM: Operational
@@ -6967,1396 +8354,8 @@
 10/20/2026, 3:47:51 PM: Operational
 10/20/2026, 3:57:20 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 16:00
 10/20/2026, 4:05:58 PM: Operational
-10/20/2026, 4:27:56 PM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">compile_api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
-10/6/2026, 4:29:55 PM: Operational
-10/6/2026, 4:44:29 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 17:00
-10/6/2026, 5:04:01 PM: Operational
-10/6/2026, 5:23:56 PM: Operational
-10/6/2026, 5:37:14 PM: Operational
-10/6/2026, 5:48:59 PM: Operational
-10/6/2026, 5:56:43 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 18:00
-10/6/2026, 6:06:48 PM: Operational
-10/6/2026, 6:31:36 PM: Operational
-10/6/2026, 6:50:27 PM: Operational
-10/6/2026, 6:59:37 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 19:00
-10/6/2026, 7:08:48 PM: Operational
-10/6/2026, 7:24:05 PM: Operational
-10/6/2026, 7:34:44 PM: Operational
-10/6/2026, 7:48:17 PM: Operational
-10/6/2026, 7:54:45 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 20:00
-10/6/2026, 8:06:57 PM: Operational
-10/6/2026, 8:28:37 PM: Operational
-10/6/2026, 8:40:28 PM: Operational
-10/6/2026, 8:57:49 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 21:00
-10/6/2026, 9:12:22 PM: Operational
-10/6/2026, 9:24:52 PM: Operational
-10/6/2026, 9:41:45 PM: Operational
-10/6/2026, 9:47:16 PM: Operational
-10/6/2026, 9:54:34 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 22:00
-10/6/2026, 10:05:16 PM: Operational
-10/6/2026, 10:25:45 PM: Operational
-10/6/2026, 10:37:55 PM: Operational
-10/6/2026, 10:47:56 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 23:00
-10/6/2026, 11:01:06 PM: Operational
-10/6/2026, 11:09:05 PM: Operational
-10/6/2026, 11:24:36 PM: Operational
-10/6/2026, 11:37:20 PM: Operational
-10/6/2026, 11:47:58 PM: Operational
-10/6/2026, 11:55:41 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 0:00
-10/7/2026, 12:10:20 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 1:00
-10/7/2026, 1:06:00 AM: Operational
-10/7/2026, 1:45:30 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 2:00
-10/7/2026, 2:10:23 AM: Operational
-10/7/2026, 2:42:17 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 3:00
-10/7/2026, 3:00:55 AM: Operational
-10/7/2026, 3:20:33 AM: Operational
-10/7/2026, 3:43:59 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 4:00
-10/7/2026, 4:00:39 AM: Operational
-10/7/2026, 4:23:52 AM: Operational
-10/7/2026, 4:43:45 AM: Operational
-10/7/2026, 4:55:05 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 5:00
-10/7/2026, 5:06:52 AM: Operational
-10/7/2026, 5:28:27 AM: Operational
-10/7/2026, 5:42:20 AM: Operational
-10/7/2026, 5:53:20 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 6:00
-10/7/2026, 6:06:09 AM: Operational
-10/7/2026, 6:40:42 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 7:00
-10/7/2026, 7:05:06 AM: Operational
-10/7/2026, 7:35:03 AM: Operational
-10/7/2026, 7:56:06 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 8:00
-10/7/2026, 8:07:31 AM: Operational
-10/7/2026, 8:37:22 AM: Operational
-10/7/2026, 8:56:30 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 9:00
-10/7/2026, 9:07:14 AM: Operational
-10/7/2026, 9:30:59 AM: Operational
-10/7/2026, 9:48:17 AM: Operational
-10/7/2026, 9:59:06 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 10:00
-10/7/2026, 10:07:01 AM: Operational
-10/7/2026, 10:27:20 AM: Operational
-10/7/2026, 10:39:21 AM: Operational
-10/7/2026, 10:50:20 AM: Operational
-10/7/2026, 10:58:46 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 11:00
-10/7/2026, 11:07:45 AM: Operational
-10/7/2026, 11:25:06 AM: Operational
-10/7/2026, 11:39:00 AM: Operational
-10/7/2026, 11:49:57 AM: Operational
-10/7/2026, 11:56:50 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 12:00
-10/7/2026, 12:07:18 PM: Operational
-10/7/2026, 12:39:32 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 13:00
-10/7/2026, 1:01:26 PM: Operational
-10/7/2026, 1:23:38 PM: Operational
-10/7/2026, 1:40:55 PM: Operational
-10/7/2026, 1:51:21 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 14:00
-10/7/2026, 2:00:11 PM: Operational
-10/7/2026, 2:14:54 PM: Operational
-10/7/2026, 2:35:36 PM: Operational
-10/7/2026, 2:49:48 PM: Operational
-10/7/2026, 2:58:37 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 15:00
-10/7/2026, 3:05:56 PM: Operational
-10/7/2026, 3:37:02 PM: Operational
-10/7/2026, 3:54:49 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 16:00
-10/7/2026, 4:12:00 PM: Operational
-10/7/2026, 4:34:00 PM: Operational
-10/7/2026, 4:46:30 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 17:00
-10/7/2026, 5:06:02 PM: Operational
-10/7/2026, 5:28:10 PM: Operational
-10/7/2026, 5:39:47 PM: Operational
-10/7/2026, 5:50:49 PM: Operational
-10/7/2026, 5:58:17 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 18:00
-10/7/2026, 6:09:38 PM: Operational
-10/7/2026, 6:33:37 PM: Operational
-10/7/2026, 6:55:40 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 19:00
-10/7/2026, 7:05:55 PM: Operational
-10/7/2026, 7:26:58 PM: Operational
-10/7/2026, 7:36:59 PM: Operational
-10/7/2026, 7:53:34 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 20:00
-10/7/2026, 8:04:44 PM: Operational
-10/7/2026, 8:28:49 PM: Operational
-10/7/2026, 8:40:22 PM: Operational
-10/7/2026, 8:50:30 PM: Operational
-10/7/2026, 8:59:08 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 21:00
-10/7/2026, 9:05:29 PM: Operational
-10/7/2026, 9:25:19 PM: Operational
-10/7/2026, 9:45:41 PM: Operational
-10/7/2026, 9:59:16 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 22:00
-10/7/2026, 10:04:40 PM: Operational
-10/7/2026, 10:23:43 PM: Operational
-10/7/2026, 10:37:59 PM: Operational
-10/7/2026, 10:48:26 PM: Operational
-10/7/2026, 10:55:52 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/7/2026 23:00
-10/7/2026, 11:04:44 PM: Operational
-10/7/2026, 11:27:13 PM: Operational
-10/7/2026, 11:33:51 PM: Operational
-10/7/2026, 11:47:45 PM: Operational
-10/7/2026, 11:54:43 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 0:00
-10/8/2026, 12:09:50 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 1:00
-10/8/2026, 1:05:02 AM: Operational
-10/8/2026, 1:45:45 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 2:00
-10/8/2026, 2:09:39 AM: Operational
-10/8/2026, 2:40:12 AM: Operational
-10/8/2026, 2:58:25 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 3:00
-10/8/2026, 3:09:12 AM: Operational
-10/8/2026, 3:35:01 AM: Operational
-10/8/2026, 3:57:24 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 4:00
-10/8/2026, 4:06:17 AM: Operational
-10/8/2026, 4:32:28 AM: Operational
-10/8/2026, 4:52:22 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 5:00
-10/8/2026, 5:01:49 AM: Operational
-10/8/2026, 5:23:38 AM: Operational
-10/8/2026, 5:40:38 AM: Operational
-10/8/2026, 5:52:15 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 6:00
-10/8/2026, 6:00:56 AM: Operational
-10/8/2026, 6:28:30 AM: Operational
-10/8/2026, 6:59:05 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 7:00
-10/8/2026, 7:15:41 AM: Operational
-10/8/2026, 7:45:25 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 8:00
-10/8/2026, 8:02:23 AM: Operational
-10/8/2026, 8:33:01 AM: Operational
-10/8/2026, 8:53:54 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 9:00
-10/8/2026, 9:08:14 AM: Operational
-10/8/2026, 9:32:06 AM: Operational
-10/8/2026, 9:49:09 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 10:00
-10/8/2026, 10:02:28 AM: Operational
-10/8/2026, 10:16:37 AM: Operational
-10/8/2026, 10:35:07 AM: Operational
-10/8/2026, 10:51:31 AM: Operational
-10/8/2026, 10:59:56 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 11:00
-10/8/2026, 11:08:44 AM: Operational
-10/8/2026, 11:27:44 AM: Operational
-10/8/2026, 11:38:44 AM: Operational
-10/8/2026, 11:50:25 AM: Operational
-10/8/2026, 11:57:43 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 12:00
-10/8/2026, 12:07:53 PM: Operational
-10/8/2026, 12:38:54 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 13:00
-10/8/2026, 1:00:53 PM: Operational
-10/8/2026, 1:23:37 PM: Operational
-10/8/2026, 1:42:34 PM: Operational
-10/8/2026, 1:53:40 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 14:00
-10/8/2026, 2:01:01 PM: Operational
-10/8/2026, 2:23:38 PM: Operational
-10/8/2026, 2:42:43 PM: Operational
-10/8/2026, 2:55:06 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 15:00
-10/8/2026, 3:05:11 PM: Operational
-10/8/2026, 3:27:49 PM: Operational
-10/8/2026, 3:40:50 PM: Operational
-10/8/2026, 3:55:12 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 16:00
-10/8/2026, 4:00:46 PM: Operational
-10/8/2026, 4:19:43 PM: Operational
-10/8/2026, 4:39:42 PM: Operational
-10/8/2026, 4:53:37 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 17:00
-10/8/2026, 5:06:05 PM: Operational
-10/8/2026, 5:25:02 PM: Operational
-10/8/2026, 5:39:11 PM: Operational
-10/8/2026, 5:49:43 PM: Operational
-10/8/2026, 5:57:51 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 18:00
-10/8/2026, 6:05:21 PM: Operational
-10/8/2026, 6:32:56 PM: Operational
-10/8/2026, 6:53:13 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 19:00
-10/8/2026, 7:02:12 PM: Operational
-10/8/2026, 7:20:36 PM: Operational
-10/8/2026, 7:33:26 PM: Operational
-10/8/2026, 7:46:04 PM: Operational
-10/8/2026, 7:55:50 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 20:00
-10/8/2026, 8:05:51 PM: Operational
-10/8/2026, 8:29:08 PM: Operational
-10/8/2026, 8:42:33 PM: Operational
-10/8/2026, 8:52:39 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 21:00
-10/8/2026, 9:00:49 PM: Operational
-10/8/2026, 9:16:13 PM: Operational
-10/8/2026, 9:31:54 PM: Operational
-10/8/2026, 9:46:05 PM: Operational
-10/8/2026, 9:55:38 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 22:00
-10/8/2026, 10:05:10 PM: Operational
-10/8/2026, 10:26:45 PM: Operational
-10/8/2026, 10:39:06 PM: Operational
-10/8/2026, 10:50:26 PM: Operational
-10/8/2026, 10:57:08 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/8/2026 23:00
-10/8/2026, 11:05:12 PM: Operational
-10/8/2026, 11:25:34 PM: Operational
-10/8/2026, 11:39:01 PM: Operational
-10/8/2026, 11:48:24 PM: Operational
-10/8/2026, 11:55:50 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 0:00
-10/9/2026, 12:10:10 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 1:00
-10/9/2026, 1:07:41 AM: Operational
-10/9/2026, 1:48:02 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 2:00
-10/9/2026, 2:11:18 AM: Operational
-10/9/2026, 2:42:41 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 3:00
-10/9/2026, 3:00:27 AM: Operational
-10/9/2026, 3:20:42 AM: Operational
-10/9/2026, 3:45:15 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 4:00
-10/9/2026, 4:03:40 AM: Operational
-10/9/2026, 4:29:19 AM: Operational
-10/9/2026, 4:47:14 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 5:00
-10/9/2026, 5:01:01 AM: Operational
-10/9/2026, 5:19:36 AM: Operational
-10/9/2026, 5:38:06 AM: Operational
-10/9/2026, 5:52:31 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 6:00
-10/9/2026, 6:01:20 AM: Operational
-10/9/2026, 6:29:18 AM: Operational
-10/9/2026, 6:59:08 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 7:00
-10/9/2026, 7:18:49 AM: Operational
-10/9/2026, 7:45:39 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 8:00
-10/9/2026, 8:03:19 AM: Operational
-10/9/2026, 8:32:51 AM: Operational
-10/9/2026, 8:54:25 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 9:00
-10/9/2026, 9:08:29 AM: Operational
-10/9/2026, 9:33:39 AM: Operational
-10/9/2026, 9:49:39 AM: Operational
-10/9/2026, 9:59:41 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 10:00
-10/9/2026, 10:15:52 AM: Operational
-10/9/2026, 10:36:32 AM: Operational
-10/9/2026, 10:50:51 AM: Operational
-10/9/2026, 10:58:01 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 11:00
-10/9/2026, 11:08:01 AM: Operational
-10/9/2026, 11:25:24 AM: Operational
-10/9/2026, 11:37:25 AM: Operational
-10/9/2026, 11:49:00 AM: Operational
-10/9/2026, 11:57:19 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 12:00
-10/9/2026, 12:05:36 PM: Operational
-10/9/2026, 12:36:51 PM: Operational
-10/9/2026, 12:59:18 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 13:00
-10/9/2026, 1:13:41 PM: Operational
-10/9/2026, 1:37:01 PM: Operational
-10/9/2026, 1:52:38 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 14:00
-10/9/2026, 2:01:09 PM: Operational
-10/9/2026, 2:20:45 PM: Operational
-10/9/2026, 2:40:31 PM: Operational
-10/9/2026, 2:53:48 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 15:00
-10/9/2026, 3:05:55 PM: Operational
-10/9/2026, 3:26:12 PM: Operational
-10/9/2026, 3:38:54 PM: Operational
-10/9/2026, 3:51:44 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 16:00
-10/9/2026, 4:00:05 PM: Operational
-10/9/2026, 4:13:33 PM: Operational
-10/9/2026, 4:30:09 PM: Operational
-10/9/2026, 4:44:26 PM: Operational
-10/9/2026, 4:57:46 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 17:00
-10/9/2026, 5:05:06 PM: Operational
-10/9/2026, 5:24:15 PM: Operational
-10/9/2026, 5:37:36 PM: Operational
-10/9/2026, 5:49:35 PM: Operational
-10/9/2026, 5:57:10 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 18:00
-10/9/2026, 6:06:15 PM: Operational
-10/9/2026, 6:31:25 PM: Operational
-10/9/2026, 6:49:21 PM: Operational
-10/9/2026, 6:59:30 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 19:00
-10/9/2026, 7:07:28 PM: Operational
-10/9/2026, 7:22:22 PM: Operational
-10/9/2026, 7:34:55 PM: Operational
-10/9/2026, 7:48:21 PM: Operational
-10/9/2026, 7:55:38 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 20:00
-10/9/2026, 8:05:25 PM: Operational
-10/9/2026, 8:26:24 PM: Operational
-10/9/2026, 8:40:16 PM: Operational
-10/9/2026, 8:51:38 PM: Operational
-10/9/2026, 8:59:15 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 21:00
-10/9/2026, 9:09:38 PM: Operational
-10/9/2026, 9:27:33 PM: Operational
-10/9/2026, 9:37:31 PM: Operational
-10/9/2026, 9:49:25 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 22:00
-10/9/2026, 10:01:19 PM: Operational
-10/9/2026, 10:05:27 PM: Operational
-10/9/2026, 10:26:34 PM: Operational
-10/9/2026, 10:39:14 PM: Operational
-10/9/2026, 10:49:48 PM: Operational
-10/9/2026, 10:57:34 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/9/2026 23:00
-10/9/2026, 11:05:29 PM: Operational
-10/9/2026, 11:25:10 PM: Operational
-10/9/2026, 11:38:36 PM: Operational
-10/9/2026, 11:48:18 PM: Operational
-10/9/2026, 11:55:18 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 0:00
-10/10/2026, 12:09:34 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 1:00
-10/10/2026, 1:05:22 AM: Operational
-10/10/2026, 1:45:11 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 2:00
-10/10/2026, 2:09:09 AM: Operational
-10/10/2026, 2:40:01 AM: Operational
-10/10/2026, 2:58:23 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 3:00
-10/10/2026, 3:13:12 AM: Operational
-10/10/2026, 3:47:39 AM: Operational
-10/10/2026, 3:56:26 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 4:00
-10/10/2026, 4:07:29 AM: Operational
-10/10/2026, 4:31:04 AM: Operational
-10/10/2026, 4:47:53 AM: Operational
-10/10/2026, 4:58:30 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 5:00
-10/10/2026, 5:05:24 AM: Operational
-10/10/2026, 5:27:06 AM: Operational
-10/10/2026, 5:39:21 AM: Operational
-10/10/2026, 5:50:41 AM: Operational
-10/10/2026, 5:58:22 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 6:00
-10/10/2026, 6:06:15 AM: Operational
-10/10/2026, 6:39:44 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 7:00
-10/10/2026, 7:01:23 AM: Operational
-10/10/2026, 7:22:31 AM: Operational
-10/10/2026, 7:39:23 AM: Operational
-10/10/2026, 7:51:37 AM: Operational
-10/10/2026, 7:58:52 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 8:00
-10/10/2026, 8:10:10 AM: Operational
-10/10/2026, 8:32:53 AM: Operational
-10/10/2026, 8:49:19 AM: Operational
-10/10/2026, 8:58:03 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 9:00
-10/10/2026, 9:04:35 AM: Operational
-10/10/2026, 9:27:05 AM: Operational
-10/10/2026, 9:39:34 AM: Operational
-10/10/2026, 9:49:07 AM: Operational
-10/10/2026, 9:56:48 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 10:00
-10/10/2026, 10:05:18 AM: Operational
-10/10/2026, 10:25:41 AM: Operational
-10/10/2026, 10:38:16 AM: Operational
-10/10/2026, 10:46:59 AM: Operational
-10/10/2026, 10:55:18 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 11:00
-10/10/2026, 11:04:40 AM: Operational
-10/10/2026, 11:23:07 AM: Operational
-10/10/2026, 11:33:54 AM: Operational
-10/10/2026, 11:47:37 AM: Operational
-10/10/2026, 11:55:16 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 12:00
-10/10/2026, 12:05:27 PM: Operational
-10/10/2026, 12:33:36 PM: Operational
-10/10/2026, 12:55:36 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 13:00
-10/10/2026, 1:05:49 PM: Operational
-10/10/2026, 1:24:30 PM: Operational
-10/10/2026, 1:38:21 PM: Operational
-10/10/2026, 1:46:52 PM: Operational
-10/10/2026, 1:55:03 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 14:00
-10/10/2026, 2:05:27 PM: Operational
-10/10/2026, 2:24:43 PM: Operational
-10/10/2026, 2:38:00 PM: Operational
-10/10/2026, 2:47:37 PM: Operational
-10/10/2026, 2:55:37 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 15:00
-10/10/2026, 3:04:19 PM: Operational
-10/10/2026, 3:24:22 PM: Operational
-10/10/2026, 3:37:54 PM: Operational
-10/10/2026, 3:48:06 PM: Operational
-10/10/2026, 3:55:06 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 16:00
-10/10/2026, 4:05:28 PM: Operational
-10/10/2026, 4:26:52 PM: Operational
-10/10/2026, 4:38:55 PM: Operational
-10/10/2026, 4:49:57 PM: Operational
-10/10/2026, 4:57:22 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 17:00
-10/10/2026, 5:04:04 PM: Operational
-10/10/2026, 5:22:49 PM: Operational
-10/10/2026, 5:32:30 PM: Operational
-10/10/2026, 5:42:35 PM: Operational
-10/10/2026, 5:49:02 PM: Operational
-10/10/2026, 5:54:38 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 18:00
-10/10/2026, 6:05:34 PM: Operational
-10/10/2026, 6:30:32 PM: Operational
-10/10/2026, 6:45:19 PM: Operational
-10/10/2026, 6:58:05 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 19:00
-10/10/2026, 7:05:14 PM: Operational
-10/10/2026, 7:21:22 PM: Operational
-10/10/2026, 7:31:17 PM: Operational
-10/10/2026, 7:41:18 PM: Operational
-10/10/2026, 7:47:06 PM: Operational
-10/10/2026, 7:54:29 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 20:00
-10/10/2026, 8:04:32 PM: Operational
-10/10/2026, 8:25:25 PM: Operational
-10/10/2026, 8:38:13 PM: Operational
-10/10/2026, 8:48:07 PM: Operational
-10/10/2026, 8:56:08 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 21:00
-10/10/2026, 9:05:26 PM: Operational
-10/10/2026, 9:23:51 PM: Operational
-10/10/2026, 9:37:48 PM: Operational
-10/10/2026, 9:47:45 PM: Operational
-10/10/2026, 9:55:02 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 22:00
-10/10/2026, 10:05:18 PM: Operational
-10/10/2026, 10:24:50 PM: Operational
-10/10/2026, 10:37:55 PM: Operational
-10/10/2026, 10:47:24 PM: Operational
-10/10/2026, 10:55:50 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/10/2026 23:00
-10/10/2026, 11:05:26 PM: Operational
-10/10/2026, 11:23:42 PM: Operational
-10/10/2026, 11:36:48 PM: Operational
-10/10/2026, 11:47:38 PM: Operational
-10/10/2026, 11:55:23 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 0:00
-10/11/2026, 12:09:37 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 1:00
-10/11/2026, 1:11:39 AM: Operational
-10/11/2026, 1:47:26 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 2:00
-10/11/2026, 2:10:48 AM: Operational
-10/11/2026, 2:45:41 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 3:00
-10/11/2026, 3:06:12 AM: Operational
-10/11/2026, 3:35:16 AM: Operational
-10/11/2026, 3:57:44 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 4:00
-10/11/2026, 4:07:41 AM: Operational
-10/11/2026, 4:38:37 AM: Operational
-10/11/2026, 4:52:57 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 5:00
-10/11/2026, 5:08:43 AM: Operational
-10/11/2026, 5:19:38 AM: Operational
-10/11/2026, 5:35:07 AM: Operational
-10/11/2026, 5:50:05 AM: Operational
-10/11/2026, 5:58:12 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 6:00
-10/11/2026, 6:05:54 AM: Operational
-10/11/2026, 6:40:39 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 7:00
-10/11/2026, 7:03:11 AM: Operational
-10/11/2026, 7:27:45 AM: Operational
-10/11/2026, 7:42:51 AM: Operational
-10/11/2026, 7:52:44 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 8:00
-10/11/2026, 8:05:46 AM: Operational
-10/11/2026, 8:32:26 AM: Operational
-10/11/2026, 8:53:53 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 9:00
-10/11/2026, 9:07:26 AM: Operational
-10/11/2026, 9:17:26 AM: Operational
-10/11/2026, 9:34:16 AM: Operational
-10/11/2026, 9:48:09 AM: Operational
-10/11/2026, 9:56:55 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 10:00
-10/11/2026, 10:05:11 AM: Operational
-10/11/2026, 10:25:24 AM: Operational
-10/11/2026, 10:38:54 AM: Operational
-10/11/2026, 10:48:25 AM: Operational
-10/11/2026, 10:56:23 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 11:00
-10/11/2026, 11:05:02 AM: Operational
-10/11/2026, 11:30:55 AM: Operational
-10/11/2026, 11:39:45 AM: Operational
-10/11/2026, 11:47:46 AM: Operational
-10/11/2026, 11:55:10 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 12:00
-10/11/2026, 12:06:30 PM: Operational
-10/11/2026, 12:36:00 PM: Operational
-10/11/2026, 12:57:21 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 13:00
-10/11/2026, 1:06:50 PM: Operational
-10/11/2026, 1:28:08 PM: Operational
-10/11/2026, 1:38:13 PM: Operational
-10/11/2026, 1:47:55 PM: Operational
-10/11/2026, 1:55:05 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 14:00
-10/11/2026, 2:04:32 PM: Operational
-10/11/2026, 2:25:19 PM: Operational
-10/11/2026, 2:40:00 PM: Operational
-10/11/2026, 2:48:51 PM: Operational
-10/11/2026, 2:56:53 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 15:00
-10/11/2026, 3:05:53 PM: Operational
-10/11/2026, 3:23:38 PM: Operational
-10/11/2026, 3:39:33 PM: Operational
-10/11/2026, 3:54:19 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 16:00
-10/11/2026, 4:05:32 PM: Operational
-10/11/2026, 4:27:48 PM: Operational
-10/11/2026, 4:39:31 PM: Operational
-10/11/2026, 4:49:29 PM: Operational
-10/11/2026, 4:58:13 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 17:00
-10/11/2026, 5:05:13 PM: Operational
-10/11/2026, 5:23:37 PM: Operational
-10/11/2026, 5:34:21 PM: Operational
-10/11/2026, 5:47:30 PM: Operational
-10/11/2026, 5:54:28 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 18:00
-10/11/2026, 6:06:08 PM: Operational
-10/11/2026, 6:30:53 PM: Operational
-10/11/2026, 6:47:41 PM: Operational
-10/11/2026, 6:58:42 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 19:00
-10/11/2026, 7:05:41 PM: Operational
-10/11/2026, 7:22:17 PM: Operational
-10/11/2026, 7:32:51 PM: Operational
-10/11/2026, 7:43:03 PM: Operational
-10/11/2026, 7:49:09 PM: Operational
-10/11/2026, 7:54:46 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 20:00
-10/11/2026, 8:06:59 PM: Operational
-10/11/2026, 8:27:06 PM: Operational
-10/11/2026, 8:39:22 PM: Operational
-10/11/2026, 8:50:06 PM: Operational
-10/11/2026, 8:57:49 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 21:00
-10/11/2026, 9:05:23 PM: Operational
-10/11/2026, 9:23:55 PM: Operational
-10/11/2026, 9:37:33 PM: Operational
-10/11/2026, 9:48:22 PM: Operational
-10/11/2026, 9:56:00 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 22:00
-10/11/2026, 10:05:20 PM: Operational
-10/11/2026, 10:25:27 PM: Operational
-10/11/2026, 10:38:05 PM: Operational
-10/11/2026, 10:47:58 PM: Operational
-10/11/2026, 10:56:26 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/11/2026 23:00
-10/11/2026, 11:05:44 PM: Operational
-10/11/2026, 11:24:26 PM: Operational
-10/11/2026, 11:38:26 PM: Operational
-10/11/2026, 11:48:17 PM: Operational
-10/11/2026, 11:55:35 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 0:00
-10/12/2026, 12:10:07 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 1:00
-10/12/2026, 1:13:22 AM: Operational
-10/12/2026, 1:55:29 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 2:00
-10/12/2026, 2:23:47 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 3:00
-10/12/2026, 3:02:00 AM: Operational
-10/12/2026, 3:35:04 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 4:00
-10/12/2026, 4:04:18 AM: Operational
-10/12/2026, 4:37:51 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 5:00
-10/12/2026, 5:01:58 AM: Operational
-10/12/2026, 5:27:59 AM: Operational
-10/12/2026, 5:47:48 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 6:00
-10/12/2026, 6:02:32 AM: Operational
-10/12/2026, 6:59:57 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 7:00
-10/12/2026, 7:40:12 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 8:00
-10/12/2026, 8:12:20 AM: Operational
-10/12/2026, 8:50:50 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 9:00
-10/12/2026, 9:11:28 AM: Operational
-10/12/2026, 9:45:35 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 10:00
-10/12/2026, 10:06:57 AM: Operational
-10/12/2026, 10:33:00 AM: Operational
-10/12/2026, 10:50:58 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 11:00
-10/12/2026, 11:02:21 AM: Operational
-10/12/2026, 11:22:48 AM: Operational
-10/12/2026, 11:40:35 AM: Operational
-10/12/2026, 11:52:41 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 12:00
-10/12/2026, 12:01:38 PM: Operational
-10/12/2026, 12:44:18 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 13:00
-10/12/2026, 1:20:43 PM: Operational
-10/12/2026, 1:55:18 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 14:00
-10/12/2026, 2:12:09 PM: Operational
-10/12/2026, 2:38:07 PM: Operational
-10/12/2026, 2:58:35 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 15:00
-10/12/2026, 3:29:48 PM: Operational
-10/12/2026, 3:58:46 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 16:00
-10/12/2026, 4:06:26 PM: Operational
-10/12/2026, 4:28:55 PM: Operational
-10/12/2026, 4:42:16 PM: Operational
-10/12/2026, 4:53:50 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 17:00
-10/12/2026, 5:05:32 PM: Operational
-10/12/2026, 5:26:25 PM: Operational
-10/12/2026, 5:39:17 PM: Operational
-10/12/2026, 5:52:19 PM: Operational
-10/12/2026, 5:58:07 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 18:00
-10/12/2026, 6:05:37 PM: Operational
-10/12/2026, 6:32:51 PM: Operational
-10/12/2026, 6:53:27 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 19:00
-10/12/2026, 7:06:04 PM: Operational
-10/12/2026, 7:24:06 PM: Operational
-10/12/2026, 7:37:27 PM: Operational
-10/12/2026, 7:49:11 PM: Operational
-10/12/2026, 7:55:56 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 20:00
-10/12/2026, 8:05:24 PM: Operational
-10/12/2026, 8:29:03 PM: Operational
-10/12/2026, 8:41:57 PM: Operational
-10/12/2026, 8:54:34 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 21:00
-10/12/2026, 9:04:57 PM: Operational
-10/12/2026, 9:23:41 PM: Operational
-10/12/2026, 9:37:50 PM: Operational
-10/12/2026, 9:49:20 PM: Operational
-10/12/2026, 9:55:28 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 22:00
-10/12/2026, 10:05:12 PM: Operational
-10/12/2026, 10:26:11 PM: Operational
-10/12/2026, 10:39:35 PM: Operational
-10/12/2026, 10:50:09 PM: Operational
-10/12/2026, 10:58:06 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/12/2026 23:00
-10/12/2026, 11:05:18 PM: Operational
-10/12/2026, 11:26:09 PM: Operational
-10/12/2026, 11:39:10 PM: Operational
-10/12/2026, 11:48:58 PM: Operational
-10/12/2026, 11:59:21 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 0:00
-10/13/2026, 12:09:25 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 1:00
-10/13/2026, 1:08:47 AM: Operational
-10/13/2026, 1:49:26 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 2:00
-10/13/2026, 2:13:48 AM: Operational
-10/13/2026, 2:53:18 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 3:00
-10/13/2026, 3:11:15 AM: Operational
-10/13/2026, 3:40:20 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 4:00
-10/13/2026, 4:00:45 AM: Operational
-10/13/2026, 4:29:32 AM: Operational
-10/13/2026, 4:50:15 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 5:00
-10/13/2026, 5:03:55 AM: Operational
-10/13/2026, 5:31:55 AM: Operational
-10/13/2026, 5:51:58 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 6:00
-10/13/2026, 6:01:58 AM: Operational
-10/13/2026, 6:39:06 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 7:00
-10/13/2026, 7:08:23 AM: Operational
-10/13/2026, 7:38:37 AM: Operational
-10/13/2026, 7:58:49 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 8:00
-10/13/2026, 8:12:51 AM: Operational
-10/13/2026, 8:41:50 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 9:00
-10/13/2026, 9:01:06 AM: Operational
-10/13/2026, 9:22:20 AM: Operational
-10/13/2026, 9:44:01 AM: Operational
-10/13/2026, 9:56:35 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 10:00
-10/13/2026, 10:07:04 AM: Operational
-10/13/2026, 10:30:52 AM: Operational
-10/13/2026, 10:46:43 AM: Operational
-10/13/2026, 10:59:52 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 11:00
-10/13/2026, 11:11:13 AM: Operational
-10/13/2026, 11:28:32 AM: Operational
-10/13/2026, 11:40:07 AM: Operational
-10/13/2026, 11:52:20 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 12:00
-10/13/2026, 12:05:08 PM: Operational
-10/13/2026, 12:30:37 PM: Operational
-10/13/2026, 12:59:05 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 13:00
-10/13/2026, 1:17:37 PM: Operational
-10/13/2026, 1:44:52 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 14:00
-10/13/2026, 2:03:05 PM: Operational
-10/13/2026, 2:28:00 PM: Operational
-10/13/2026, 2:43:57 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 15:00
-10/13/2026, 3:02:18 PM: Operational
-10/13/2026, 3:20:36 PM: Operational
-10/13/2026, 3:37:02 PM: Operational
-10/13/2026, 3:53:35 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 16:00
-10/13/2026, 4:01:18 PM: Operational
-10/13/2026, 4:19:06 PM: Operational
-10/13/2026, 4:39:14 PM: Operational
-10/13/2026, 4:55:03 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 17:00
-10/13/2026, 5:02:13 PM: Operational
-10/13/2026, 5:19:23 PM: Operational
-10/13/2026, 5:33:30 PM: Operational
-10/13/2026, 5:46:42 PM: Operational
-10/13/2026, 5:57:25 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 18:00
-10/13/2026, 6:07:01 PM: Operational
-10/13/2026, 6:34:04 PM: Operational
-10/13/2026, 6:55:46 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 19:00
-10/13/2026, 7:06:34 PM: Operational
-10/13/2026, 7:23:57 PM: Operational
-10/13/2026, 7:33:31 PM: Operational
-10/13/2026, 7:44:12 PM: Operational
-10/13/2026, 7:49:48 PM: Operational
-10/13/2026, 7:54:58 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 20:00
-10/13/2026, 8:06:10 PM: Operational
-10/13/2026, 8:27:41 PM: Operational
-10/13/2026, 8:39:57 PM: Operational
-10/13/2026, 8:50:05 PM: Operational
-10/13/2026, 8:55:46 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 21:00
-10/13/2026, 9:05:52 PM: Operational
-10/13/2026, 9:22:14 PM: Operational
-10/13/2026, 9:30:26 PM: Operational
-10/13/2026, 9:39:19 PM: Operational
-10/13/2026, 9:46:44 PM: Operational
-10/13/2026, 9:54:06 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 22:00
-10/13/2026, 10:05:32 PM: Operational
-10/13/2026, 10:22:06 PM: Operational
-10/13/2026, 10:31:46 PM: Operational
-10/13/2026, 10:41:33 PM: Operational
-10/13/2026, 10:47:26 PM: Operational
-10/13/2026, 10:54:08 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/13/2026 23:00
-10/13/2026, 11:05:02 PM: Operational
-10/13/2026, 11:21:05 PM: Operational
-10/13/2026, 11:29:53 PM: Operational
-10/13/2026, 11:36:20 PM: Operational
-10/13/2026, 11:45:13 PM: Operational
-10/13/2026, 11:54:34 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 0:00
-10/14/2026, 12:08:48 AM: Operational
-10/14/2026, 12:55:42 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 1:00
-10/14/2026, 1:18:40 AM: Operational
-10/14/2026, 1:38:35 AM: Operational
-10/14/2026, 1:53:42 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 2:00
-10/14/2026, 2:06:37 AM: Operational
-10/14/2026, 2:32:57 AM: Operational
-10/14/2026, 2:49:59 AM: Operational
-10/14/2026, 2:58:24 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 3:00
-10/14/2026, 3:06:15 AM: Operational
-10/14/2026, 3:29:15 AM: Operational
-10/14/2026, 3:43:06 AM: Operational
-10/14/2026, 3:53:39 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 4:00
-10/14/2026, 4:00:23 AM: Operational
-10/14/2026, 4:12:40 AM: Operational
-10/14/2026, 4:31:30 AM: Operational
-10/14/2026, 4:46:14 AM: Operational
-10/14/2026, 4:57:22 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 5:00
-10/14/2026, 5:05:30 AM: Operational
-10/14/2026, 5:25:11 AM: Operational
-10/14/2026, 5:39:13 AM: Operational
-10/14/2026, 5:49:16 AM: Operational
-10/14/2026, 5:55:45 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 6:00
-10/14/2026, 6:06:37 AM: Operational
-10/14/2026, 6:40:36 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 7:00
-10/14/2026, 7:01:08 AM: Operational
-10/14/2026, 7:22:00 AM: Operational
-10/14/2026, 7:39:20 AM: Operational
-10/14/2026, 7:52:09 AM: Operational
-10/14/2026, 7:59:45 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 8:00
-10/14/2026, 8:06:09 AM: Operational
-10/14/2026, 8:33:14 AM: Operational
-10/14/2026, 8:50:42 AM: Operational
-10/14/2026, 8:59:59 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 9:00
-10/14/2026, 9:11:48 AM: Operational
-10/14/2026, 9:30:01 AM: Operational
-10/14/2026, 9:41:39 AM: Operational
-10/14/2026, 9:52:06 AM: Operational
-10/14/2026, 9:58:39 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 10:00
-10/14/2026, 10:06:37 AM: Operational
-10/14/2026, 10:25:40 AM: Operational
-10/14/2026, 10:37:37 AM: Operational
-10/14/2026, 10:48:06 AM: Operational
-10/14/2026, 10:55:12 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 11:00
-10/14/2026, 11:05:04 AM: Operational
-10/14/2026, 11:26:00 AM: Operational
-10/14/2026, 11:38:31 AM: Operational
-10/14/2026, 11:47:37 AM: Operational
-10/14/2026, 11:55:40 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 12:00
-10/14/2026, 12:06:06 PM: Operational
-10/14/2026, 12:35:27 PM: Operational
-10/14/2026, 12:54:15 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 13:00
-10/14/2026, 1:05:36 PM: Operational
-10/14/2026, 1:25:29 PM: Operational
-10/14/2026, 1:38:24 PM: Operational
-10/14/2026, 1:47:42 PM: Operational
-10/14/2026, 1:55:44 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 14:00
-10/14/2026, 2:06:56 PM: Operational
-10/14/2026, 2:26:27 PM: Operational
-10/14/2026, 2:39:31 PM: Operational
-10/14/2026, 2:49:11 PM: Operational
-10/14/2026, 2:55:58 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 15:00
-10/14/2026, 3:05:44 PM: Operational
-10/14/2026, 3:28:12 PM: Operational
-10/14/2026, 3:40:32 PM: Operational
-10/14/2026, 3:51:58 PM: Operational
-10/14/2026, 3:59:00 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 16:00
-10/14/2026, 4:10:28 PM: Operational
-10/14/2026, 4:28:26 PM: Operational
-10/14/2026, 4:40:12 PM: Operational
-10/14/2026, 4:51:43 PM: Operational
-10/14/2026, 4:59:03 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 17:00
-10/14/2026, 5:05:42 PM: Operational
-10/14/2026, 5:22:57 PM: Operational
-10/14/2026, 5:35:13 PM: Operational
-10/14/2026, 5:48:03 PM: Operational
-10/14/2026, 5:56:38 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 18:00
-10/14/2026, 6:05:57 PM: Operational
-10/14/2026, 6:31:59 PM: Operational
-10/14/2026, 6:47:58 PM: Operational
-10/14/2026, 6:58:02 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 19:00
-10/14/2026, 7:05:09 PM: Operational
-10/14/2026, 7:23:39 PM: Operational
-10/14/2026, 7:33:31 PM: Operational
-10/14/2026, 7:43:50 PM: Operational
-10/14/2026, 7:49:54 PM: Operational
-10/14/2026, 7:55:31 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 20:00
-10/14/2026, 8:05:55 PM: Operational
-10/14/2026, 8:24:15 PM: Operational
-10/14/2026, 8:37:08 PM: Operational
-10/14/2026, 8:48:13 PM: Operational
-10/14/2026, 8:56:48 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 21:00
-10/14/2026, 9:11:03 PM: Operational
-10/14/2026, 9:22:35 PM: Operational
-10/14/2026, 9:32:47 PM: Operational
-10/14/2026, 9:43:59 PM: Operational
-10/14/2026, 9:48:31 PM: Operational
-10/14/2026, 9:54:09 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 22:00
-10/14/2026, 10:05:51 PM: Operational
-10/14/2026, 10:22:57 PM: Operational
-10/14/2026, 10:33:18 PM: Operational
-10/14/2026, 10:43:27 PM: Operational
-10/14/2026, 10:47:16 PM: Operational
-10/14/2026, 10:55:08 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/14/2026 23:00
-10/14/2026, 11:06:12 PM: Operational
-10/14/2026, 11:23:27 PM: Operational
-10/14/2026, 11:31:59 PM: Operational
-10/14/2026, 11:37:56 PM: Operational
-10/14/2026, 11:45:09 PM: Operational
-10/14/2026, 11:54:44 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 0:00
-10/15/2026, 12:09:11 AM: Operational
-10/15/2026, 12:53:48 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 1:00
-10/15/2026, 1:15:56 AM: Operational
-10/15/2026, 1:40:08 AM: Operational
-10/15/2026, 1:55:48 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 2:00
-10/15/2026, 2:07:58 AM: Operational
-10/15/2026, 2:34:12 AM: Operational
-10/15/2026, 2:50:41 AM: Operational
-10/15/2026, 2:58:26 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 3:00
-10/15/2026, 3:05:39 AM: Operational
-10/15/2026, 3:29:53 AM: Operational
-10/15/2026, 3:42:35 AM: Operational
-10/15/2026, 3:54:23 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 4:00
-10/15/2026, 4:07:05 AM: Operational
-10/15/2026, 4:27:58 AM: Operational
-10/15/2026, 4:40:36 AM: Operational
-10/15/2026, 4:50:09 AM: Operational
-10/15/2026, 4:57:54 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 5:00
-10/15/2026, 5:05:44 AM: Operational
-10/15/2026, 5:25:56 AM: Operational
-10/15/2026, 5:39:47 AM: Operational
-10/15/2026, 5:49:08 AM: Operational
-10/15/2026, 5:56:19 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 6:00
-10/15/2026, 6:07:34 AM: Operational
-10/15/2026, 6:40:31 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 7:00
-10/15/2026, 7:01:57 AM: Operational
-10/15/2026, 7:22:15 AM: Operational
-10/15/2026, 7:38:56 AM: Operational
-10/15/2026, 7:51:42 AM: Operational
-10/15/2026, 7:58:45 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 8:00
-10/15/2026, 8:06:26 AM: Operational
-10/15/2026, 8:33:49 AM: Operational
-10/15/2026, 8:53:23 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 9:00
-10/15/2026, 9:01:37 AM: Operational
-10/15/2026, 9:17:23 AM: Operational
-10/15/2026, 9:41:54 AM: Operational
-10/15/2026, 9:50:02 AM: Operational
-10/15/2026, 9:57:12 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 10:00
-10/15/2026, 10:05:58 AM: Operational
-10/15/2026, 10:25:30 AM: Operational
-10/15/2026, 10:39:02 AM: Operational
-10/15/2026, 10:49:20 AM: Operational
-10/15/2026, 10:55:41 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 11:00
-10/15/2026, 11:05:32 AM: Operational
-10/15/2026, 11:23:02 AM: Operational
-10/15/2026, 11:37:44 AM: Operational
-10/15/2026, 11:48:24 AM: Operational
-10/15/2026, 11:55:46 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 12:00
-10/15/2026, 12:07:07 PM: Operational
-10/15/2026, 12:36:18 PM: Operational
-10/15/2026, 12:57:50 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 13:00
-10/15/2026, 1:08:09 PM: Operational
-10/15/2026, 1:27:59 PM: Operational
-10/15/2026, 1:38:49 PM: Operational
-10/15/2026, 1:50:12 PM: Operational
-10/15/2026, 1:59:01 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 14:00
-10/15/2026, 2:06:22 PM: Operational
-10/15/2026, 2:26:53 PM: Operational
-10/15/2026, 2:37:58 PM: Operational
-10/15/2026, 2:48:27 PM: Operational
-10/15/2026, 2:55:49 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 15:00
-10/15/2026, 3:05:35 PM: Operational
-10/15/2026, 3:27:10 PM: Operational
-10/15/2026, 3:40:11 PM: Operational
-10/15/2026, 3:51:16 PM: Operational
-10/15/2026, 3:55:41 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 16:00
-10/15/2026, 4:05:57 PM: Operational
-10/15/2026, 4:27:13 PM: Operational
-10/15/2026, 4:39:40 PM: Operational
-10/15/2026, 4:51:47 PM: Operational
-10/15/2026, 4:59:30 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 17:00
-10/15/2026, 5:07:27 PM: Operational
-10/15/2026, 5:24:07 PM: Operational
-10/15/2026, 5:33:36 PM: Operational
-10/15/2026, 5:43:59 PM: Operational
-10/15/2026, 5:49:50 PM: Operational
-10/15/2026, 5:54:51 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 18:00
-10/15/2026, 6:06:38 PM: Operational
-10/15/2026, 6:28:33 PM: Operational
-10/15/2026, 6:44:16 PM: Operational
-10/15/2026, 6:58:48 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 19:00
-10/15/2026, 7:04:19 PM: Operational
-10/15/2026, 7:21:57 PM: Operational
-10/15/2026, 7:30:30 PM: Operational
-10/15/2026, 7:37:09 PM: Operational
-10/15/2026, 7:45:57 PM: Operational
-10/15/2026, 7:55:17 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 20:00
-10/15/2026, 8:04:51 PM: Operational
-10/15/2026, 8:23:37 PM: Operational
-10/15/2026, 8:36:29 PM: Operational
-10/15/2026, 8:47:12 PM: Operational
-10/15/2026, 8:56:12 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 21:00
-10/15/2026, 9:05:16 PM: Operational
-10/15/2026, 9:25:41 PM: Operational
-10/15/2026, 9:37:56 PM: Operational
-10/15/2026, 9:46:17 PM: Operational
-10/15/2026, 9:55:19 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 22:00
-10/15/2026, 10:05:41 PM: Operational
-10/15/2026, 10:26:08 PM: Operational
-10/15/2026, 10:37:05 PM: Operational
-10/15/2026, 10:47:03 PM: Operational
-10/15/2026, 10:54:31 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/15/2026 23:00
-10/15/2026, 11:05:48 PM: Operational
-10/15/2026, 11:20:16 PM: Operational
-10/15/2026, 11:29:53 PM: Operational
-10/15/2026, 11:34:55 PM: Operational
-10/15/2026, 11:50:32 PM: Operational
-10/15/2026, 11:53:35 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 0:00
-10/16/2026, 12:08:57 AM: Operational
-10/16/2026, 12:55:07 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 1:00
-10/16/2026, 1:16:13 AM: Operational
-10/16/2026, 1:39:24 AM: Operational
-10/16/2026, 1:55:41 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 2:00
-10/16/2026, 2:06:12 AM: Operational
-10/16/2026, 2:35:16 AM: Operational
-10/16/2026, 2:50:57 AM: Operational
-10/16/2026, 2:58:01 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 3:00
-10/16/2026, 3:06:16 AM: Operational
-10/16/2026, 3:29:04 AM: Operational
-10/16/2026, 3:42:53 AM: Operational
-10/16/2026, 3:53:04 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 4:00
-10/16/2026, 4:00:38 AM: Operational
-10/16/2026, 4:10:38 AM: Operational
-10/16/2026, 4:28:53 AM: Operational
-10/16/2026, 4:41:54 AM: Operational
-10/16/2026, 4:52:08 AM: Operational
-10/16/2026, 4:59:10 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 5:00
-10/16/2026, 5:08:33 AM: Operational
-10/16/2026, 5:25:28 AM: Operational
-10/16/2026, 5:39:46 AM: Operational
-10/16/2026, 5:48:30 AM: Operational
-10/16/2026, 5:55:53 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 6:00
-10/16/2026, 6:06:07 AM: Operational
-10/16/2026, 6:39:16 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 7:00
-10/16/2026, 7:01:52 AM: Operational
-10/16/2026, 7:20:24 AM: Operational
-10/16/2026, 7:36:23 AM: Operational
-10/16/2026, 7:50:06 AM: Operational
-10/16/2026, 7:57:48 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 8:00
-10/16/2026, 8:06:09 AM: Operational
-10/16/2026, 8:32:48 AM: Operational
-10/16/2026, 8:48:39 AM: Operational
-10/16/2026, 8:58:38 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 9:00
-10/16/2026, 9:06:00 AM: Operational
-10/16/2026, 9:27:17 AM: Operational
-10/16/2026, 9:38:26 AM: Operational
-10/16/2026, 9:48:25 AM: Operational
-10/16/2026, 9:56:16 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 10:00
-10/16/2026, 10:05:06 AM: Operational
-10/16/2026, 10:25:55 AM: Operational
-10/16/2026, 10:37:45 AM: Operational
-10/16/2026, 10:47:20 AM: Operational
-10/16/2026, 10:55:28 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 11:00
-10/16/2026, 11:05:38 AM: Operational
-10/16/2026, 11:23:18 AM: Operational
-10/16/2026, 11:36:40 AM: Operational
-10/16/2026, 11:47:52 AM: Operational
-10/16/2026, 11:54:46 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 12:00
-10/16/2026, 12:06:26 PM: Operational
-10/16/2026, 12:36:09 PM: Operational
-10/16/2026, 12:56:48 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 13:00
-10/16/2026, 1:06:53 PM: Operational
-10/16/2026, 1:26:53 PM: Operational
-10/16/2026, 1:39:02 PM: Operational
-10/16/2026, 1:48:24 PM: Operational
-10/16/2026, 1:55:43 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 14:00
-10/16/2026, 2:05:50 PM: Operational
-10/16/2026, 2:26:18 PM: Operational
-10/16/2026, 2:40:21 PM: Operational
-10/16/2026, 2:50:24 PM: Operational
-10/16/2026, 2:57:30 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 15:00
-10/16/2026, 3:04:56 PM: Operational
-10/16/2026, 3:23:36 PM: Operational
-10/16/2026, 3:34:04 PM: Operational
-10/16/2026, 3:44:11 PM: Operational
-10/16/2026, 3:55:29 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 16:00
-10/16/2026, 4:05:02 PM: Operational
-10/16/2026, 4:26:56 PM: Operational
-10/16/2026, 4:38:54 PM: Operational
-10/16/2026, 4:47:34 PM: Operational
-10/16/2026, 4:57:01 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 17:00
-10/16/2026, 5:04:29 PM: Operational
-10/16/2026, 5:22:02 PM: Operational
-10/16/2026, 5:30:33 PM: Operational
-10/16/2026, 5:39:04 PM: Operational
-10/16/2026, 5:46:43 PM: Operational
-10/16/2026, 5:55:01 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 18:00
-10/16/2026, 6:05:32 PM: Operational
-10/16/2026, 6:29:07 PM: Operational
-10/16/2026, 6:43:10 PM: Operational
-10/16/2026, 6:52:29 PM: Operational
-10/16/2026, 6:58:58 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 19:00
-10/16/2026, 7:05:31 PM: Operational
-10/16/2026, 7:20:42 PM: Operational
-10/16/2026, 7:30:48 PM: Operational
-10/16/2026, 7:39:17 PM: Operational
-10/16/2026, 7:46:04 PM: Operational
-10/16/2026, 7:54:42 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 20:00
-10/16/2026, 8:09:04 PM: Operational
-10/16/2026, 8:24:30 PM: Operational
-10/16/2026, 8:38:12 PM: Operational
-10/16/2026, 8:48:52 PM: Operational
-10/16/2026, 8:54:57 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 21:00
-10/16/2026, 9:04:42 PM: Operational
-10/16/2026, 9:21:10 PM: Operational
-10/16/2026, 9:30:27 PM: Operational
-10/16/2026, 9:37:56 PM: Operational
-10/16/2026, 9:44:24 PM: Operational
-10/16/2026, 9:54:51 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 22:00
-10/16/2026, 10:05:32 PM: Operational
-10/16/2026, 10:23:18 PM: Operational
-10/16/2026, 10:33:35 PM: Operational
-10/16/2026, 10:42:30 PM: Operational
-10/16/2026, 10:48:37 PM: Operational
-10/16/2026, 10:54:12 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/16/2026 23:00
-10/16/2026, 11:05:15 PM: Operational
-10/16/2026, 11:21:59 PM: Operational
-10/16/2026, 11:30:06 PM: Operational
-10/16/2026, 11:36:47 PM: Operational
-10/16/2026, 11:44:14 PM: Operational
-10/16/2026, 11:54:21 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 0:00
-10/17/2026, 12:08:45 AM: Operational
-10/17/2026, 12:55:04 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 1:00
-10/17/2026, 1:17:05 AM: Operational
-10/17/2026, 1:36:34 AM: Operational
-10/17/2026, 1:54:16 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 2:00
-10/17/2026, 2:05:51 AM: Operational
-10/17/2026, 2:32:05 AM: Operational
-10/17/2026, 2:47:20 AM: Operational
-10/17/2026, 2:56:54 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 3:00
-10/17/2026, 3:06:10 AM: Operational
-10/17/2026, 3:26:08 AM: Operational
-10/17/2026, 3:39:54 AM: Operational
-10/17/2026, 3:50:21 AM: Operational
-10/17/2026, 3:56:09 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 4:00
-10/17/2026, 4:05:40 AM: Operational
-10/17/2026, 4:26:31 AM: Operational
-10/17/2026, 4:39:53 AM: Operational
-10/17/2026, 4:48:56 AM: Operational
-10/17/2026, 4:56:32 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 5:00
-10/17/2026, 5:05:23 AM: Operational
-10/17/2026, 5:23:31 AM: Operational
-10/17/2026, 5:34:14 AM: Operational
-10/17/2026, 5:46:22 AM: Operational
-10/17/2026, 5:54:29 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 6:00
-10/17/2026, 6:06:20 AM: Operational
-10/17/2026, 6:35:19 AM: Operational
-10/17/2026, 6:56:43 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 7:00
-10/17/2026, 7:05:30 AM: Operational
-10/17/2026, 7:24:49 AM: Operational
-10/17/2026, 7:37:49 AM: Operational
-10/17/2026, 7:46:13 AM: Operational
-10/17/2026, 7:54:18 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 8:00
-10/17/2026, 8:05:38 AM: Operational
-10/17/2026, 8:28:21 AM: Operational
-10/17/2026, 8:38:36 AM: Operational
-10/17/2026, 8:48:59 AM: Operational
-10/17/2026, 8:55:17 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 9:00
-10/17/2026, 9:05:22 AM: Operational
-10/17/2026, 9:23:36 AM: Operational
-10/17/2026, 9:32:43 AM: Operational
-10/17/2026, 9:43:01 AM: Operational
-10/17/2026, 9:48:01 AM: Operational
-10/17/2026, 9:53:26 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 10:00
-10/17/2026, 10:05:11 AM: Operational
-10/17/2026, 10:22:35 AM: Operational
-10/17/2026, 10:32:34 AM: Operational
-10/17/2026, 10:40:10 AM: Operational
-10/17/2026, 10:45:57 AM: Operational
-10/17/2026, 10:54:20 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 11:00
-10/17/2026, 11:05:10 AM: Operational
-10/17/2026, 11:21:39 AM: Operational
-10/17/2026, 11:30:15 AM: Operational
-10/17/2026, 11:36:16 AM: Operational
-10/17/2026, 11:43:36 AM: Operational
-10/17/2026, 11:55:11 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 12:00
-10/17/2026, 12:06:27 PM: Operational
-10/17/2026, 12:29:25 PM: Operational
-10/17/2026, 12:44:55 PM: Operational
-10/17/2026, 12:55:30 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 13:00
-10/17/2026, 1:04:25 PM: Operational
-10/17/2026, 1:21:42 PM: Operational
-10/17/2026, 1:31:18 PM: Operational
-10/17/2026, 1:36:49 PM: Operational
-10/17/2026, 1:44:59 PM: Operational
-10/17/2026, 1:53:40 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 14:00
-10/17/2026, 2:04:16 PM: Operational
-10/17/2026, 2:22:12 PM: Operational
-10/17/2026, 2:31:24 PM: Operational
-10/17/2026, 2:39:25 PM: Operational
-10/17/2026, 2:45:13 PM: Operational
-10/17/2026, 2:54:50 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 15:00
-10/17/2026, 3:04:44 PM: Operational
-10/17/2026, 3:22:12 PM: Operational
-10/17/2026, 3:30:58 PM: Operational
-10/17/2026, 3:37:19 PM: Operational
-10/17/2026, 3:44:40 PM: Operational
-10/17/2026, 3:54:57 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 16:00
-10/17/2026, 4:06:28 PM: Operational
-10/17/2026, 4:23:50 PM: Operational
-10/17/2026, 4:36:55 PM: Operational
-10/17/2026, 4:45:10 PM: Operational
-10/17/2026, 4:54:11 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 17:00
-10/17/2026, 5:05:50 PM: Operational
-10/17/2026, 5:20:22 PM: Operational
-10/17/2026, 5:27:46 PM: Operational
-10/17/2026, 5:34:01 PM: Operational
-10/17/2026, 5:43:54 PM: Operational
-10/17/2026, 5:55:07 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 18:00
-10/17/2026, 6:04:55 PM: Operational
-10/17/2026, 6:31:28 PM: Operational
-10/17/2026, 6:42:24 PM: Operational
-10/17/2026, 6:46:19 PM: Operational
-10/17/2026, 6:54:09 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 19:00
-10/17/2026, 7:05:18 PM: Operational
-10/17/2026, 7:17:46 PM: Operational
-10/17/2026, 7:25:11 PM: Operational
-10/17/2026, 7:34:05 PM: Operational
-10/17/2026, 7:44:26 PM: Operational
-10/17/2026, 7:53:35 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 20:00
-10/17/2026, 8:05:22 PM: Operational
-10/17/2026, 8:23:09 PM: Operational
-10/17/2026, 8:38:03 PM: Operational
-10/17/2026, 8:45:43 PM: Operational
-10/17/2026, 8:54:15 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 21:00
-10/17/2026, 9:05:10 PM: Operational
-10/17/2026, 9:20:43 PM: Operational
-10/17/2026, 9:29:35 PM: Operational
-10/17/2026, 9:36:02 PM: Operational
-10/17/2026, 9:43:11 PM: Operational
-10/17/2026, 9:54:16 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 22:00
-10/17/2026, 10:05:02 PM: Operational
-10/17/2026, 10:21:02 PM: Operational
-10/17/2026, 10:29:48 PM: Operational
-10/17/2026, 10:36:26 PM: Operational
-10/17/2026, 10:44:08 PM: Operational
-10/17/2026, 10:54:09 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/17/2026 23:00
-10/17/2026, 11:04:37 PM: Operational
-10/17/2026, 11:19:57 PM: Operational
-10/17/2026, 11:26:25 PM: Operational
-10/17/2026, 11:34:03 PM: Operational
-10/17/2026, 11:43:52 PM: Operational
-10/17/2026, 11:53:51 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 0:00
-10/18/2026, 12:08:44 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 1:00
-10/18/2026, 1:00:55 AM: Operational
-10/18/2026, 1:26:34 AM: Operational
-10/18/2026, 1:45:25 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 2:00
-10/18/2026, 2:08:12 AM: Operational
-10/18/2026, 2:26:20 AM: Operational
-10/18/2026, 2:41:08 AM: Operational
-10/18/2026, 2:53:23 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 3:00
-10/18/2026, 3:00:02 AM: Operational
-10/18/2026, 3:10:28 AM: Operational
-10/18/2026, 3:29:56 AM: Operational
-10/18/2026, 3:42:13 AM: Operational
-10/18/2026, 3:52:07 AM: Operational
-10/18/2026, 3:58:44 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 4:00
-10/18/2026, 4:07:08 AM: Operational
-10/18/2026, 4:27:38 AM: Operational
-10/18/2026, 4:39:58 AM: Operational
-10/18/2026, 4:49:05 AM: Operational
-10/18/2026, 4:56:44 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 5:00
-10/18/2026, 5:05:08 AM: Operational
-10/18/2026, 5:23:27 AM: Operational
-10/18/2026, 5:33:37 AM: Operational
-10/18/2026, 5:43:25 AM: Operational
-10/18/2026, 5:49:32 AM: Operational
-10/18/2026, 5:55:15 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 6:00
-10/18/2026, 6:05:45 AM: Operational
-10/18/2026, 6:36:49 AM: Operational
-10/18/2026, 6:57:51 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 7:00
-10/18/2026, 7:06:06 AM: Operational
-10/18/2026, 7:25:16 AM: Operational
-10/18/2026, 7:37:29 AM: Operational
-10/18/2026, 7:46:46 AM: Operational
-10/18/2026, 7:55:16 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 8:00
-10/18/2026, 8:06:24 AM: Operational
-10/18/2026, 8:28:45 AM: Operational
-10/18/2026, 8:40:12 AM: Operational
-10/18/2026, 8:49:45 AM: Operational
-10/18/2026, 8:56:29 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 9:00
-10/18/2026, 9:06:10 AM: Operational
-10/18/2026, 9:23:25 AM: Operational
-10/18/2026, 9:35:54 AM: Operational
-10/18/2026, 9:46:26 AM: Operational
-10/18/2026, 9:54:08 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 10:00
-10/18/2026, 10:05:29 AM: Operational
-10/18/2026, 10:22:38 AM: Operational
-10/18/2026, 10:32:13 AM: Operational
-10/18/2026, 10:41:24 AM: Operational
-10/18/2026, 10:47:12 AM: Operational
-10/18/2026, 10:54:00 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 11:00
-10/18/2026, 11:05:17 AM: Operational
-10/18/2026, 11:20:04 AM: Operational
-10/18/2026, 11:29:53 AM: Operational
-10/18/2026, 11:36:10 AM: Operational
-10/18/2026, 11:44:05 AM: Operational
-10/18/2026, 11:54:15 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 12:00
-10/18/2026, 12:05:48 PM: Operational
-10/18/2026, 12:30:56 PM: Operational
-10/18/2026, 12:46:23 PM: Operational
-10/18/2026, 12:56:43 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 13:00
-10/18/2026, 1:05:17 PM: Operational
-10/18/2026, 1:21:46 PM: Operational
-10/18/2026, 1:30:58 PM: Operational
-10/18/2026, 1:38:48 PM: Operational
-10/18/2026, 1:44:02 PM: Operational
-10/18/2026, 1:54:58 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 14:00
-10/18/2026, 2:05:21 PM: Operational
-10/18/2026, 2:22:43 PM: Operational
-10/18/2026, 2:32:19 PM: Operational
-10/18/2026, 2:40:32 PM: Operational
-10/18/2026, 2:47:57 PM: Operational
-10/18/2026, 2:53:56 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 15:00
-10/18/2026, 3:04:49 PM: Operational
-10/18/2026, 3:22:14 PM: Operational
-10/18/2026, 3:32:04 PM: Operational
-10/18/2026, 3:39:51 PM: Operational
-10/18/2026, 3:45:19 PM: Operational
-10/18/2026, 3:58:16 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 16:00
-10/18/2026, 4:06:16 PM: Operational
-10/18/2026, 4:24:40 PM: Operational
-10/18/2026, 4:43:02 PM: Operational
-10/18/2026, 4:53:31 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 17:00
-10/18/2026, 5:05:29 PM: Operational
-10/18/2026, 5:18:29 PM: Operational
-10/18/2026, 5:29:27 PM: Operational
-10/18/2026, 5:35:27 PM: Operational
-10/18/2026, 5:45:08 PM: Operational
-10/18/2026, 5:53:47 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 18:00
-10/18/2026, 6:05:49 PM: Operational
-10/18/2026, 6:26:30 PM: Operational
-10/18/2026, 6:39:06 PM: Operational
-10/18/2026, 6:47:55 PM: Operational
-10/18/2026, 6:54:08 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 19:00
-10/18/2026, 7:05:30 PM: Operational
-10/18/2026, 7:18:30 PM: Operational
-10/18/2026, 7:26:56 PM: Operational
-10/18/2026, 7:34:00 PM: Operational
-10/18/2026, 7:44:16 PM: Operational
-10/18/2026, 7:53:27 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 20:00
-10/18/2026, 8:06:04 PM: Operational
-10/18/2026, 8:23:03 PM: Operational
-10/18/2026, 8:32:27 PM: Operational
-10/18/2026, 8:42:41 PM: Operational
-10/18/2026, 8:48:09 PM: Operational
-10/18/2026, 8:53:41 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 21:00
-10/18/2026, 9:05:20 PM: Operational
-10/18/2026, 9:21:46 PM: Operational
-10/18/2026, 9:30:05 PM: Operational
-10/18/2026, 9:36:46 PM: Operational
-10/18/2026, 9:44:51 PM: Operational
-10/18/2026, 9:54:12 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 22:00
-10/18/2026, 10:04:14 PM: Operational
-10/18/2026, 10:26:02 PM: Operational
-10/18/2026, 10:31:18 PM: Operational
-10/18/2026, 10:46:05 PM: Operational
-10/18/2026, 10:53:41 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/18/2026 23:00
-10/18/2026, 11:04:10 PM: Operational
-10/18/2026, 11:20:47 PM: Operational
-10/18/2026, 11:35:48 PM: Operational
-10/18/2026, 11:50:08 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 0:00
-10/19/2026, 12:00:40 AM: Operational
-10/19/2026, 12:14:58 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 1:00
-10/19/2026, 1:00:39 AM: Operational
-10/19/2026, 1:28:01 AM: Operational
-10/19/2026, 1:49:31 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 2:00
-10/19/2026, 2:06:09 AM: Operational
-10/19/2026, 2:37:15 AM: Operational
-10/19/2026, 2:54:58 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 3:00
-10/19/2026, 3:05:53 AM: Operational
-10/19/2026, 3:32:00 AM: Operational
-10/19/2026, 3:51:32 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 4:00
-10/19/2026, 4:00:12 AM: Operational
-10/19/2026, 4:17:55 AM: Operational
-10/19/2026, 4:38:56 AM: Operational
-10/19/2026, 4:54:22 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 5:00
-10/19/2026, 5:05:09 AM: Operational
-10/19/2026, 5:27:27 AM: Operational
-10/19/2026, 5:40:10 AM: Operational
-10/19/2026, 5:52:20 AM: Operational
-10/19/2026, 5:58:39 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 6:00
-10/19/2026, 6:08:48 AM: Operational
-10/19/2026, 6:51:55 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 7:00
-10/19/2026, 7:18:04 AM: Operational
-10/19/2026, 7:48:40 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 8:00
-10/19/2026, 8:03:10 AM: Operational
-10/19/2026, 8:39:00 AM: Operational
-10/19/2026, 8:57:01 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 9:00
-10/19/2026, 9:08:38 AM: Operational
-10/19/2026, 9:37:07 AM: Operational
-10/19/2026, 9:55:11 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 10:00
-10/19/2026, 10:05:27 AM: Operational
-10/19/2026, 10:26:58 AM: Operational
-10/19/2026, 10:40:20 AM: Operational
-10/19/2026, 10:50:10 AM: Operational
-10/19/2026, 10:57:26 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 11:00
-10/19/2026, 11:05:26 AM: Operational
-10/19/2026, 11:24:34 AM: Operational
-10/19/2026, 11:37:45 AM: Operational
-10/19/2026, 11:48:31 AM: Operational
-10/19/2026, 11:56:09 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 12:00
-10/19/2026, 12:06:57 PM: Operational
-10/19/2026, 12:38:03 PM: Operational
-10/19/2026, 12:58:48 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 13:00
-10/19/2026, 1:10:14 PM: Operational
-10/19/2026, 1:30:59 PM: Operational
-10/19/2026, 1:49:20 PM: Operational
-10/19/2026, 1:59:15 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 14:00
-10/19/2026, 2:08:06 PM: Operational
-10/19/2026, 2:27:44 PM: Operational
-10/19/2026, 2:39:57 PM: Operational
-10/19/2026, 2:50:25 PM: Operational
-10/19/2026, 2:58:55 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 15:00
-10/19/2026, 3:11:54 PM: Operational
-10/19/2026, 3:28:43 PM: Operational
-10/19/2026, 3:38:29 PM: Operational
-10/19/2026, 3:48:15 PM: Operational
-10/19/2026, 3:56:28 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 16:00
-10/19/2026, 4:05:52 PM: Operational
-10/19/2026, 4:28:02 PM: Operational
-10/19/2026, 4:41:49 PM: Operational
-10/19/2026, 4:52:59 PM: Operational
-10/19/2026, 4:59:55 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 17:00
-10/19/2026, 5:07:05 PM: Operational
-10/19/2026, 5:24:02 PM: Operational
-10/19/2026, 5:34:32 PM: Operational
-10/19/2026, 5:54:26 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 18:00
-10/19/2026, 6:06:59 PM: Operational
-10/19/2026, 6:33:18 PM: Operational
-10/19/2026, 6:49:21 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 19:00
-10/19/2026, 7:02:52 PM: Operational
-10/19/2026, 7:08:34 PM: Operational
-10/19/2026, 7:20:55 PM: Operational
-10/19/2026, 7:32:41 PM: Operational
-10/19/2026, 7:41:42 PM: Operational
-10/19/2026, 7:48:40 PM: Operational
-10/19/2026, 7:56:13 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 20:00
-10/19/2026, 8:05:41 PM: Operational
-10/19/2026, 8:26:30 PM: Operational
-10/19/2026, 8:39:24 PM: Operational
-10/19/2026, 8:48:21 PM: Operational
-10/19/2026, 8:55:59 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 21:00
-10/19/2026, 9:05:57 PM: Operational
-10/19/2026, 9:23:20 PM: Operational
-10/19/2026, 9:33:51 PM: Operational
-10/19/2026, 9:46:49 PM: Operational
-10/19/2026, 9:54:21 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 22:00
-10/19/2026, 10:06:21 PM: Operational
-10/19/2026, 10:23:04 PM: Operational
-10/19/2026, 10:36:49 PM: Operational
-10/19/2026, 10:45:53 PM: Operational
-10/19/2026, 10:54:13 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/19/2026 23:00
-10/19/2026, 11:05:43 PM: Operational
-10/19/2026, 11:23:49 PM: Operational
-10/19/2026, 11:36:55 PM: Operational
-10/19/2026, 11:47:45 PM: Operational
-10/19/2026, 11:53:31 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 0:00
-10/20/2026, 12:09:28 AM: Operational
-10/20/2026, 12:55:19 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 1:00
-10/20/2026, 1:18:50 AM: Operational
-10/20/2026, 1:41:42 AM: Operational
-10/20/2026, 1:56:21 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 2:00
-10/20/2026, 2:07:01 AM: Operational
-10/20/2026, 2:32:55 AM: Operational
-10/20/2026, 2:51:11 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 3:00
-10/20/2026, 3:00:07 AM: Operational
-10/20/2026, 3:11:35 AM: Operational
-10/20/2026, 3:31:06 AM: Operational
-10/20/2026, 3:44:39 AM: Operational
-10/20/2026, 3:57:14 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 4:00
-10/20/2026, 4:06:26 AM: Operational
-10/20/2026, 4:28:54 AM: Operational
-10/20/2026, 4:40:07 AM: Operational
-10/20/2026, 4:51:14 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 5:00
-10/20/2026, 5:00:01 AM: Operational
-10/20/2026, 5:10:48 AM: Operational
-10/20/2026, 5:26:37 AM: Operational
-10/20/2026, 5:40:54 AM: Operational
-10/20/2026, 5:50:33 AM: Operational
-10/20/2026, 5:57:20 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 6:00
-10/20/2026, 6:06:49 AM: Operational
-10/20/2026, 6:39:46 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 7:00
-10/20/2026, 7:00:26 AM: Operational
-10/20/2026, 7:21:49 AM: Operational
-10/20/2026, 7:41:06 AM: Operational
-10/20/2026, 7:52:58 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 8:00
-10/20/2026, 8:00:12 AM: Operational
-10/20/2026, 8:16:50 AM: Operational
-10/20/2026, 8:41:26 AM: Operational
-10/20/2026, 8:56:03 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 9:00
-10/20/2026, 9:05:29 AM: Operational
-10/20/2026, 9:28:04 AM: Operational
-10/20/2026, 9:40:11 AM: Operational
-10/20/2026, 9:51:08 AM: Operational
-10/20/2026, 9:58:43 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 10:00
-10/20/2026, 10:05:37 AM: Operational
-10/20/2026, 10:24:26 AM: Operational
-10/20/2026, 10:38:22 AM: Operational
-10/20/2026, 10:48:19 AM: Operational
-10/20/2026, 10:55:56 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 11:00
-10/20/2026, 11:05:37 AM: Operational
-10/20/2026, 11:24:33 AM: Operational
-10/20/2026, 11:37:32 AM: Operational
-10/20/2026, 11:47:57 AM: Operational
-10/20/2026, 11:56:26 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 12:00
-10/20/2026, 12:10:26 PM: Operational
-10/20/2026, 12:36:07 PM: Operational
-10/20/2026, 12:57:00 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 13:00
-10/20/2026, 1:07:18 PM: Operational
-10/20/2026, 1:28:45 PM: Operational
-10/20/2026, 1:38:50 PM: Operational
-10/20/2026, 1:50:39 PM: Operational
-10/20/2026, 1:57:06 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 14:00
-10/20/2026, 2:07:05 PM: Operational
-10/20/2026, 2:27:22 PM: Operational
-10/20/2026, 2:39:26 PM: Operational
-10/20/2026, 2:50:31 PM: Operational
-10/20/2026, 2:58:46 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 15:00
-10/20/2026, 3:06:29 PM: Operational
-10/20/2026, 3:26:32 PM: Operational
-10/20/2026, 3:38:15 PM: Operational
-10/20/2026, 3:47:51 PM: Operational
-10/20/2026, 3:57:20 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 16:00
-10/20/2026, 4:05:58 PM: Operational
-10/20/2026, 4:27:56 PM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">svg_service</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
-10/6/2026, 4:29:55 PM: Operational
+10/20/2026, 4:27:56 PM: Operational
+10/20/2026, 4:40:02 PM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">svg_service</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
 10/6/2026, 4:44:29 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 17:00
 10/6/2026, 5:04:01 PM: Operational
 10/6/2026, 5:23:56 PM: Operational
@@ -9743,8 +9742,8 @@
 10/20/2026, 3:47:51 PM: Operational
 10/20/2026, 3:57:20 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 16:00
 10/20/2026, 4:05:58 PM: Operational
-10/20/2026, 4:27:56 PM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">browser_preview</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
-10/6/2026, 4:29:55 PM: Operational
+10/20/2026, 4:27:56 PM: Operational
+10/20/2026, 4:40:02 PM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">browser_preview</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
 10/6/2026, 4:44:29 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 17:00
 10/6/2026, 5:04:01 PM: Operational
 10/6/2026, 5:23:56 PM: Operational
@@ -11131,8 +11130,8 @@
 10/20/2026, 3:47:51 PM: Operational
 10/20/2026, 3:57:20 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 16:00
 10/20/2026, 4:05:58 PM: Operational
-10/20/2026, 4:27:56 PM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">tscircuit_package</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
-10/6/2026, 4:29:55 PM: Operational
+10/20/2026, 4:27:56 PM: Operational
+10/20/2026, 4:40:02 PM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">tscircuit_package</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
 10/6/2026, 4:44:29 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 17:00
 10/6/2026, 5:04:01 PM: Operational
 10/6/2026, 5:23:56 PM: Operational
@@ -12519,8 +12518,8 @@
 10/20/2026, 3:47:51 PM: Operational
 10/20/2026, 3:57:20 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 16:00
 10/20/2026, 4:05:58 PM: Operational
-10/20/2026, 4:27:56 PM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">usercode_api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
-10/6/2026, 4:29:55 PM: Operational
+10/20/2026, 4:27:56 PM: Operational
+10/20/2026, 4:40:02 PM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">usercode_api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/6/2026 16:00
 10/6/2026, 4:44:29 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-yellow-200" title="10/6/2026 17:00
 10/6/2026, 5:04:01 PM: Issues Detected
 10/6/2026, 5:23:56 PM: Operational
@@ -13907,4 +13906,5 @@
 10/20/2026, 3:47:51 PM: Operational
 10/20/2026, 3:57:20 PM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="10/20/2026 16:00
 10/20/2026, 4:05:58 PM: Operational
-10/20/2026, 4:27:56 PM: Operational"></div></div></div></div></div><div class="bg-white rounded-lg shadow-lg p-6 mt-8"><h3 class="text-lg font-semibold mb-4">Recent Outages</h3><div class="overflow-x-auto"><table class="min-w-full"><thead><tr class="border-b"><th class="text-left py-2 px-4 whitespace-nowrap">Service</th><th class="text-left py-2 px-4 whitespace-nowrap">Start Time</th><th class="text-left py-2 px-4 whitespace-nowrap">End Time</th><th class="text-left py-2 px-4 whitespace-nowrap">Duration</th><th class="text-left py-2 px-4 whitespace-nowrap">Status</th></tr></thead><tbody><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">10/20/2026, 12:10:26 PM</td><td class="py-2 px-4 whitespace-nowrap">10/20/2026, 12:36:07 PM</td><td class="py-2 px-4 whitespace-nowrap">26min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">10/18/2026, 11:35:48 PM</td><td class="py-2 px-4 whitespace-nowrap">10/19/2026, 1:00:39 AM</td><td class="py-2 px-4 whitespace-nowrap">1hr 25min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">svg_service</td><td class="py-2 px-4 whitespace-nowrap">10/18/2026, 4:24:40 PM</td><td class="py-2 px-4 whitespace-nowrap">10/18/2026, 4:43:02 PM</td><td class="py-2 px-4 whitespace-nowrap">18min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">svg_service</td><td class="py-2 px-4 whitespace-nowrap">10/18/2026, 1:05:17 PM</td><td class="py-2 px-4 whitespace-nowrap">10/18/2026, 1:21:46 PM</td><td class="py-2 px-4 whitespace-nowrap">16min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">svg_service</td><td class="py-2 px-4 whitespace-nowrap">10/18/2026, 8:06:24 AM</td><td class="py-2 px-4 whitespace-nowrap">10/18/2026, 8:28:45 AM</td><td class="py-2 px-4 whitespace-nowrap">22min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">10/13/2026, 6:07:01 PM</td><td class="py-2 px-4 whitespace-nowrap">10/13/2026, 6:34:04 PM</td><td class="py-2 px-4 whitespace-nowrap">27min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">svg_service</td><td class="py-2 px-4 whitespace-nowrap">10/12/2026, 9:11:28 AM</td><td class="py-2 px-4 whitespace-nowrap">10/12/2026, 9:45:35 AM</td><td class="py-2 px-4 whitespace-nowrap">34min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">10/12/2026, 4:37:51 AM</td><td class="py-2 px-4 whitespace-nowrap">10/12/2026, 5:01:58 AM</td><td class="py-2 px-4 whitespace-nowrap">24min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">10/12/2026, 12:10:07 AM</td><td class="py-2 px-4 whitespace-nowrap">10/12/2026, 1:13:22 AM</td><td class="py-2 px-4 whitespace-nowrap">1hr 03min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">svg_service</td><td class="py-2 px-4 whitespace-nowrap">10/8/2026, 12:07:53 PM</td><td class="py-2 px-4 whitespace-nowrap">10/8/2026, 12:38:54 PM</td><td class="py-2 px-4 whitespace-nowrap">31min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">svg_service</td><td class="py-2 px-4 whitespace-nowrap">10/7/2026, 3:54:49 PM</td><td class="py-2 px-4 whitespace-nowrap">10/7/2026, 4:12:00 PM</td><td class="py-2 px-4 whitespace-nowrap">17min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">10/6/2026, 5:04:01 PM</td><td class="py-2 px-4 whitespace-nowrap">10/6/2026, 5:23:56 PM</td><td class="py-2 px-4 whitespace-nowrap">20min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr></tbody></table></div></div></div></body></html>
+10/20/2026, 4:27:56 PM: Operational
+10/20/2026, 4:40:02 PM: Operational"></div></div></div></div></div><div class="bg-white rounded-lg shadow-lg p-6 mt-8"><h3 class="text-lg font-semibold mb-4">Recent Outages</h3><div class="overflow-x-auto"><table class="min-w-full"><thead><tr class="border-b"><th class="text-left py-2 px-4 whitespace-nowrap">Service</th><th class="text-left py-2 px-4 whitespace-nowrap">Start Time</th><th class="text-left py-2 px-4 whitespace-nowrap">End Time</th><th class="text-left py-2 px-4 whitespace-nowrap">Duration</th><th class="text-left py-2 px-4 whitespace-nowrap">Status</th></tr></thead><tbody><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">10/20/2026, 12:10:26 PM</td><td class="py-2 px-4 whitespace-nowrap">10/20/2026, 12:36:07 PM</td><td class="py-2 px-4 whitespace-nowrap">26min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">10/18/2026, 11:35:48 PM</td><td class="py-2 px-4 whitespace-nowrap">10/19/2026, 1:00:39 AM</td><td class="py-2 px-4 whitespace-nowrap">1hr 25min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">svg_service</td><td class="py-2 px-4 whitespace-nowrap">10/18/2026, 4:24:40 PM</td><td class="py-2 px-4 whitespace-nowrap">10/18/2026, 4:43:02 PM</td><td class="py-2 px-4 whitespace-nowrap">18min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">svg_service</td><td class="py-2 px-4 whitespace-nowrap">10/18/2026, 1:05:17 PM</td><td class="py-2 px-4 whitespace-nowrap">10/18/2026, 1:21:46 PM</td><td class="py-2 px-4 whitespace-nowrap">16min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">svg_service</td><td class="py-2 px-4 whitespace-nowrap">10/18/2026, 8:06:24 AM</td><td class="py-2 px-4 whitespace-nowrap">10/18/2026, 8:28:45 AM</td><td class="py-2 px-4 whitespace-nowrap">22min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">10/13/2026, 6:07:01 PM</td><td class="py-2 px-4 whitespace-nowrap">10/13/2026, 6:34:04 PM</td><td class="py-2 px-4 whitespace-nowrap">27min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">svg_service</td><td class="py-2 px-4 whitespace-nowrap">10/12/2026, 9:11:28 AM</td><td class="py-2 px-4 whitespace-nowrap">10/12/2026, 9:45:35 AM</td><td class="py-2 px-4 whitespace-nowrap">34min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">10/12/2026, 4:37:51 AM</td><td class="py-2 px-4 whitespace-nowrap">10/12/2026, 5:01:58 AM</td><td class="py-2 px-4 whitespace-nowrap">24min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">10/12/2026, 12:10:07 AM</td><td class="py-2 px-4 whitespace-nowrap">10/12/2026, 1:13:22 AM</td><td class="py-2 px-4 whitespace-nowrap">1hr 03min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">svg_service</td><td class="py-2 px-4 whitespace-nowrap">10/8/2026, 12:07:53 PM</td><td class="py-2 px-4 whitespace-nowrap">10/8/2026, 12:38:54 PM</td><td class="py-2 px-4 whitespace-nowrap">31min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">svg_service</td><td class="py-2 px-4 whitespace-nowrap">10/7/2026, 3:54:49 PM</td><td class="py-2 px-4 whitespace-nowrap">10/7/2026, 4:12:00 PM</td><td class="py-2 px-4 whitespace-nowrap">17min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">10/6/2026, 5:04:01 PM</td><td class="py-2 px-4 whitespace-nowrap">10/6/2026, 5:23:56 PM</td><td class="py-2 px-4 whitespace-nowrap">20min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr></tbody></table></div></div></div></body></html>
