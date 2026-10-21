@@ -13,7 +13,7 @@
 | `svg_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ✅ Operational |
-| `usercode_api` | ❌ TypeError: ECONNRESET: The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch() |
+| `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
