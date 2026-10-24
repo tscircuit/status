@@ -2,11 +2,13 @@ import { writeFile } from "node:fs/promises"
 import { execSync } from "node:child_process"
 import type { StatusCheck } from "../lib/types"
 
-// Check if webhook URL is set
-if (!process.env.DISCORD_WEBHOOK_URL) {
-  console.error("Error: DISCORD_WEBHOOK_URL environment variable is not set")
+// Check if at least one webhook URL is set
+if (!process.env.DISCORD_WEBHOOK_URL && !process.env.SLACK_WEBHOOK_URL) {
   console.error(
-    "Please set it using: export DISCORD_WEBHOOK_URL='your-webhook-url'",
+    "Error: DISCORD_WEBHOOK_URL or SLACK_WEBHOOK_URL environment variable must be set",
+  )
+  console.error(
+    "Please set one using: export DISCORD_WEBHOOK_URL='your-webhook-url' or export SLACK_WEBHOOK_URL='your-webhook-url'",
   )
   process.exit(1)
 }
@@ -161,7 +163,7 @@ async function runTest() {
     console.log("Test outage data written successfully")
 
     // Run the notification script
-    console.log("Sending notification to Discord...")
+    console.log("Sending notification to configured webhooks...")
     execSync("bun run scripts/discord-notification.ts", {
       env: { ...process.env },
       stdio: "inherit",
