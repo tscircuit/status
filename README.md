@@ -12,87 +12,8 @@
 | `compile_api` | ✅ Operational |
 | `svg_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
-| `tscircuit_package` | ❌ tscircuit package health check failed: Command failed: npm install -g tscircuit --force
-npm warn using --force Recommended protections disabled.
-npm warn ERESOLVE overriding peer dependency
-npm warn While resolving: react-reconciler@0.34.0
-npm warn Found: react@19.1.0
-npm warn node_modules/tscircuit/node_modules/react
-npm warn   react@"^19.1.0" from tscircuit@0.0.3042
-npm warn   node_modules/tscircuit
-npm warn     tscircuit@"*" from the root project
-npm warn     2 more (@tscircuit/cli, @tscircuit/krt-wasm)
-npm warn   12 more (@tscircuit/props, jscad-fiber, react-dom, ...)
-npm warn
-npm warn Could not resolve dependency:
-npm warn peer react@"^19.3.0" from react-reconciler@0.34.0
-npm warn node_modules/tscircuit/node_modules/react-reconciler
-npm warn   peer react-reconciler@"*" from jscad-fiber@0.0.92
-npm warn   node_modules/tscircuit/node_modules/jscad-fiber
-npm warn   1 more (jscad-fiber)
-npm warn
-npm warn Conflicting peer dependency: react@19.3.1
-npm warn node_modules/react
-npm warn   peer react@"^19.3.0" from react-reconciler@0.34.0
-npm warn   node_modules/tscircuit/node_modules/react-reconciler
-npm warn     peer react-reconciler@"*" from jscad-fiber@0.0.92
-npm warn     node_modules/tscircuit/node_modules/jscad-fiber
-npm warn     1 more (jscad-fiber)
-npm warn ERESOLVE overriding peer dependency
-npm warn While resolving: jscad-electronics@0.0.210
-npm warn Found: @tscircuit/alphabet@0.0.25
-npm warn node_modules/tscircuit/node_modules/@tscircuit/alphabet
-npm warn   @tscircuit/alphabet@"0.0.25" from tscircuit@0.0.3042
-npm warn   node_modules/tscircuit
-npm warn     tscircuit@"*" from the root project
-npm warn     2 more (@tscircuit/cli, @tscircuit/krt-wasm)
-npm warn   5 more (graphics-debug, circuit-json-to-gltf, circuit-to-svg, ...)
-npm warn
-npm warn Could not resolve dependency:
-npm warn peer @tscircuit/alphabet@"^0.0.24" from jscad-electronics@0.0.210
-npm warn node_modules/tscircuit/node_modules/circuit-json-to-gltf/node_modules/jscad-electronics
-npm warn   jscad-electronics@"^0.0.210" from circuit-json-to-gltf@0.0.160
-npm warn   node_modules/tscircuit/node_modules/circuit-json-to-gltf
-npm warn
-npm warn Conflicting peer dependency: @tscircuit/alphabet@0.0.24
-npm warn node_modules/@tscircuit/alphabet
-npm warn   peer @tscircuit/alphabet@"^0.0.24" from jscad-electronics@0.0.210
-npm warn   node_modules/tscircuit/node_modules/circuit-json-to-gltf/node_modules/jscad-electronics
-npm warn     jscad-electronics@"^0.0.210" from circuit-json-to-gltf@0.0.160
-npm warn     node_modules/tscircuit/node_modules/circuit-json-to-gltf
-npm warn ERESOLVE overriding peer dependency
-npm warn While resolving: jscad-electronics@0.0.210
-npm warn Found: circuit-json@0.0.539
-npm warn node_modules/tscircuit/node_modules/circuit-json
-npm warn   circuit-json@"^0.0.539" from tscircuit@0.0.3042
-npm warn   node_modules/tscircuit
-npm warn     tscircuit@"*" from the root project
-npm warn     2 more (@tscircuit/cli, @tscircuit/krt-wasm)
-npm warn   15 more (@tscircuit/checks, @tscircuit/circuit-json-util, ...)
-npm warn
-npm warn Could not resolve dependency:
-npm warn peer circuit-json@"^0.0.426" from jscad-electronics@0.0.210
-npm warn node_modules/tscircuit/node_modules/circuit-json-to-gltf/node_modules/jscad-electronics
-npm warn   jscad-electronics@"^0.0.210" from circuit-json-to-gltf@0.0.160
-npm warn   node_modules/tscircuit/node_modules/circuit-json-to-gltf
-npm warn
-npm warn Conflicting peer dependency: circuit-json@0.0.426
-npm warn node_modules/circuit-json
-npm warn   peer circuit-json@"^0.0.426" from jscad-electronics@0.0.210
-npm warn   node_modules/tscircuit/node_modules/circuit-json-to-gltf/node_modules/jscad-electronics
-npm warn     jscad-electronics@"^0.0.210" from circuit-json-to-gltf@0.0.160
-npm warn     node_modules/tscircuit/node_modules/circuit-json-to-gltf
-npm warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
-npm error code E404
-npm error 404 Not Found - GET https://registry.npmjs.org/tslib/-/tslib-2.9.1.tgz - Not found
-npm error 404
-npm error 404  'tslib@https://registry.npmjs.org/tslib/-/tslib-2.9.1.tgz' is not in this registry.
-npm error 404
-npm error 404 Note that you can also install from a
-npm error 404 tarball, folder, http url, or git url.
-npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-10-30T20_23_52_250Z-debug-0.log
- |
-| `usercode_api` | ❌ Usercode job failed: Unknown error |
+| `tscircuit_package` | ✅ Operational |
+| `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
