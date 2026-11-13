@@ -1,5 +1,6 @@
 import ky from "ky"
 import * as fs from "fs"
+import { formatDuration } from "../lib/format-duration"
 import type { StatusCheck, Outage } from "../lib/types"
 
 // Configuration
@@ -44,20 +45,6 @@ function saveReportedOutages(reportedOutages: Record<string, number>): void {
     )
   } catch (error) {
     console.error("Error saving reported outages:", error)
-  }
-}
-
-/**
- * Format duration from milliseconds to a readable string
- */
-function formatDuration(milliseconds: number): string {
-  const totalMinutes = Math.round(milliseconds / 1000 / 60)
-  if (totalMinutes >= 60) {
-    const hours = Math.floor(totalMinutes / 60)
-    const minutes = totalMinutes % 60
-    return `${hours}hr ${minutes.toString().padStart(2, "0")}min`
-  } else {
-    return `${totalMinutes}min`
   }
 }
 

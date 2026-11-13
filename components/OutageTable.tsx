@@ -1,15 +1,7 @@
+import { formatDuration } from "lib/format-duration"
 import type { Outage } from "lib/types"
 
-function formatDuration(milliseconds: number): string {
-  const totalMinutes = Math.round(milliseconds / 1000 / 60)
-  if (totalMinutes >= 60) {
-    const hours = Math.floor(totalMinutes / 60)
-    const minutes = totalMinutes % 60
-    return `${hours}hr ${minutes.toString().padStart(2, "0")}min`
-  } else {
-    return `${totalMinutes}min`
-  }
-}
+export { formatDuration }
 
 export const OutageTable = ({
   outages,
