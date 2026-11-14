@@ -49,19 +49,23 @@ async function parseJsonResponse<T>(
   context: string,
 ): Promise<T> {
   const text = await response.text()
+  if (!response.ok) {
+    throw new Error(
+      `${context} failed with HTTP ${response.status} ${response.statusText} ` +
+        `(content-type: ${response.headers.get("content-type") || "unknown"}, ` +
+        `cf-ray: ${response.headers.get("cf-ray") || "unknown"}): ${text.slice(0, 2000)}`,
+    )
+  }
+
   let parsed: unknown
   try {
     parsed = text ? JSON.parse(text) : {}
   } catch (error) {
     throw new Error(
-      `Failed to parse JSON from ${context}: ${
+      `Failed to parse JSON from ${context} (HTTP ${response.status}, content-type: ${response.headers.get("content-type") || "unknown"}, cf-ray: ${response.headers.get("cf-ray") || "unknown"}): ${text.slice(0, 2000)}; ${
         error instanceof Error ? error.message : String(error)
       }`,
     )
-  }
-
-  if (!response.ok) {
-    throw new Error(`${context} failed with status ${response.status}: ${text}`)
   }
 
   return parsed as T
