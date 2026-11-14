@@ -10,10 +10,10 @@
 | `registry_bundling` | ✅ Operational |
 | `fly_registry_api` | ✅ Operational |
 | `compile_api` | ✅ Operational |
-| `svg_service` | ✅ Operational |
+| `svg_service` | ❌ SVG Service Health Check Failed: pcb render failed after 15001ms: Request timed out: GET https://svg.tscircuit.com/?svg_type=pcb&code=H4sIAJsBqGcAA42QsQ6CMBRFdxP%2F4aUTDEJBNikLiR%2FA5FpKkUahTanRxPjvVksb4uTWc3JfTlL%2BUFIb6HhPb1cDUQykgmi7AShbSXUHd9GZgaAMjyOCgYvzYBaqPiu703wWs5HaIYBjOjFOUH5BXvdSGqXFZM9xgfPgJzraYZMFMbPhRJ7Fy7NireX9wqnPMqooE6vuIly4wBir45%2Fx%2Bje%2B8zVfDyLkjaaMQ6%2FlSFDSZFBBosSUITDSinol3EmZfv%2FTvuPDG02y%2Bwx1AQAA&cachebust=l011a8 |
 | `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ✅ Operational |
-| `usercode_api` | ❌ Error: Failed to parse JSON from add file seveibar-rp2040-zero-0.0.18-pr5-74798a90-files/lib/KeyCircuit.tsx: JSON Parse error: Unrecognized token '<' |
+| `usercode_api` | ✅ Operational |
 
 <!-- END_STATUS_TABLE -->
 
