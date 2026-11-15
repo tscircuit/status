@@ -1,3 +1,4 @@
+import { formatDateTime } from "lib/format-date"
 import type { StatusCheck } from "lib/types"
 
 export function UptimeGraph({ checks }: { checks: StatusCheck[] }) {
@@ -10,8 +11,9 @@ export function UptimeGraph({ checks }: { checks: StatusCheck[] }) {
 
   // Build the map and hours array in a single pass through checks
   for (const check of checks) {
-    const date = new Date(check.timestamp)
-    const hourKey = `${date.toLocaleDateString()} ${date.getHours()}:00`
+    const hourStart = new Date(check.timestamp)
+    hourStart.setMinutes(0, 0, 0)
+    const hourKey = hourStart.toISOString()
 
     if (!hourChecksMap.has(hourKey)) {
       hourChecksMap.set(hourKey, [])
@@ -44,7 +46,12 @@ export function UptimeGraph({ checks }: { checks: StatusCheck[] }) {
                     <div
                       key={hour}
                       className="h-8 w-full bg-gray-200"
-                      title={`${hour}\nNo data available for this period`}
+                      data-hour-start={hour}
+                      data-has-data="false"
+                      title={`${formatDateTime(hour, {
+                        timeZone: "UTC",
+                        hour12: false,
+                      })}\nNo data available for this period`}
                     />
                   )
                 }
@@ -56,6 +63,24 @@ export function UptimeGraph({ checks }: { checks: StatusCheck[] }) {
                   (check) => check.status === "error",
                 )
 
+                const tooltipChecks: Array<{
+                  timestamp: string
+                  status: "ok" | "error"
+                }> = hourChecks.flatMap((check) => {
+                  const serviceCheck = check.checks.find(
+                    (c) => c.service === service,
+                  )
+                  if (!serviceCheck) {
+                    return []
+                  }
+                  return [
+                    {
+                      timestamp: check.timestamp,
+                      status: serviceCheck.status,
+                    },
+                  ]
+                })
+
                 return (
                   <div
                     key={hour}
@@ -66,10 +91,19 @@ export function UptimeGraph({ checks }: { checks: StatusCheck[] }) {
                           ? "bg-yellow-200"
                           : "bg-green-200"
                     }`}
-                    title={`${hour}\n${hourChecks
+                    data-hour-start={hour}
+                    data-has-data="true"
+                    data-tooltip-checks={JSON.stringify(tooltipChecks)}
+                    title={`${formatDateTime(hour, {
+                      timeZone: "UTC",
+                      hour12: false,
+                    })}\n${tooltipChecks
                       .map(
-                        (check) =>
-                          `${new Date(check.timestamp).toLocaleString()}: ${check.checks.find((c) => c.service === service)?.status === "error" ? "Issues Detected" : "Operational"}`,
+                        (entry) =>
+                          `${formatDateTime(entry.timestamp, {
+                            timeZone: "UTC",
+                            hour12: false,
+                          })}: ${entry.status === "error" ? "Issues Detected" : "Operational"}`,
                       )
                       .join("\n")}`}
                   />
