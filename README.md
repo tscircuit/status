@@ -13,7 +13,7 @@
 | `svg_service` | ✅ Operational |
 | `browser_preview` | ✅ Operational |
 | `tscircuit_package` | ✅ Operational |
-| `usercode_api` | ❌ Error: add file seveibar-rp2040-zero-0.0.18-pr5-74798a90-files/package.json failed with HTTP 500 Internal Server Error (content-type: text/html; charset=UTF-8, cf-ray: a5fdef063bc323a3-PDX): <!DOCTYPE html>
+| `usercode_api` | ❌ Error: add file seveibar-rp2040-zero-0.0.18-pr5-74798a90-files/package.json failed with HTTP 500 Internal Server Error (content-type: text/html; charset=UTF-8, cf-ray: a5fdfe3e6b96ebc1-SEA): <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
@@ -50,7 +50,7 @@
                 <h1>
                     <span class="cf-error-type" data-translate="error">Error</span>
                     <span class="cf-error-code">1101</span>
-                    <small class="heading-ray-id">Ray ID: a5fdef063bc323a3 &bull; 2026-11-25 04:33:10 UTC</small>
+                    <small class="heading-ray-id">Ray ID: a5fdfe3e6b96ebc1 &bull; 2026-11-25 04:43:33 UTC</small>
                 </h1>
                 <h2 class="cf-subheadline" data-translate="error_desc">Worker threw exception</h2>
             </div><!-- /.header -->
