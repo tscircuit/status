@@ -1,48 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><title>tscircuit Status</title><script src="https://cdn.tailwindcss.com"></script><meta name="viewport" content="width=device-width, initial-scale=1"/></head><body class="bg-gray-100 min-h-screen p-8"><div class="max-w-6xl mx-auto"><h1 class="text-3xl font-bold mb-8">tscircuit Status</h1><div><div id="error-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"><div id="modal-content" class="bg-white rounded-lg shadow-xl w-full max-w-md mx-auto"><div class="flex items-center justify-between p-5 border-b"><div class="flex items-center gap-2"><svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M12 5.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13z"></path></svg><h2 id="modal-title" class="text-lg font-semibold text-red-600">Error Details</h2></div><button class="close-modal text-gray-500 hover:text-gray-700 transition" aria-label="Close"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg></button></div><div class="p-5"><p id="error-message" class="text-sm text-red-600"></p></div><div class="flex justify-end p-4 border-t bg-gray-50 rounded-b-lg"><button class="close-modal px-4 py-2 text-sm font-medium text-white bg-red-500 hover:bg-red-600 rounded-lg transition">Close</button></div></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">registry-api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">freerouting-cluster</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">jlcsearch-api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">registry_bundling</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">fly_registry_api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">compile_api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">svg_service</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">99.43<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">browser_preview</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">tscircuit_package</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">99.69<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">usercode_api</h3><button class="ml-auto text-red-500 hover:text-red-600" data-service="usercode_api" data-error="Error: add file seveibar-rp2040-zero-0.0.18-pr5-74798a90-files/package.json failed with HTTP 500 Internal Server Error (content-type: text/html; charset=UTF-8, cf-ray: a5fdfe3e6b96ebc1-SEA): &lt;!DOCTYPE html&gt;
-&lt;!--[if lt IE 7]&gt; &lt;html class=&quot;no-js ie6 oldie&quot; lang=&quot;en-US&quot;&gt; &lt;![endif]--&gt;
-&lt;!--[if IE 7]&gt;    &lt;html class=&quot;no-js ie7 oldie&quot; lang=&quot;en-US&quot;&gt; &lt;![endif]--&gt;
-&lt;!--[if IE 8]&gt;    &lt;html class=&quot;no-js ie8 oldie&quot; lang=&quot;en-US&quot;&gt; &lt;![endif]--&gt;
-&lt;!--[if gt IE 8]&gt;&lt;!--&gt; &lt;html class=&quot;no-js&quot; lang=&quot;en-US&quot;&gt; &lt;!--&lt;![endif]--&gt;
-&lt;head&gt;
-&lt;title&gt;Worker threw exception | usercode.tscircuit.com | Cloudflare&lt;/title&gt;
-&lt;meta charset=&quot;UTF-8&quot; /&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
-&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge&quot; /&gt;
-&lt;meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot; /&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; id=&quot;cf_styles-css&quot; href=&quot;/cdn-cgi/styles/cf.errors.css&quot; /&gt;
-&lt;!--[if lt IE 9]&gt;&lt;link rel=&quot;stylesheet&quot; id=&#x27;cf_styles-ie-css&#x27; href=&quot;/cdn-cgi/styles/cf.errors.ie.css&quot; /&gt;&lt;![endif]--&gt;
-&lt;style&gt;body{margin:0;padding:0}&lt;/style&gt;
-
-
-&lt;!--[if gte IE 10]&gt;&lt;!--&gt;
-&lt;script&gt;
-  if (!navigator.cookieEnabled) {
-    window.addEventListener(&#x27;DOMContentLoaded&#x27;, function () {
-      var cookieEl = document.getElementById(&#x27;cookie-alert&#x27;);
-      cookieEl.style.display = &#x27;block&#x27;;
-    })
-  }
-&lt;/script&gt;
-&lt;!--&lt;![endif]--&gt;
-
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div id=&quot;cf-wrapper&quot;&gt;
-        &lt;div class=&quot;cf-alert cf-alert-error cf-cookie-error&quot; id=&quot;cookie-alert&quot; data-translate=&quot;enable_cookies&quot;&gt;Please enable cookies.&lt;/div&gt;
-        &lt;div id=&quot;cf-error-details&quot; class=&quot;cf-error-details-wrapper&quot;&gt;
-            &lt;div class=&quot;cf-wrapper cf-header cf-error-overview&quot;&gt;
-                &lt;h1&gt;
-                    &lt;span class=&quot;cf-error-type&quot; data-translate=&quot;error&quot;&gt;Error&lt;/span&gt;
-                    &lt;span class=&quot;cf-error-code&quot;&gt;1101&lt;/span&gt;
-                    &lt;small class=&quot;heading-ray-id&quot;&gt;Ray ID: a5fdfe3e6b96ebc1 &amp;bull; 2026-11-25 04:43:33 UTC&lt;/small&gt;
-                &lt;/h1&gt;
-                &lt;h2 class=&quot;cf-subheadline&quot; data-translate=&quot;error_desc&quot;&gt;Worker threw exception&lt;/h2&gt;
-            &lt;/div&gt;&lt;!-- /.header --&gt;
-    
-            &lt;section&gt;&lt;/section&gt;&lt;!-- spacer --&gt;
-    
-          " aria-label="View Error Details"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert-icon lucide-circle-alert"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg></button></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-red-500"></div><span>Error</span></div><div class="text-2xl font-bold mb-1">98.91<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div></div><script>
+<!DOCTYPE html><html lang="en"><head><title>tscircuit Status</title><script src="https://cdn.tailwindcss.com"></script><meta name="viewport" content="width=device-width, initial-scale=1"/></head><body class="bg-gray-100 min-h-screen p-8"><div class="max-w-6xl mx-auto"><h1 class="text-3xl font-bold mb-8">tscircuit Status</h1><div><div id="error-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"><div id="modal-content" class="bg-white rounded-lg shadow-xl w-full max-w-md mx-auto"><div class="flex items-center justify-between p-5 border-b"><div class="flex items-center gap-2"><svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M12 5.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13z"></path></svg><h2 id="modal-title" class="text-lg font-semibold text-red-600">Error Details</h2></div><button class="close-modal text-gray-500 hover:text-gray-700 transition" aria-label="Close"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg></button></div><div class="p-5"><p id="error-message" class="text-sm text-red-600"></p></div><div class="flex justify-end p-4 border-t bg-gray-50 rounded-b-lg"><button class="close-modal px-4 py-2 text-sm font-medium text-white bg-red-500 hover:bg-red-600 rounded-lg transition">Close</button></div></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">registry-api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">freerouting-cluster</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">jlcsearch-api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">registry_bundling</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">fly_registry_api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">compile_api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">svg_service</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">99.43<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">browser_preview</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">100.00<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">tscircuit_package</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">99.69<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div><div class="bg-white rounded-lg shadow-lg p-6"><div class="flex items-center mb-2 justify-between"><h3 class="text-lg font-semibold">usercode_api</h3></div><div class="flex items-center mb-4"><div class="w-3 h-3 rounded-full mr-2 bg-green-500"></div><span>Operational</span></div><div class="text-2xl font-bold mb-1">98.91<!-- -->%</div><div class="text-sm text-gray-600">Uptime (14 days)</div></div></div><script>
             document.addEventListener("DOMContentLoaded", () => {
               const modal = document.getElementById("error-modal")
               const modalContent = document.getElementById("modal-content")
@@ -71,8 +27,7 @@
                 });
               });
             })
-          </script></div><div class="bg-white rounded-lg shadow-lg p-4 sm:p-6 overflow-hidden"><h3 class="text-lg font-semibold mb-4">Uptime History</h3><div class="space-y-4 sm:overflow-visible overflow-x-auto pb-2"><div class="relative"><div class="text-sm font-medium mb-1">registry-api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 4:00
-11/11/2026, 4:54:21 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
+          </script></div><div class="bg-white rounded-lg shadow-lg p-4 sm:p-6 overflow-hidden"><h3 class="text-lg font-semibold mb-4">Uptime History</h3><div class="space-y-4 sm:overflow-visible overflow-x-auto pb-2"><div class="relative"><div class="text-sm font-medium mb-1">registry-api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
 11/11/2026, 5:04:35 AM: Operational
 11/11/2026, 5:18:03 AM: Operational
 11/11/2026, 5:24:45 AM: Operational
@@ -2000,8 +1955,8 @@
 11/25/2026, 4:21:06 AM: Operational
 11/25/2026, 4:29:30 AM: Operational
 11/25/2026, 4:33:51 AM: Operational
-11/25/2026, 4:43:52 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">freerouting-cluster</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 4:00
-11/11/2026, 4:54:21 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
+11/25/2026, 4:43:52 AM: Operational
+11/25/2026, 4:55:10 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">freerouting-cluster</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
 11/11/2026, 5:04:35 AM: Operational
 11/11/2026, 5:18:03 AM: Operational
 11/11/2026, 5:24:45 AM: Operational
@@ -3929,8 +3884,8 @@
 11/25/2026, 4:21:06 AM: Operational
 11/25/2026, 4:29:30 AM: Operational
 11/25/2026, 4:33:51 AM: Operational
-11/25/2026, 4:43:52 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">jlcsearch-api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 4:00
-11/11/2026, 4:54:21 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
+11/25/2026, 4:43:52 AM: Operational
+11/25/2026, 4:55:10 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">jlcsearch-api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
 11/11/2026, 5:04:35 AM: Operational
 11/11/2026, 5:18:03 AM: Operational
 11/11/2026, 5:24:45 AM: Operational
@@ -5858,8 +5813,8 @@
 11/25/2026, 4:21:06 AM: Operational
 11/25/2026, 4:29:30 AM: Operational
 11/25/2026, 4:33:51 AM: Operational
-11/25/2026, 4:43:52 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">registry_bundling</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 4:00
-11/11/2026, 4:54:21 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
+11/25/2026, 4:43:52 AM: Operational
+11/25/2026, 4:55:10 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">registry_bundling</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
 11/11/2026, 5:04:35 AM: Operational
 11/11/2026, 5:18:03 AM: Operational
 11/11/2026, 5:24:45 AM: Operational
@@ -7787,8 +7742,8 @@
 11/25/2026, 4:21:06 AM: Operational
 11/25/2026, 4:29:30 AM: Operational
 11/25/2026, 4:33:51 AM: Operational
-11/25/2026, 4:43:52 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">fly_registry_api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 4:00
-11/11/2026, 4:54:21 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
+11/25/2026, 4:43:52 AM: Operational
+11/25/2026, 4:55:10 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">fly_registry_api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
 11/11/2026, 5:04:35 AM: Operational
 11/11/2026, 5:18:03 AM: Operational
 11/11/2026, 5:24:45 AM: Operational
@@ -9716,8 +9671,8 @@
 11/25/2026, 4:21:06 AM: Operational
 11/25/2026, 4:29:30 AM: Operational
 11/25/2026, 4:33:51 AM: Operational
-11/25/2026, 4:43:52 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">compile_api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 4:00
-11/11/2026, 4:54:21 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
+11/25/2026, 4:43:52 AM: Operational
+11/25/2026, 4:55:10 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">compile_api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
 11/11/2026, 5:04:35 AM: Operational
 11/11/2026, 5:18:03 AM: Operational
 11/11/2026, 5:24:45 AM: Operational
@@ -11645,8 +11600,8 @@
 11/25/2026, 4:21:06 AM: Operational
 11/25/2026, 4:29:30 AM: Operational
 11/25/2026, 4:33:51 AM: Operational
-11/25/2026, 4:43:52 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">svg_service</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 4:00
-11/11/2026, 4:54:21 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
+11/25/2026, 4:43:52 AM: Operational
+11/25/2026, 4:55:10 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">svg_service</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
 11/11/2026, 5:04:35 AM: Operational
 11/11/2026, 5:18:03 AM: Operational
 11/11/2026, 5:24:45 AM: Operational
@@ -13574,8 +13529,8 @@
 11/25/2026, 4:21:06 AM: Operational
 11/25/2026, 4:29:30 AM: Operational
 11/25/2026, 4:33:51 AM: Operational
-11/25/2026, 4:43:52 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">browser_preview</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 4:00
-11/11/2026, 4:54:21 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
+11/25/2026, 4:43:52 AM: Operational
+11/25/2026, 4:55:10 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">browser_preview</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
 11/11/2026, 5:04:35 AM: Operational
 11/11/2026, 5:18:03 AM: Operational
 11/11/2026, 5:24:45 AM: Operational
@@ -15503,8 +15458,8 @@
 11/25/2026, 4:21:06 AM: Operational
 11/25/2026, 4:29:30 AM: Operational
 11/25/2026, 4:33:51 AM: Operational
-11/25/2026, 4:43:52 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">tscircuit_package</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 4:00
-11/11/2026, 4:54:21 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
+11/25/2026, 4:43:52 AM: Operational
+11/25/2026, 4:55:10 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">tscircuit_package</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
 11/11/2026, 5:04:35 AM: Operational
 11/11/2026, 5:18:03 AM: Operational
 11/11/2026, 5:24:45 AM: Operational
@@ -17432,8 +17387,8 @@
 11/25/2026, 4:21:06 AM: Operational
 11/25/2026, 4:29:30 AM: Operational
 11/25/2026, 4:33:51 AM: Operational
-11/25/2026, 4:43:52 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">usercode_api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 4:00
-11/11/2026, 4:54:21 AM: Operational"></div><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
+11/25/2026, 4:43:52 AM: Operational
+11/25/2026, 4:55:10 AM: Operational"></div></div></div><div class="relative"><div class="text-sm font-medium mb-1">usercode_api</div><div class="grid grid-flow-col auto-cols-fr gap-px w-full sm:overflow-visible overflow-x-auto"><div class="h-6 sm:h-8 min-w-[12px] bg-green-200" title="11/11/2026 5:00
 11/11/2026, 5:04:35 AM: Operational
 11/11/2026, 5:18:03 AM: Operational
 11/11/2026, 5:24:45 AM: Operational
@@ -19361,4 +19316,5 @@
 11/25/2026, 4:21:06 AM: Operational
 11/25/2026, 4:29:30 AM: Operational
 11/25/2026, 4:33:51 AM: Issues Detected
-11/25/2026, 4:43:52 AM: Issues Detected"></div></div></div></div></div><div class="bg-white rounded-lg shadow-lg p-6 mt-8"><h3 class="text-lg font-semibold mb-4">Recent Outages</h3><div class="overflow-x-auto"><table class="min-w-full"><thead><tr class="border-b"><th class="text-left py-2 px-4 whitespace-nowrap">Service</th><th class="text-left py-2 px-4 whitespace-nowrap">Start Time</th><th class="text-left py-2 px-4 whitespace-nowrap">End Time</th><th class="text-left py-2 px-4 whitespace-nowrap">Duration</th><th class="text-left py-2 px-4 whitespace-nowrap">Status</th></tr></thead><tbody><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">11/19/2026, 6:02:58 PM</td><td class="py-2 px-4 whitespace-nowrap">11/19/2026, 6:21:48 PM</td><td class="py-2 px-4 whitespace-nowrap">19min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">11/16/2026, 2:01:12 PM</td><td class="py-2 px-4 whitespace-nowrap">11/16/2026, 2:17:50 PM</td><td class="py-2 px-4 whitespace-nowrap">17min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">11/14/2026, 7:43:32 PM</td><td class="py-2 px-4 whitespace-nowrap">11/14/2026, 8:12:16 PM</td><td class="py-2 px-4 whitespace-nowrap">29min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr></tbody></table></div></div></div></body></html>
+11/25/2026, 4:43:52 AM: Issues Detected
+11/25/2026, 4:55:10 AM: Operational"></div></div></div></div></div><div class="bg-white rounded-lg shadow-lg p-6 mt-8"><h3 class="text-lg font-semibold mb-4">Recent Outages</h3><div class="overflow-x-auto"><table class="min-w-full"><thead><tr class="border-b"><th class="text-left py-2 px-4 whitespace-nowrap">Service</th><th class="text-left py-2 px-4 whitespace-nowrap">Start Time</th><th class="text-left py-2 px-4 whitespace-nowrap">End Time</th><th class="text-left py-2 px-4 whitespace-nowrap">Duration</th><th class="text-left py-2 px-4 whitespace-nowrap">Status</th></tr></thead><tbody><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">11/25/2026, 4:33:51 AM</td><td class="py-2 px-4 whitespace-nowrap">11/25/2026, 4:55:10 AM</td><td class="py-2 px-4 whitespace-nowrap">21min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">11/19/2026, 6:02:58 PM</td><td class="py-2 px-4 whitespace-nowrap">11/19/2026, 6:21:48 PM</td><td class="py-2 px-4 whitespace-nowrap">19min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">11/16/2026, 2:01:12 PM</td><td class="py-2 px-4 whitespace-nowrap">11/16/2026, 2:17:50 PM</td><td class="py-2 px-4 whitespace-nowrap">17min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr><tr class="border-b"><td class="py-2 px-4 whitespace-nowrap">usercode_api</td><td class="py-2 px-4 whitespace-nowrap">11/14/2026, 7:43:32 PM</td><td class="py-2 px-4 whitespace-nowrap">11/14/2026, 8:12:16 PM</td><td class="py-2 px-4 whitespace-nowrap">29min</td><td class="py-2 px-4 whitespace-nowrap"><span class="px-2 py-1 rounded text-sm bg-gray-100">Resolved</span></td></tr></tbody></table></div></div></div></body></html>
